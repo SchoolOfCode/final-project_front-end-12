@@ -6,6 +6,7 @@
 import React from 'react';
 import styles from '../styles/navbar.module.css'
 import { BurgerMenu } from './burgerMenu.js';
+import Link from 'next/link'
 
 export function NavBar() {
 
@@ -13,7 +14,7 @@ export function NavBar() {
     <div className={styles.div}>
       <h1>SEASONAL</h1>
       <BurgerMenu/>
-      {/* Links to other pages for browser view */}
+      <Link href="/listPage">listPage</Link>
     </div>
   )
 }
