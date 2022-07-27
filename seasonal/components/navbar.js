@@ -13,8 +13,9 @@ export function NavBar() {
   return (
     <div className={styles.div}>
       <h1>SEASONAL</h1>
+      <Link href="/listPage/listPage">List Page</Link>
       <BurgerMenu/>
-      <Link href="/listPage">listPage</Link>
+      
     </div>
   )
 }

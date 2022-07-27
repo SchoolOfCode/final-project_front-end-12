@@ -7,7 +7,7 @@ export function BurgerMenu() {
   return(
     //icon for burger menu
     //onClick, (toggles state to display: dropdown menu)
-    <Image src='/burgerMenu.png' className={styles.menu} alt='burger menu' height={50} width={50} layout="raw" />
+    <Image src='/burgerMenu.png' className={styles.menu} alt='burger menu' height={50} width={50} />
     
     //dropdown menu contains links to other pages
   )

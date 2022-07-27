@@ -1,11 +1,12 @@
 import React from "react";
 
 
-export function ListPage () {
+export default function ListPage() {
 
     return (
         <div>
-            <h1>Hello World</h1>
+        <h1>Link page!</h1>
+   
         </div>
     )
 }
