@@ -1,0 +1,11 @@
+.div {
+  background: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute; */
+}
+
+.div h1 {
+  background: blue;
+}

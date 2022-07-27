@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { NavBar } from '../components/navbar'
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <meta name="description" content="Seasonal Foods" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <NavBar className={styles.NavBar}/>
       <main className={styles.main}>
         <h1 className={styles.title}>
           Hello World!
