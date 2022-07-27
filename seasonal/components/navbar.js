@@ -8,6 +8,7 @@ import styles from '../styles/navbar.module.css'
 import { BurgerMenu } from './burgerMenu.js';
 import Link from 'next/link'
 
+
 export function NavBar() {
 
   return (
