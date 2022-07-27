@@ -15,6 +15,7 @@ export function NavBar() {
       <h1>SEASONAL</h1>
       <Link href="/listPage/listPage">List Page</Link>
       <Link href="/aboutPage/aboutPage">About Page</Link>
+      <Link href="/singleItemPage/singleItemPage">SingleItemPage</Link>
       <BurgerMenu/>
       
     </div>
