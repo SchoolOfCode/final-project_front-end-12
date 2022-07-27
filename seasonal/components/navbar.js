@@ -5,13 +5,15 @@
 
 import React from 'react';
 import styles from '../styles/navbar.module.css'
+import { BurgerMenu } from './burgerMenu.js';
 
 export function NavBar() {
 
   return (
     <div className={styles.div}>
       <h1>SEASONAL</h1>
-      {/* burger menu */}
+      <BurgerMenu/>
+      {/* Links to other pages for browser view */}
     </div>
   )
 }

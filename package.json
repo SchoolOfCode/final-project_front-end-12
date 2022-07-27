@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "config": "^1.31.0",
+    "next-config": "^0.1.0"
+  }
+}
