@@ -4,12 +4,12 @@
 // It should include an h1 with the app name 
 
 import React from 'react';
-import styles from '../styles/NavBar.module.css'
+import styles from '../styles/navbar.module.css'
 
 export function NavBar() {
 
   return (
-    <div>
+    <div className={styles.div}>
       <h1>SEASONAL</h1>
       {/* burger menu */}
     </div>
