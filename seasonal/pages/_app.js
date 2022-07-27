@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import { SearchResultsProvider } from "../context/search.js";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <SearchResultsProvider>
+      <Component {...pageProps} />
+    </SearchResultsProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
