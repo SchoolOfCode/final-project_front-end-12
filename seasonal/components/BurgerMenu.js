@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import styles from '../styles/burger-menu.module.css';
+import styles from '../styles/BurgerMenu.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -16,7 +16,7 @@ export function BurgerMenu() {
       
       {dropdown &&
         <div className={styles.dropdown}> 
-          <Link href="/aboutPage">About Page</Link>
+          <Link href="/about">About</Link>
         </div>
       }
     </>

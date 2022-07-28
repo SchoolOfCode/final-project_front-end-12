@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { NavBar } from "../components/navbar";
-import { Searchbar } from "../components/Searchbar.js";
+import { NavBar } from "../components/NavBar.js";
+import { SearchBar } from "../components/SearchBar.js";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       </main>
       <footer className={styles.footer}>
         THIS IS WHERE THE SEARCH BAR WILL GO!
-        <Searchbar />
+        <SearchBar />
       </footer>
     </div>
   );

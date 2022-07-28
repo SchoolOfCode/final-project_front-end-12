@@ -1,8 +1,8 @@
 import { useState } from "react";
-import styles from "../styles/Searchbar.module.css";
+import styles from "../styles/SearchBar.module.css";
 import { useSearchContext } from "../context/search.js";
 
-export function Searchbar() {
+export function SearchBar() {
   const [searchResults, setSearchResults] = useSearchContext();
   const [searchText, setSearchText] = useState("");
 

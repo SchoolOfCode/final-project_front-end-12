@@ -4,8 +4,8 @@
 // It should include an h1 with the app name 
 
 import React from 'react';
-import styles from '../styles/navbar.module.css'
-import { BurgerMenu } from './burgerMenu.js';
+import styles from '../styles/NavBar.module.css'
+import { BurgerMenu } from './BurgerMenu.js';
 import Link from 'next/link'
 
 

@@ -1,11 +1,11 @@
 import React from "react";
 
 
-export default function SingleItemPage() {
+export default function About() {
 
     return (
         <div>
-        <h1>SingleItemPage!</h1>
+        <h1>About page!</h1>
    
         </div>
     )
