@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Button.module.css";
+import styles from "../styles/Button.module.css"; 
 // import Link from "next/link";
 
 //Plan
@@ -8,12 +8,12 @@ import styles from "../styles/Button.module.css";
 // Button Styling needs to be a variable that follows the seasons.
 
 export default function Button({text, url}) {
+  
   return (
     // <Link >
     <a href={url} target="_blank">
-    <button className={styles.button}>{text}</button>
+    <button className={styles.button} >{text}</button>
     </a>
     // </Link>
   )
 }
-
