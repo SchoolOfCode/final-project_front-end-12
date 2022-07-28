@@ -1,0 +1,50 @@
+.container {
+  width: 80%;
+  background: #fff;
+  margin: 5% auto;
+  padding: 5%;
+  color: #000;
+  border: 1px solid red;
+  border-radius: 4px;
+}
+
+.header {
+  text-align: center;
+}
+
+.months {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+}
+
+.months > li {
+  background: pink;
+  padding: 0px 10px;
+}
+
+.foodTags {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.foodTags > li {
+  background: green;
+  padding: 0px 10px;
+}
+
+.descriptionContainer {
+  display: flex;
+}
+
+.mainImage {
+  display: inline;
+  vertical-align: top;
+}
+
+.mainDescription {
+  display: inline;
+}
