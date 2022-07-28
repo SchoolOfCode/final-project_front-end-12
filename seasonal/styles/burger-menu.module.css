@@ -1,3 +1,10 @@
+.dropdown{
+  background-color: blue;
+  position: absolute;
+  display: flex;
+  top: 100px;
+
+}
 .menu {
   align-self: flex-end;
   padding-right: 5px;
