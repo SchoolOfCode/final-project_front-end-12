@@ -1,11 +1,15 @@
 .div {
-  background: rgb(200, 204, 200);
+  background: rgb(231, 231, 231);
   display: flex;
   justify-content: center;
   align-items: center;
   position: center;
+  height: 1vh;
 }
+.title{
+  padding: 0px;
+  margin: 0px, 0px, 0px, 0px;
 
-.div h1 {
-  background-color: rgba(235, 108, 214, 0.89);
+
+
 }
