@@ -1,12 +1,5 @@
-import React from "react";
-
+import Card from "../components/Card.js";
 
 export default function Item() {
-
-    return (
-        <div>
-        <h1> This is where the individual item will be later</h1>
-   
-        </div>
-    )
+  return <Card />;
 }
