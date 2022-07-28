@@ -9,9 +9,47 @@ export function Searchbar() {
 
 //changes here- handleClick need to take in the value of the select and perform an if check 
 
-
-
 async function handleClick() {
+
+
+ var letters = /^[A-Za-z]+$/;
+if(searchText.match(letters)){
+
+  if (selectValue==='Month'){
+   let searchString = "https://seasonality-server-new.herokuapp.com/produce";
+    let modifiedMonth = searchText.slice(0, 3);
+    const data = await fetch(`${searchString}?month=${modifiedMonth}`);
+    let result = await data.json();
+    console.log(result);
+    setSearchResults(result.payload);
+    console.log(`this is the search results console log: ${searchResults}`);
+  }
+  else if(selectValue==='Item'){
+    let searchString = "https://seasonality-server-new.herokuapp.com/produce";
+    const data = await fetch(`${searchString}?item=${searchText}`);
+    let result = await data.json();
+    console.log(result);
+    setSearchResults(result.payload);
+    console.log(`this is the search results console log: ${searchResults}`);
+  }
+  else if (selectValue===''){
+    let searchString = "https://seasonality-server-new.herokuapp.com/produce";
+    const data = await fetch(`${searchString}?item=${searchText}`);
+    let result = await data.json();
+    console.log(result);
+    setSearchResults(result.payload);
+    console.log(`this is the search results console log: ${searchResults}`);
+   
+  }}
+else{alert("Please enter a viable search");}
+
+  }
+
+
+
+
+
+/* async function handleClick() {
 
 if (selectValue==='Month'){
  let searchString = "https://seasonality-server-new.herokuapp.com/produce";
@@ -30,10 +68,16 @@ else if(selectValue==='Item'){
   setSearchResults(result.payload);
   console.log(`this is the search results console log: ${searchResults}`);
 }
-
+else if (selectValue===''){
+  let searchString = "https://seasonality-server-new.herokuapp.com/produce";
+  const data = await fetch(`${searchString}?item=${searchText}`);
+  let result = await data.json();
+  console.log(result);
+  setSearchResults(result.payload);
+  console.log(`this is the search results console log: ${searchResults}`);
  
 }
-
+} */
 
 
 
@@ -53,6 +97,8 @@ else if(selectValue==='Item'){
     console.log(searchText);
   }
 
+
+  
   return (
     <form>
       <label for="searchInput">
@@ -104,3 +150,7 @@ TO DO NEXT
 // look at search by item and search by month 
 // understand where the value is being passed to 
 // onChange select e.target.value
+// when there's no selection made we just run get item
+
+
+//error handling is horrific but kind of works?
