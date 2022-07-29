@@ -5,14 +5,6 @@
   margin: 3px;
 }
 
-@keyframes slide-top {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100px);
-  }
-}
 
 .dropdown {
   background-color: rgb(243, 169, 91);
@@ -27,6 +19,7 @@
   animation: scale-up-ver-top 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
+/* Animation for dropdown */
 @keyframes scale-up-ver-top {
   0% {
     transform: scaleY(0.4);
