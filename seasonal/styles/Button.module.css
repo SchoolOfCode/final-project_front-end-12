@@ -8,11 +8,13 @@
     text-align: center;
     font-size: 18px;
     letter-spacing: 0.1rem;
-    color: #442A06;
+    color: black;
     background: linear-gradient(120deg, #71C7AE 0%, #71C791 100%);
     border-radius: 5px;
      transition-duration: 0.4s; 
 }
+
+
 
  
 
@@ -21,15 +23,24 @@
  
   
 
-/* .button {
+.button {
     background-color:green;
     transition-duration: 0.4s;
-  }  */
+  } 
   
   .button:hover {
-    background:linear-gradient(120deg, #71C7AE 50%,black 50%);
+    background:linear-gradient(120deg, #71C7AE 50%,#638179);
     color: white;
   }
+  .button:hover{
+    color: white;
+    cursor: pointer;
+  }
+
+ 
+  
+
+
 
 
 /*  we want a colour animation happening with an onClick
