@@ -1,55 +1,55 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles/SearchBar.module.css";
 import { useSearchContext } from "../context/search.js";
+import { useRouter } from "next/router";
 
 export function SearchBar() {
   const [searchResults, setSearchResults] = useSearchContext();
   const [searchText, setSearchText] = useState("");
   const [selectValue, setSelectValue] = useState("");
+  const router = useRouter();
 
-//changes here- handleClick need to take in the value of the select and perform an if check 
+  //changes here- handleClick need to take in the value of the select and perform an if check
 
-async function handleClick() {
+  async function handleClick() {
+    var letters = /^[A-Za-z]+$/;
+    if (searchText.match(letters)) {
+      if (selectValue === "Month") {
+        let searchString =
+          "https://seasonality-server-new.herokuapp.com/produce";
+        let modifiedMonth = searchText.slice(0, 3);
+        const data = await fetch(`${searchString}?month=${modifiedMonth}`);
+        let result = await data.json();
+        console.log(result);
+        setSearchResults(result.payload);
+        console.log(`this is the search results console log: ${searchResults}`);
+      } else if (selectValue === "Item") {
+        router.push({ pathname: "/item", query: { food: searchText } });
+        /* let searchString =
+          "https://seasonality-server-new.herokuapp.com/produce";
+        const data = await fetch(`${searchString}?item=${searchText}`);
+        let result = await data.json();
+        console.log(result);
+        setSearchResults(result.payload);
+        console.log(`this is the search results console log: ${searchResults}`);
+        setTimeout(() => {
 
-
- var letters = /^[A-Za-z]+$/;
-if(searchText.match(letters)){
-
-  if (selectValue==='Month'){
-   let searchString = "https://seasonality-server-new.herokuapp.com/produce";
-    let modifiedMonth = searchText.slice(0, 3);
-    const data = await fetch(`${searchString}?month=${modifiedMonth}`);
-    let result = await data.json();
-    console.log(result);
-    setSearchResults(result.payload);
-    console.log(`this is the search results console log: ${searchResults}`);
+        }, 1000); */
+      } else if (selectValue === "") {
+        let searchString =
+          "https://seasonality-server-new.herokuapp.com/produce";
+        const data = await fetch(`${searchString}?item=${searchText}`);
+        let result = await data.json();
+        console.log(result);
+        setSearchResults(result.payload);
+        console.log(`this is the search results console log: ${searchResults}`);
+      }
+    } else {
+      alert("Please enter a viable search");
+    }
   }
-  else if(selectValue==='Item'){
-    let searchString = "https://seasonality-server-new.herokuapp.com/produce";
-    const data = await fetch(`${searchString}?item=${searchText}`);
-    let result = await data.json();
-    console.log(result);
-    setSearchResults(result.payload);
-    console.log(`this is the search results console log: ${searchResults}`);
-  }
-  else if (selectValue===''){
-    let searchString = "https://seasonality-server-new.herokuapp.com/produce";
-    const data = await fetch(`${searchString}?item=${searchText}`);
-    let result = await data.json();
-    console.log(result);
-    setSearchResults(result.payload);
-    console.log(`this is the search results console log: ${searchResults}`);
-   
-  }}
-else{alert("Please enter a viable search");}
 
-  }
-
-
-
-
-
-/* async function handleClick() {
+  /* async function handleClick() {
 
 if (selectValue==='Month'){
  let searchString = "https://seasonality-server-new.herokuapp.com/produce";
@@ -79,9 +79,7 @@ else if (selectValue===''){
 }
 } */
 
-
-
-/* 
+  /* 
   async function handleClick() {
     let searchString = "https://seasonality-server-new.herokuapp.com/produce";
     let modifiedMonth = searchText.slice(0, 3);
@@ -97,30 +95,37 @@ else if (selectValue===''){
     console.log(searchText);
   }
 
-
-  
   return (
     <form>
-      <label for="searchInput">
+      <label for='searchInput'>
         <input
-          type="text"
-          placeholder="Searchbar"
-          id="searchInput"
-          pattern="[a-zA-Z]"
-          title="Please use letters only!"
+          type='text'
+          placeholder='Searchbar'
+          id='searchInput'
+          pattern='[a-zA-Z]'
+          title='Please use letters only!'
           onChange={handleChange}
         />
       </label>
-      <button type="submit" onClick={handleClick}>
+      <button type='submit' onClick={handleClick}>
         Submit
       </button>
-      <label for="searchDropdown"> 
-        <select name="searchDropdown" id="searchDropdown" onChange={(e)=>{setSelectValue(e.target.value); console.log(selectValue)}}>
-        <option value="" disabled selected hidden>Filter by Month or item</option>
-        <option value="Month">Month</option>
-        <option value="Item">Item</option>
+      <label for='searchDropdown'>
+        <select
+          name='searchDropdown'
+          id='searchDropdown'
+          onChange={(e) => {
+            setSelectValue(e.target.value);
+            console.log(selectValue);
+          }}
+        >
+          <option value='' disabled selected hidden>
+            Filter by Month or item
+          </option>
+          <option value='Month'>Month</option>
+          <option value='Item'>Item</option>
         </select>
-      </label>   
+      </label>
     </form>
   );
 }
@@ -145,12 +150,11 @@ TO DO NEXT
 - TODO: Can't search by food item at the moment.
 */
 
-// Plan 
+// Plan
 // making a drop down using the select - drop down menu
-// look at search by item and search by month 
-// understand where the value is being passed to 
+// look at search by item and search by month
+// understand where the value is being passed to
 // onChange select e.target.value
 // when there's no selection made we just run get item
-
 
 //error handling is horrific but kind of works?
