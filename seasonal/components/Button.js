@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/Button.module.css"; 
 import Link from "next/link";
-
+import { useRouter } from 'next/router'
 //Plan
 // Button needs to be clickable and take us to {prop} url.
 // Button text needs to be a {prop}
@@ -11,13 +11,23 @@ import Link from "next/link";
 // the href 
 
 
-export default function Button({text, url}) {
+export default function Button({text}) {
   
+  
+const router = useRouter()
+
+
+
+
+function handleClick(){
+router.push({pathname:'/item', query:{food:text}})
+}
+
   return (
-    <Link href={url}>
+  
     <a className={styles.link}>
-    <button className={styles.button}>{text}</button>
+    <button className={styles.button} onClick={handleClick}>{text}</button>
     </a>
-   </Link>
+
   )
 }
