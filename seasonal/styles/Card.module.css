@@ -4,7 +4,7 @@
   margin: 5% auto;
   padding: 5%;
   color: #000;
-  border: 1px solid red;
+  border: 1px solid #000;
   border-radius: 4px;
 }
 
@@ -15,36 +15,64 @@
 .months {
   list-style-type: none;
   margin: 0;
-  padding: 10px;
+  padding: 0 1rem;
   display: flex;
+  flex-direction: row;
+  justify-content: safe center;
+  flex-wrap: wrap;
 }
 
 .months > li {
-  background: pink;
+  background: darkseagreen;
+  line-height: 200%;
   padding: 0px 10px;
+  border-radius: 4px;
+  margin: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 .foodTags {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0 1rem;
   display: flex;
+  flex-direction: row;
+  justify-content: safe center;
+  flex-wrap: wrap;
 }
 
 .foodTags > li {
-  background: green;
+  background: cornflowerblue;
+  line-height: 200%;
   padding: 0px 10px;
+  border-radius: 4px;
+  margin: 0.5rem;
+  font-size: 0.8rem;
 }
 
-.descriptionContainer {
-  display: flex;
+.imageWrapper {
+  width: 100%;
+  text-align: center;
 }
 
 .mainImage {
-  display: inline;
-  vertical-align: top;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .mainDescription {
-  display: inline;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  line-height: 150%;
 }
+
+/* PLAN 
+
+- TABLED FOR LATER. We want the mainDescription to be able to resize and flow onto new lines.
+
+- TABLED FOR LATER. But we do not want the mainImage to responsively change dimensions: we only want it to change size, or become a single-line or block element, on resize of viewport.
+
+- We want each tag in the foodTags to be a different colour. Relevant to its value? Should this be set in the data object, or should we change the ul to an ol, and always set those values in the same position, and just make sure the same position gets the same colour tag each time? */
