@@ -11,17 +11,16 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>What is in season?</title>
+        <title>Seasonal</title>
         <meta name="description" content="Seasonal Foods" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
       <main className={styles.main}>
-        <h1 className={styles.title}>Hello World!</h1>
+        <h3 className={styles.title}>What's in season?</h3>
         <Button text={text}/>
       </main>
       <footer className={styles.footer}>
-        THIS IS WHERE THE SEARCH BAR WILL GO!
         <SearchBar />
       </footer>
     </div>

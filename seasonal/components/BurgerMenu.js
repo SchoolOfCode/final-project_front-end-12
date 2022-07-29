@@ -18,6 +18,7 @@ export function BurgerMenu() {
       
       {dropdown &&
           <div className={styles.dropdown}>
+              <Link href="/">Home</Link>
               <Link href="/about">About</Link>
           </div>
       }
