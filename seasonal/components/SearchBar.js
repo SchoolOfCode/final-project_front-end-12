@@ -9,86 +9,21 @@ export function SearchBar() {
   const [selectValue, setSelectValue] = useState("");
   const router = useRouter();
 
-  //changes here- handleClick need to take in the value of the select and perform an if check
-
-  async function handleClick() {
+  async function handleClick(e) {
+    e.preventDefault();
     var letters = /^[A-Za-z]+$/;
     if (searchText.match(letters)) {
       if (selectValue === "Month") {
-        let searchString =
-          "https://seasonality-server-new.herokuapp.com/produce";
-        let modifiedMonth = searchText.slice(0, 3);
-        const data = await fetch(`${searchString}?month=${modifiedMonth}`);
-        let result = await data.json();
-        console.log(result);
-        setSearchResults(result.payload);
-        console.log(`this is the search results console log: ${searchResults}`);
+        router.push({ pathname: "/results", query: { month: searchText } });
       } else if (selectValue === "Item") {
         router.push({ pathname: "/item", query: { food: searchText } });
-        /* let searchString =
-          "https://seasonality-server-new.herokuapp.com/produce";
-        const data = await fetch(`${searchString}?item=${searchText}`);
-        let result = await data.json();
-        console.log(result);
-        setSearchResults(result.payload);
-        console.log(`this is the search results console log: ${searchResults}`);
-        setTimeout(() => {
-
-        }, 1000); */
       } else if (selectValue === "") {
-        let searchString =
-          "https://seasonality-server-new.herokuapp.com/produce";
-        const data = await fetch(`${searchString}?item=${searchText}`);
-        let result = await data.json();
-        console.log(result);
-        setSearchResults(result.payload);
-        console.log(`this is the search results console log: ${searchResults}`);
+        alert("Please select to search by month or item");
+      } else {
+        alert("Please use letters only in your search");
       }
-    } else {
-      alert("Please enter a viable search");
     }
   }
-
-  /* async function handleClick() {
-
-if (selectValue==='Month'){
- let searchString = "https://seasonality-server-new.herokuapp.com/produce";
-  let modifiedMonth = searchText.slice(0, 3);
-  const data = await fetch(`${searchString}?month=${modifiedMonth}`);
-  let result = await data.json();
-  console.log(result);
-  setSearchResults(result.payload);
-  console.log(`this is the search results console log: ${searchResults}`);
-}
-else if(selectValue==='Item'){
-  let searchString = "https://seasonality-server-new.herokuapp.com/produce";
-  const data = await fetch(`${searchString}?item=${searchText}`);
-  let result = await data.json();
-  console.log(result);
-  setSearchResults(result.payload);
-  console.log(`this is the search results console log: ${searchResults}`);
-}
-else if (selectValue===''){
-  let searchString = "https://seasonality-server-new.herokuapp.com/produce";
-  const data = await fetch(`${searchString}?item=${searchText}`);
-  let result = await data.json();
-  console.log(result);
-  setSearchResults(result.payload);
-  console.log(`this is the search results console log: ${searchResults}`);
- 
-}
-} */
-
-  /* 
-  async function handleClick() {
-    let searchString = "https://seasonality-server-new.herokuapp.com/produce";
-    let modifiedMonth = searchText.slice(0, 3);
-    const data = await fetch(`${searchString}?month=${modifiedMonth}`);
-    let result = await data.json();
-    console.log(result);
-    setSearchResults(result.payload);
-    console.log(`this is the search results console log: ${searchResults}`);
-  } */
 
   function handleChange(e) {
     setSearchText(e.target.value);
@@ -102,26 +37,28 @@ else if (selectValue===''){
           type='text'
           placeholder='Searchbar'
           id='searchInput'
-          pattern='[a-zA-Z]'
-          title='Please use letters only!'
           onChange={handleChange}
         />
       </label>
-      <button type='submit' onClick={handleClick}>
+      <button
+        type='submit'
+        onClick={(e) => {
+          handleClick(e);
+        }}
+      >
         Submit
       </button>
       <label htmlFor='searchDropdown'>
         <select
           name='searchDropdown'
           id='searchDropdown'
+          defaultValue=''
           onChange={(e) => {
             setSelectValue(e.target.value);
             console.log(selectValue);
           }}
         >
-          <option value='' disabled defaultValue hidden>
-            Filter by Month or item
-          </option>
+          <option value=''>Filter by Month or item</option>
           <option value='Month'>Month</option>
           <option value='Item'>Item</option>
         </select>

@@ -1,12 +1,36 @@
 import React from "react";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
+import Button from "../components/Button.js";
 
+const searchString = "https://seasonality-server-new.herokuapp.com/produce";
 
 export default function Results() {
+  const router = useRouter();
+  const [searchResults, setSearchResults] = useState({ payload: [] });
 
-    return (
-        <div>
-        <h1> This is where the list of items will be later! </h1>
-   
-        </div>
-    )
+  useEffect(() => {
+    const fetchData = async () => {
+      console.log(JSON.stringify(router.query));
+      let modifiedMonth = router.query.month.slice(0, 3);
+      const data = await fetch(`${searchString}?month=${modifiedMonth}`);
+      let result = await data.json();
+      setSearchResults(result);
+      console.log(
+        `this is the search results console log: ${JSON.stringify(result)}`
+      );
+    };
+    if (!router.isReady) return;
+    fetchData()
+      // make sure to catch any error
+      .catch(console.error);
+  }, [router.isReady]);
+
+  if (searchResults.payload.length > 0) {
+    return searchResults.payload.map((result) => {
+      return <Button text={result.name} />;
+    });
+  } else {
+    return <p>Loading</p>;
+  }
 }
