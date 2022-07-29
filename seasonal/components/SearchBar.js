@@ -97,7 +97,7 @@ else if (selectValue===''){
 
   return (
     <form>
-      <label for='searchInput'>
+      <label htmlFor='searchInput'>
         <input
           type='text'
           placeholder='Searchbar'
@@ -110,7 +110,7 @@ else if (selectValue===''){
       <button type='submit' onClick={handleClick}>
         Submit
       </button>
-      <label for='searchDropdown'>
+      <label htmlFor='searchDropdown'>
         <select
           name='searchDropdown'
           id='searchDropdown'
@@ -119,7 +119,7 @@ else if (selectValue===''){
             console.log(selectValue);
           }}
         >
-          <option value='' disabled selected hidden>
+          <option value='' disabled defaultValue hidden>
             Filter by Month or item
           </option>
           <option value='Month'>Month</option>

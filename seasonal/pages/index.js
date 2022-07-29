@@ -4,8 +4,8 @@ import { NavBar } from "../components/NavBar.js";
 import { SearchBar } from "../components/SearchBar.js";
 import Button from '../components/Button';
 
-    let text = "Aubergine";
-    let url = '/item'
+ let text = "Aubergine";
+
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       <NavBar />
       <main className={styles.main}>
         <h1 className={styles.title}>Hello World!</h1>
-        <Button text={text} url={url} />
+        <Button text={text}/>
       </main>
       <footer className={styles.footer}>
         THIS IS WHERE THE SEARCH BAR WILL GO!
