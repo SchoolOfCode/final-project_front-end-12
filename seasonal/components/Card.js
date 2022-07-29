@@ -9,12 +9,19 @@ const exampleState = {
     {
       allergens: "NA",
       description:
-        "This is an example entry, and this is an example description.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       family: "Rose",
       foodtype: "Pome",
       id: 1,
       imageurl: "https://via.placeholder.com/200x200",
-      month: ["Jan", "Feb", "Sep", "Oct", "Nov", "Dec"],
+      month: [
+        "January",
+        "February",
+        "September",
+        "October",
+        "November",
+        "December",
+      ],
       name: "Apple",
       usedas: "Fruit",
     },
@@ -33,19 +40,29 @@ export default function Card() {
         })}
       </ol>
       <ul className={styles.foodTags}>
-        <li>Family: {exampleState.payload[0].family}</li>
-        <li>Food Type: {exampleState.payload[0].foodtype}</li>
-        <li>Used As: {exampleState.payload[0].usedas}</li>
-        <li>Allergens: {exampleState.payload[0].allergens}</li>
+        <li>
+          <i>Family</i> <b>{exampleState.payload[0].family}</b>
+        </li>
+        <li>
+          <i>Food Type</i> <b>{exampleState.payload[0].foodtype}</b>
+        </li>
+        <li>
+          <i>Used As</i> <b>{exampleState.payload[0].usedas}</b>
+        </li>
+        <li>
+          <i>Allergens</i> <b>{exampleState.payload[0].allergens}</b>
+        </li>
       </ul>
       <div className={styles.descriptionContainer}>
-        <Image
-          src="https://res.cloudinary.com/dvpop7e9w/image/upload/v1659018752/cld-sample-4.jpg"
-          alt="Image of food item"
-          width={300}
-          height={200}
-          className={styles.mainImage}
-        />
+        <div className={styles.imageWrapper}>
+          <Image
+            src="https://res.cloudinary.com/dvpop7e9w/image/upload/v1659018752/cld-sample-4.jpg"
+            alt="Image of food item"
+            width={600}
+            height={400}
+            className={styles.mainImage}
+          />
+        </div>
         <p className={styles.mainDescription}>
           {exampleState.payload[0].description}
         </p>
