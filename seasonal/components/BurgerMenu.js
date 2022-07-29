@@ -12,12 +12,14 @@ export function BurgerMenu() {
 
   return(
     <>
-      <Image src='/burgerMenu.png' onClick={toggleDropdown} className={styles.menu} alt='burger menu' height={50} width={50} />
+      <div className={styles.wrapper}>
+      <Image src='/burgerMenu.png' onClick={toggleDropdown} alt='burger menu' height={40} width={40} className={styles.menu} />
+      </div>
       
       {dropdown &&
-        <div className={styles.dropdown}> 
-          <Link href="/about">About</Link>
-        </div>
+          <div className={styles.dropdown}>
+              <Link href="/about">About</Link>
+          </div>
       }
     </>
   )
