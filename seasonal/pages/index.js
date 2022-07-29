@@ -5,7 +5,7 @@ import { SearchBar } from "../components/SearchBar.js";
 import Button from '../components/Button';
 
     let text = "Aubergine";
-    let url = "https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/bakedstuffedaubergin_71986_16x9.jpg";
+    let url = '/item'
 
 export default function Home() {
   return (

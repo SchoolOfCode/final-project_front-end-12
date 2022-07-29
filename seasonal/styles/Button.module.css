@@ -1,4 +1,4 @@
-.button{
+ .button{
 
     display: inline-block;
     height: 50px;
@@ -9,16 +9,30 @@
     font-size: 18px;
     letter-spacing: 0.1rem;
     color: #442A06;
-    background-image: linear-gradient(120deg, #71C7AE 0%, #71C791 100%);
+    background: linear-gradient(120deg, #71C7AE 0%, #71C791 100%);
     border-radius: 5px;
-    transition: 1.5s;
-
-};
-
-.cont2 {
-    background-image: black;
+     transition-duration: 0.4s; 
 }
-/* 
-.a:hover.button{
-    background-image: linear-gradient(120deg, #71C7AE 50%, #71C791 50%); 
-} */
+
+ 
+
+/* .button:hover {
+    background:black  /* linear-gradient(120deg, #71C7AE 50%, #71C791 50%) */; 
+ 
+  
+
+/* .button {
+    background-color:green;
+    transition-duration: 0.4s;
+  }  */
+  
+  .button:hover {
+    background:linear-gradient(120deg, #71C7AE 50%,black 50%);
+    color: white;
+  }
+
+
+/*  we want a colour animation happening with an onClick
+problem is the redirect, have a look atr the link firing on key release
+so on key down - send change colour 
+on key up -send to link    */
