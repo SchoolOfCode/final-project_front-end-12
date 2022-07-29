@@ -12,3 +12,21 @@
   width: 100vw;
   text-align: center;
 }
+
+
+@media screen and (max-width: 600px) {
+  .div {
+    background: rgb(231, 231, 231);
+    height: 7vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .title {
+    margin: 0;
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+  }
+}
