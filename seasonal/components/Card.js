@@ -70,7 +70,7 @@ export default function Card() {
         <div className={styles.descriptionContainer}>
           <Image
             src='https://res.cloudinary.com/dvpop7e9w/image/upload/v1659018752/cld-sample-4.jpg'
-            alt='Image of food item'
+            alt={currentItem.payload[0].name}
             width={300}
             height={200}
             className={styles.mainImage}
