@@ -1,15 +1,14 @@
 .div {
   background: rgb(231, 231, 231);
+  height: 7vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  position: center;
-  height: 1vh;
 }
-.title{
-  padding: 0px;
-  margin: 0px, 0px, 0px, 0px;
 
-
-
+.title {
+  margin: 0;
+  position: absolute;
+  width: 100vw;
+  text-align: center;
 }

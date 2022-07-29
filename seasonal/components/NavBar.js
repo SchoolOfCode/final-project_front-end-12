@@ -6,7 +6,7 @@
 import React from 'react';
 import styles from '../styles/NavBar.module.css'
 import { BurgerMenu } from './BurgerMenu.js';
-import Link from 'next/link'
+// import Link from 'next/link'
 
 
 export function NavBar() {
@@ -17,7 +17,7 @@ export function NavBar() {
       {/* <Link href="/listPage" className={styles.navLink}>List Page</Link>
       <Link href="/aboutPage" className={styles.navLink}>About Page</Link>
       <Link href="/singleItemPage" className={styles.navLink}>SingleItemPage</Link> */}
-      <BurgerMenu/>
+      <BurgerMenu className={styles.menu}/>
       
     </div>
   )
