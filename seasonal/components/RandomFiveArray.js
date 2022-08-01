@@ -14,7 +14,7 @@ const [timeStamp, setTimeStamp]=useState('')
 // we want to find out how to get timestamp data from a user when they press on teh site
 // we need to see what format that is in and how we pass it to the fetch request 
 
-let fetchString = "https://seasonality-server-new.herokuapp.com/produce/random?month="
+let fetchString = "https://seasonality-server-new.herokuapp.com/produce/random"
 
 
  useEffect(() => {
