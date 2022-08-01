@@ -27,7 +27,7 @@ useEffect(() => {
         `this is the search results console log: ${JSON.stringify(result)}`
       );
    
-  },[Date()]);
+  },[timeStamp]);
 
 
  return randomArray.payload.map((result) => {
