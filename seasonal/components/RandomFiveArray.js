@@ -26,7 +26,7 @@ let fetchString = "https://seasonality-server-new.herokuapp.com/produce/random?m
      let longMonth= today.toLocaleString('default', { month: 'long' })
      console.log(longMonth)
      setTimeStamp(longMonth)
-     console.log(`this is a ${timeStamp}`)
+     console.log(`this is today's month-  ${timeStamp}`)
      
      const data = await fetch(`${fetchString}?month=${timeStamp}`);
      let result = await data.json();
