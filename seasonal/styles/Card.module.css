@@ -1,3 +1,17 @@
+.footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  flex-direction: row;
+  width: 100vw;
+  height: 7vh;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+}
+
+
 .container {
   width: 80%;
   background: #fff;

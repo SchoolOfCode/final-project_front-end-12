@@ -6,6 +6,19 @@
   align-items: center;
 }
 
+.link {
+  z-index: 2;
+  text-decoration: none;
+  color: inherit;
+  font-size: calc(13px + 2vmin);
+  padding-right: 15px;
+  transition: ease-in-out, .25s;
+
+}
+.link:hover {
+  color: rgb(243, 169, 91);
+}
+
 .title {
   margin: 0;
   position: absolute;
@@ -21,6 +34,10 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+  }
+
+  .link {
+    display: none;
   }
 
   .title {

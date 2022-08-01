@@ -10,7 +10,12 @@ export function NavBar() {
     <div className={styles.div}>
       <h1 className={styles.title}>SEASONAL</h1>
       
-      <Link href="/about" className={styles.links}>About</Link>
+      <Link href="/">
+        <a className={styles.link}>Home</a>
+      </Link>
+      <Link href="/about">
+        <a className={styles.link}>About</a>
+      </Link>
 
       <BurgerMenu className={styles.menu}/>
       

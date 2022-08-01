@@ -51,6 +51,8 @@
   .dropdown a{
     transition: ease-in-out, .25s;
     font-size: calc(15px + 2vmin);
+    text-decoration: none;
+    color: inherit;
   }
   .dropdown a:hover {
     color: white;
