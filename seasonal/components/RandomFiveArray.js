@@ -14,8 +14,11 @@ const [timeStamp, setTimeStamp]=useState('')
 
 
 useEffect(() => {
+    let date= Date()
+    let month= date.slice(4,7)
+    setTimeStamp(month)
     const fetchData = async () => {
-     // here we want to pass in the date time stamp 
+     // here we want to the fetch string the month 
         
       const data = await fetch(``);
       let result = await data.json();
@@ -24,7 +27,7 @@ useEffect(() => {
         `this is the search results console log: ${JSON.stringify(result)}`
       );
    
-  },[timeStamp]);
+  },[Date()]);
 
 
  return randomArray.payload.map((result) => {
