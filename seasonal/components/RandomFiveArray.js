@@ -16,29 +16,32 @@ const [timeStamp, setTimeStamp]=useState('')
 
 let fetchString = "https://seasonality-server-new.herokuapp.com/produce/random"
 
+function getMonth(){
+const today= new Date()
+let longMonth= today.toLocaleString('default', { month: 'long' })
+console.log(longMonth)
+setTimeStamp(longMonth)
+}
 
- useEffect(() => {
 
-    const fetchData = async () => {
-     // here we want to the fetch string the month 
 
-     const today= new Date()
-     let longMonth= today.toLocaleString('default', { month: 'long' })
-     console.log(longMonth)
-     setTimeStamp(longMonth)
+useEffect(() => {
+const fetchData = async () => {    
      console.log(`this is today's month-  ${timeStamp}`)
-     
      const data = await fetch(`${fetchString}?month=${timeStamp}`);
      let result = await data.json();
      setRandomArray(result);
      console.log(
         `this is the search results console log: ${JSON.stringify(result)}`);
-    
-}
+      }
 
-fetchData()
+if(timeStamp===''){
+  getMonth()
+}
+if(timeStamp==='') return 
+ fetchData()
    
-  },[]); 
+  },[timeStamp]); 
 
   if (randomArray.payload.length > 0) {
     return randomArray.payload.map((result) => {
