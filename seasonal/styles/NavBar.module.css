@@ -1,5 +1,5 @@
 .div {
-  background: rgb(231, 231, 231);
+  background-color: var(--accent-two);
   height: 7vh;
   display: flex;
   justify-content: flex-end;
@@ -12,8 +12,8 @@
   color: inherit;
   font-size: calc(13px + 2vmin);
   padding-right: 15px;
-  transition: ease-in-out, .25s;
-
+  transition: ease-in-out, 0.25s;
+  color: var(--main-lightest);
 }
 .link:hover {
   color: rgb(243, 169, 91);
@@ -24,12 +24,12 @@
   position: absolute;
   width: 100vw;
   text-align: center;
+  color: var(--main-lightest);
 }
-
 
 @media screen and (max-width: 600px) {
   .div {
-    background: rgb(231, 231, 231);
+    background-color: var(--accent-two);
     height: 7vh;
     display: flex;
     justify-content: flex-end;
