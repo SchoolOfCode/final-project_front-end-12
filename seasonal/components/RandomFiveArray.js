@@ -14,18 +14,24 @@ const [timeStamp, setTimeStamp]=useState('')
 // we want to find out how to get timestamp data from a user when they press on teh site
 // we need to see what format that is in and how we pass it to the fetch request 
 
+let fetchString = "https://seasonality-server-new.herokuapp.com/produce/random?month="
+
+
  useEffect(() => {
-    let date= Date()
-    console.log(date)
-    let month= date.slice(4,7)
-    setTimeStamp(month)
 
     const fetchData = async () => {
      // here we want to the fetch string the month 
-      const data = await fetch(``);
-      let result = await data.json();
-      setRandomArray(result);
-      console.log(
+
+     const today= new Date()
+     let longMonth= today.toLocaleString('default', { month: 'long' })
+     console.log(longMonth)
+     setTimeStamp(longMonth)
+     console.log(`this is a ${timeStamp}`)
+     
+     const data = await fetch(`${fetchString}?month=${timeStamp}`);
+     let result = await data.json();
+     setRandomArray(result);
+     console.log(
         `this is the search results console log: ${JSON.stringify(result)}`);
     
 }
