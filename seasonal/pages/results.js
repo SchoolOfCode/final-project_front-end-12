@@ -12,7 +12,7 @@ export default function Results() {
   useEffect(() => {
     const fetchData = async () => {
       console.log(JSON.stringify(router.query));
-      let modifiedMonth = router.query.month.slice(0, 3);
+      let modifiedMonth = router.query.month;
       const data = await fetch(`${searchString}?month=${modifiedMonth}`);
       let result = await data.json();
       setSearchResults(result);
