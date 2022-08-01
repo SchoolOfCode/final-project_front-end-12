@@ -2,7 +2,11 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { NavBar } from "../components/NavBar.js";
 import { SearchBar } from "../components/SearchBar.js";
-import Button from '../components/Button';
+import { RandomFiveArray } from '../components/RandomFiveArray.js'
+//import Button from '../components/Button';
+
+
+
 
  let text = "Aubergine";
 
@@ -18,7 +22,7 @@ export default function Home() {
       <NavBar />
       <main className={styles.main}>
         <h3 className={styles.title}>What's in season?</h3>
-        <Button text={text}/>
+        <RandomFiveArray/>
       </main>
       <footer className={styles.footer}>
         <SearchBar />
