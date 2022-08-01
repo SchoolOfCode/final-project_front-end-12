@@ -5,30 +5,6 @@ import { useRouter } from "next/router";
 //Import for when using proper state (once it persists on route change)
 import { useSearchContext } from "../context/search.js";
 
-const exampleState = {
-  success: true,
-  payload: [
-    {
-      allergens: "NA",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      family: "Rose",
-      foodtype: "Pome",
-      id: 1,
-      imageurl: "https://via.placeholder.com/200x200",
-      month: [
-        "January",
-        "February",
-        "September",
-        "October",
-        "November",
-        "December",
-      ],
-      name: "Apple",
-      usedas: "Fruit",
-    },
-  ],
-};
 
 const searchString = "https://seasonality-server-new.herokuapp.com/produce";
 
