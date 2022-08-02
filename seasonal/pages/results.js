@@ -18,10 +18,10 @@ return(
       </Head>
   
   <NavBar/>
- <ResultsItem/> 
- <footer className={styles.footer}>
-        <SearchBar />
-      </footer>
+  <ResultsItem/> 
+  <footer className={styles.footer}>
+    <SearchBar />
+  </footer>
  </div>
 )
 

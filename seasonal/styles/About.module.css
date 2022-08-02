@@ -5,6 +5,8 @@
   flex-direction: column;
   align-items: center;
   margin: 0 10vw;
+  padding-top: 48px;
+  padding-bottom: 60px;
 }
 
 .footer {
@@ -23,4 +25,13 @@
 .pagecontainer ul {
   list-style: none;
   padding-left: 0;
+  align-self: flex-start;
+}
+
+.linkSection a:link {
+  color: var(--accent-three);
+}
+
+.linkSection a:visited {
+  color: var(--accent-one);
 }

@@ -24,11 +24,11 @@
   .dropdown {
     background-color: var(--accent-two);
     position: fixed;
+    top: 7vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 7vh;
     height: fit-content;
     padding-top: 2vh;
     padding-bottom: 2vh;
@@ -60,7 +60,7 @@
   }
 
   .dropdown{
-   height: 50vh;
+   height: 100vh;
    gap: 50px;
 
 
