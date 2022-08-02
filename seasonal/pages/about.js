@@ -25,7 +25,7 @@ export default function About() {
                     <li> <a href="https://www.linkedin.com/in/matthew-miller-b38aaa231/" target="_blank">Matthew Miller</a></li> 
                     <li> <a href="https://www.linkedin.com/in/nathanlee94" target="_blank">Nathan Lee</a></li> 
                 </ul>
-                <p>If you'd like to learn more, visit the links available at: *Linktree*</p>
+                <p>If you'd like to learn more, visit the links available at: Linktree goes here</p>
             </div>
             <footer className={styles.footer}>
                 <SearchBar />
