@@ -29,7 +29,7 @@
 .months {
   list-style-type: none;
   margin: 0;
-  padding: 0 1rem;
+  padding: 0 1rem 0.7rem;
   display: flex;
   flex-direction: row;
   justify-content: safe center;
@@ -55,6 +55,7 @@
   justify-content: safe center;
   flex-wrap: wrap;
   font-weight: bold;
+  
 }
 
 
@@ -85,12 +86,10 @@
 }
 
 
-
-
-.imageWrapper {
+/* .imageWrapper {
   width: 100%;
   text-align: center;
-}
+} */
 
 .descriptionContainer{
 display:flex;

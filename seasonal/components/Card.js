@@ -45,12 +45,14 @@ export default function Card() {
         </ul>
         <div className={styles.descriptionContainer}>
           <Image
-            src='https://res.cloudinary.com/dvpop7e9w/image/upload/v1659018752/cld-sample-4.jpg'
+            src='https://res.cloudinary.com/dvpop7e9w/image/upload/v1659451348/banana-open_wi6q55.png'
             alt={currentItem.payload[0].name}
             width={300}
-            height={200}
+            height={300}
             className={styles.mainImage}
           />
+         </div> 
+         <div>
           <p className={styles.mainDescription}>
             {currentItem.payload[0].description}
           </p>
