@@ -1,5 +1,5 @@
 .div {
-  background-color: var(--accent-two);
+  background-color: var(--accent-one);
   height: 7vh;
   display: flex;
   justify-content: flex-end;
@@ -8,28 +8,28 @@
 
 .link {
   z-index: 2;
-  text-decoration: none;
   color: inherit;
-  font-size: calc(13px + 2vmin);
-  padding-right: 15px;
-  transition: ease-in-out, 0.25s;
+  font-size: calc(4px + 2vmin);
+  padding-right: 3rem;
   color: var(--main-lightest);
+  text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+  transition: text-decoration-color 300ms;
 }
 .link:hover {
-  color: rgb(243, 169, 91);
+  text-decoration-color: var(--main-lightest);
 }
 
 .title {
   margin: 0;
   position: absolute;
   width: 100vw;
-  text-align: center;
+  text-align: left;
+  padding-left: 3rem;
   color: var(--main-lightest);
 }
 
 @media screen and (max-width: 600px) {
   .div {
-    background-color: var(--accent-two);
     height: 7vh;
     display: flex;
     justify-content: flex-end;
@@ -45,5 +45,6 @@
     position: absolute;
     width: 100vw;
     text-align: center;
+    padding: 0;
   }
 }
