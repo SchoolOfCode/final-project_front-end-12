@@ -45,10 +45,10 @@ if(timeStamp==='') return
 
   if (randomArray.payload.length > 0) {
     return randomArray.payload.map((result) => {
-      return <Button text={result.name} />;
+      return <Button text={result.name} key={result.id}/>;
     });
   } else {
-    return <p>Hmm, that's strange we know we put something here, please refresh to try again !</p>;
+    return <p>Hmm, that&apos;s strange we know we put something here, please refresh to try again !</p>;
   }
 
 }
