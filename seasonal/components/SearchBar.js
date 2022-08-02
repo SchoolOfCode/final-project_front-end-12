@@ -32,37 +32,42 @@ export function SearchBar() {
 
   return (
     <form>
+      <div className={styles.searchContainer}>
       <label htmlFor='searchInput'>
         <input
           type='text'
-          placeholder='Searchbar'
+          className={styles.searchBar}
           id='searchInput'
           onChange={handleChange}
         />
       </label>
-      <button
-        type='submit'
-        onClick={(e) => {
-          handleClick(e);
-        }}
-      >
-        Submit
-      </button>
       <label htmlFor='searchDropdown'>
         <select
           name='searchDropdown'
           id='searchDropdown'
+          className={styles.dropdown}
           defaultValue=''
           onChange={(e) => {
             setSelectValue(e.target.value);
             console.log(selectValue);
           }}
         >
-          <option value=''>Filter by Month or item</option>
+          <option value=''>Filter by Month or Item</option>
           <option value='Month'>Month</option>
           <option value='Item'>Item</option>
         </select>
       </label>
+      <button
+        id='search-button'
+        type='submit'
+        className={styles.submitButton}
+        onClick={(e) => {
+          handleClick(e);
+        }}
+      >
+        Submit
+      </button>
+      </div>
     </form>
   );
 }

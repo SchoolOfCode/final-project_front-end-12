@@ -1,3 +1,40 @@
-.p {
-  color: red;
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
+
+.searchBar {
+  height: 35px;
+  width: 30vw;
+  border-radius: 5px;
+  border: 2px;
+}
+
+.dropdown {
+  height: 35px;
+  border-radius: 5px;
+  border: 2px;
+}
+
+.submitButton {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--main-lightest);
+  background: var(--accent-one);
+  border: 0px;
+  border-radius: 5px;
+  height: 35px;
+}
+
+.submitButton:hover {
+  background: var(--accent-three);
+  border: 0px;
+  cursor: pointer;
+  transition: linear 0.4s;
+}
+
+/* Don't forget to do a media for mobile */
