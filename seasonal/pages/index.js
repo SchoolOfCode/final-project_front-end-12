@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 import { NavBar } from "../components/NavBar.js";
 import { SearchBar } from "../components/SearchBar.js";
 import { RandomFiveArray } from '../components/RandomFiveArray.js'
-import Button from '../components/Button';
+//import Button from '../components/Button';
 
 
 
@@ -22,7 +22,8 @@ export default function Home() {
       <NavBar />
       <main className={styles.main}>
         <h3 className={styles.title}>What&apos;s in season?</h3>
-        <Button text={text}/>
+        <RandomFiveArray/>
+      {/* //  <Button text={text}/> */}
       </main>
       <footer className={styles.footer}>
         <SearchBar />
