@@ -30,7 +30,7 @@ export function ResultsItem(){
   
     if (searchResults.payload.length > 0) {
       return searchResults.payload.map((result) => {
-        return <Button text={result.name} />;
+        return <Button text={result.name} key={result.id}/>;
       });
     } else {
       return <p>Loading</p>;
