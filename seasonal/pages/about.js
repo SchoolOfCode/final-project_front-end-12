@@ -18,13 +18,14 @@ export default function About() {
                 <p>It isn’t easy to know what’s in season, so Seasonal was created to help people make informed choices about the food they eat. We’ve made finding food in season easier and more accessible. All you have to do is search by month or by a desired food item to see what times of the year food is grown in the UK.</p>
                 <p>Seasonal was made by 12** - a team of junior software developers - for our final project at the School of Code. Our team consists of:</p>
                 <ul>
-                    <li> <a href="">Andy Johnson</a></li> 
+                    <li> <a href="https://www.linkedin.com/in/mult-vit/" target="_blank">Andy Johnson</a></li> 
                     <li> <a href="https://www.linkedin.com/in/fiona-kitchen" target="_blank">Fiona Kitchen</a></li>
                     <li> <a href="https://www.linkedin.com/in/gdarar/" target="_blank">Guiji Darar</a></li> 
                     <li> <a href="https://www.linkedin.com/in/madisonclowe/" target="_blank">Madison Lowe</a></li> 
-                    <li> <a href="" target="_blank">Matthew Miller</a></li> 
+                    <li> <a href="https://www.linkedin.com/in/matthew-miller-b38aaa231/" target="_blank">Matthew Miller</a></li> 
                     <li> <a href="https://www.linkedin.com/in/nathanlee94" target="_blank">Nathan Lee</a></li> 
                 </ul>
+                <p>If you'd like to learn more, visit the links available at: *Linktree*</p>
             </div>
             <footer className={styles.footer}>
                 <SearchBar />
