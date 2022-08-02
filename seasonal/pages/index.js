@@ -21,8 +21,8 @@ export default function Home() {
       </Head>
       <NavBar />
       <main className={styles.main}>
-        <h3 className={styles.title}>What's in season?</h3>
-        <RandomFiveArray/>
+        <h3 className={styles.title}>What&apos;s in season?</h3>
+        <Button text={text}/>
       </main>
       <footer className={styles.footer}>
         <SearchBar />
