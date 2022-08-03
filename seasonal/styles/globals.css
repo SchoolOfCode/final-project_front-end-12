@@ -22,12 +22,3 @@ body {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: var(--main-light);
-    background: var(--main-dark);
-  }
-}
