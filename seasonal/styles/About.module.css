@@ -3,14 +3,28 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin: 0 10vw;
+  align-items: center;
   padding-top: 48px;
   padding-bottom: 60px;
-  text-align: left;
   
 }
+
+.textcontainer {
+  height: fit-content;
+  width: 90vw;
+  padding: 5vw;
+  background-color: var(--main-lightest);
+  border-radius: 7px;
+  border: solid;
+  border-width: 1px;
+  border-color: var(--main-gray);
+  text-align: left;
+}
+
 .pagecontainer h1{
-  align-self: center;
+  text-align: center;
+  padding-bottom: 10px;
+  margin: 0px;
 }
 .footer {
   display: flex;
