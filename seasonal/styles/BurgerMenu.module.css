@@ -22,13 +22,13 @@
   }
 
   .dropdown {
-    background-color: rgb(243, 169, 91);
+    background-color: var(--accent-two);
     position: fixed;
+    top: 7vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 7vh;
     height: fit-content;
     padding-top: 2vh;
     padding-bottom: 2vh;
@@ -47,12 +47,23 @@
       transform-origin: 100% 0%;
     }
   }
-  
+  .closeMenu{
+    margin-top: 20px;
+
+  }
   .dropdown a{
     transition: ease-in-out, .25s;
     font-size: calc(15px + 2vmin);
     text-decoration: none;
     color: inherit;
+
+  }
+
+  .dropdown{
+   height: 100vh;
+   gap: 50px;
+
+
   }
   .dropdown a:hover {
     color: white;

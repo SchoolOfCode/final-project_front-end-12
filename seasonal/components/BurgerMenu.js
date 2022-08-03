@@ -20,6 +20,7 @@ export function BurgerMenu() {
           <div className={styles.dropdown}>
               <Link href="/">Home</Link>
               <Link href="/about">About</Link>
+              <Image src='/close.png' onClick={toggleDropdown} alt='burger menu' height={20} width={20} className={styles.closeMenu} />
           </div>
       }
     </>
