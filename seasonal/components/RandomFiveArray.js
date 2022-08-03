@@ -4,9 +4,10 @@ import { useState, useEffect } from 'react';
 
 
 
-export function RandomFiveArray(){
+export function RandomFiveArray({timeStamp, getMonth}){
+
 const [randomArray, setRandomArray]=useState({ payload: [] })
-const [timeStamp, setTimeStamp]=useState('')
+// const [timeStamp, setTimeStamp]=useState('')
 
 /* let dummydata= {payload: [{name:'carrot' },{name:'pear'},{name:'apple'}] }
  */
@@ -16,12 +17,12 @@ const [timeStamp, setTimeStamp]=useState('')
 
 let fetchString = "https://seasonality-server-new.herokuapp.com/produce/random"
 
-function getMonth(){
-const today= new Date()
-let longMonth= today.toLocaleString('default', { month: 'long' })
-console.log(longMonth)
-setTimeStamp(longMonth)
-}
+// function getMonth(){
+// const today= new Date()
+// let longMonth= today.toLocaleString('default', { month: 'long' })
+// console.log(longMonth)
+// setTimeStamp(longMonth)
+// }
 
 
 
