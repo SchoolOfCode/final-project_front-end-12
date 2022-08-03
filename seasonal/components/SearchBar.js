@@ -67,6 +67,7 @@ export function SearchBar() {
           handleClick(e);
         }}
       >
+      <span className={styles.visuallyHidden}>Submit Search</span>
         Submit
       </button>
       </div>

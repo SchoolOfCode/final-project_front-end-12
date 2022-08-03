@@ -16,7 +16,7 @@ export default function About() {
       </Head>
             <NavBar aria-label="Navigation" />
             <div className={styles.pagecontainer}>
-                <h1>About Seasonal</h1>
+                <h2>About Seasonal</h2>
                 <p>Seasonal is an app that helps people find out what food is in season in the UK.</p>
                 <p>There are many benefits to eating food that is in season. </p>
                 <p>Not only is it cheaper for you, but it means that food doesn&apos;t need to be shipped overseas. We can all reduce our carbon footprint by eating locally farmed produce. The further from home that your food is grown, the more energy and emissions it takes to reach your plate. </p>
