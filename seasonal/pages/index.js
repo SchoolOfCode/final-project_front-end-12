@@ -25,7 +25,7 @@ export default function Home() {
         <RandomFiveArray/>
       {/* //  <Button text={text}/> */}
       </main>
-      <footer className={styles.footer}>
+      <footer className={styles.footer} aria-label="Search bar">
         <SearchBar />
       </footer>
     </div>
