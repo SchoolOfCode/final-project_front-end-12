@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 //Import for when using proper state (once it persists on route change)
 import { useSearchContext } from "../context/search.js";
 
-
 const searchString = "https://seasonality-server-new.herokuapp.com/produce";
 
 export default function Card() {
@@ -43,7 +42,7 @@ export default function Card() {
           <li>Used As: {currentItem.payload[0].usedas}</li>
           <li>Allergens: {currentItem.payload[0].allergens}</li>
         </ul>
-        <div className={styles.descriptionContainer}>
+        <div className={styles.imageContainer}>
           <Image
             src='https://res.cloudinary.com/dvpop7e9w/image/upload/v1659451348/banana-open_wi6q55.png'
             alt={currentItem.payload[0].name}
@@ -51,12 +50,10 @@ export default function Card() {
             height={300}
             className={styles.mainImage}
           />
-         </div> 
-         <div>
-          <p className={styles.mainDescription}>
-            {currentItem.payload[0].description}
-          </p>
         </div>
+        <p className={styles.mainDescription}>
+          {currentItem.payload[0].description}
+        </p>
       </div>
     );
   } else {

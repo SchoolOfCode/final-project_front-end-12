@@ -16,20 +16,21 @@
   width: 80%;
   background: #fff;
   margin: 5% auto;
-  padding: 5%;
+  padding: 1rem;
   color: #000;
-  border: 1px solid var(--main-lightest);
+  border: 1px solid #D9D9D9;
   border-radius: 25px;
 }
 
 .header {
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .months {
   list-style-type: none;
   margin: 0;
-  padding: 0 1rem 0.7rem;
+  padding: 0 1rem;
   display: flex;
   flex-direction: row;
   justify-content: safe center;
@@ -85,38 +86,18 @@
   background:#FFA8A8;
 }
 
-
-/* .imageWrapper {
-  width: 100%;
-  text-align: center;
-} */
-
-.descriptionContainer{
+.imageContainer{
 display:flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-
-}
-
-
-.mainImage {
-  display: block;
-  width: 100%;
-  height: auto;
+padding: 1.5rem;
 }
 
 .mainDescription {
-  max-width: 600px;
+  max-width: 850px;
   margin: 0 auto;
   padding: 1rem 0;
   line-height: 150%;
+  text-align: justify;
 }
-
-/* PLAN 
-
-- TABLED FOR LATER. We want the mainDescription to be able to resize and flow onto new lines.
-
-- TABLED FOR LATER. But we do not want the mainImage to responsively change dimensions: we only want it to change size, or become a single-line or block element, on resize of viewport.
-
-- We want each tag in the foodTags to be a different colour. Relevant to its value? Should this be set in the data object, or should we change the ul to an ol, and always set those values in the same position, and just make sure the same position gets the same colour tag each time? */
