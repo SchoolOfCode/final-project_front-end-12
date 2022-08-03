@@ -19,7 +19,7 @@ export default function Home() {
         <meta name="description" content="Seasonal Foods" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar />
+      <NavBar aria-label="Navigation"/>
       <main className={styles.main}>
         <h3 className={styles.title}>What&apos;s in season?</h3>
         <RandomFiveArray/>

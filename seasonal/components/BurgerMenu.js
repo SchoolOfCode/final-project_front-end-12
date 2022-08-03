@@ -17,10 +17,10 @@ export function BurgerMenu() {
       </div>
       
       {dropdown &&
-          <div className={styles.dropdown}>
+          <div className={styles.dropdown} aria-label="dropdown menu for navigation">
               <Link href="/">Home</Link>
               <Link href="/about">About</Link>
-              <Image src='/close.png' onClick={toggleDropdown} alt='burger menu' height={20} width={20} className={styles.closeMenu} />
+              <Image src='/close.png' onClick={toggleDropdown} alt='close menu' height={20} width={20} className={styles.closeMenu} />
           </div>
       }
     </>

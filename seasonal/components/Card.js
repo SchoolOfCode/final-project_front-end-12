@@ -30,7 +30,7 @@ export default function Card() {
 
   if (currentItem.payload.length > 0) {
     return (
-      <div className={styles.container}>
+      <div className={styles.container} aria-label="Card containing details about the food item">
         <h1 className={styles.header}>{currentItem.payload[0].name}</h1>
         <ol className={styles.months}>
           {currentItem.payload[0].month.map((individualMonth, index) => {

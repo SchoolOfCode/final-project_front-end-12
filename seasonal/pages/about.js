@@ -14,7 +14,7 @@ export default function About() {
         <meta name="description" content="About page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-            <NavBar />
+            <NavBar aria-label="Navigation" />
             <div className={styles.pagecontainer}>
                 <h1>About Seasonal</h1>
                 <p>Seasonal is an app that helps people find out what food is in season in the UK.</p>
@@ -24,16 +24,16 @@ export default function About() {
                 <p>It isn&apos;t easy to know what&apos;s in season, so Seasonal was created to help people make informed choices about the food they eat. We&apos;ve made finding food in season easier and more accessible. All you have to do is search by month or by a desired food item to see what times of the year food is grown in the UK.</p>
                 <p>Seasonal was made by 12** - a team of junior software developers - for our final project at the School of Code. Our team consists of:</p>
                 <ul className={styles.linkSection}>
-                    <li> <a href="https://www.linkedin.com/in/mult-vit/" target="_blank" rel="noreferrer">Andy Johnson</a></li> 
-                    <li> <a href="https://www.linkedin.com/in/fiona-kitchen" target="_blank" rel="noreferrer">Fiona Kitchen</a></li>
-                    <li> <a href="https://www.linkedin.com/in/gdarar/" target="_blank" rel="noreferrer">Guiji Darar</a></li> 
-                    <li> <a href="https://www.linkedin.com/in/madisonclowe/" target="_blank" rel="noreferrer">Madison Lowe</a></li> 
-                    <li> <a href="https://www.linkedin.com/in/matthew-miller-b38aaa231/" target="_blank" rel="noreferrer">Matthew Miller</a></li> 
-                    <li> <a href="https://www.linkedin.com/in/nathanlee94" target="_blank" rel="noreferrer">Nathan Lee</a></li> 
+                    <li> <a href="https://www.linkedin.com/in/mult-vit/" target="_blank" rel="noreferrer" aria-label="Social profile link of developer">Andy Johnson</a></li> 
+                    <li> <a href="https://www.linkedin.com/in/fiona-kitchen" target="_blank" rel="noreferrer" aria-label="Social profile link of developer">Fiona Kitchen</a></li>
+                    <li> <a href="https://www.linkedin.com/in/gdarar/" target="_blank" rel="noreferrer" aria-label="Social profile link of developer">Guiji Darar</a></li> 
+                    <li> <a href="https://www.linkedin.com/in/madisonclowe/" target="_blank" rel="noreferrer" aria-label="Social profile link of developer">Madison Lowe</a></li> 
+                    <li> <a href="https://www.linkedin.com/in/matthew-miller-b38aaa231/" target="_blank" rel="noreferrer" aria-label="Social profile link of developer">Matthew Miller</a></li> 
+                    <li> <a href="https://www.linkedin.com/in/nathanlee94" target="_blank" rel="noreferrer" aria-label="Social profile link of developer">Nathan Lee</a></li> 
                 </ul>
                 <p>If you&apos;d like to learn more, visit the links available at: Linktree goes here</p>
             </div>
-            <footer className={styles.footer}>
+            <footer className={styles.footer} aria-label="Search Bar">
                 <SearchBar />
             </footer>
         </div>
