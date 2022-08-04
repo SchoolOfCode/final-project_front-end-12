@@ -17,9 +17,9 @@ return(
         <link rel="icon" href="/favicon.ico" />
       </Head>
   
-  <NavBar/>
-  <ResultsItem/> 
-  <footer className={styles.footer}>
+  <NavBar aria-label="Navigation"/>
+  <ResultsItem aria-label="A list of food items in season as a result of the search filter"/> 
+  <footer className={styles.footer} aria-label="Search bar">
     <SearchBar />
   </footer>
  </div>

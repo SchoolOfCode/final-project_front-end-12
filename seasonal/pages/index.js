@@ -30,17 +30,17 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Seasonal</title>
-        <meta name="description" content="Seasonal Foods" />
+        <meta name="description" content="An app that helps people find what food is in season in the UK" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar />
-      <main className={styles.main}>
+      <NavBar aria-label="Navigation" role='navigation bar'/>
+      <main className={styles.main} role='main content'>
         <h2 className={styles.title}>It&apos;s {timeStamp}!</h2>
         <h3 className={styles.titleh3}>Some things in season...</h3>
         <RandomFiveArray timeStamp={timeStamp} getMonth={getMonth} />
         <MoreButton text={timeStamp} />
       </main>
-      <footer className={styles.footer}>
+      <footer className={styles.footer} aria-label="Search bar" role='search bar'>
         <SearchBar />
       </footer>
     </div>

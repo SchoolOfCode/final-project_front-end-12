@@ -16,14 +16,15 @@
   width: 80%;
   background: #fff;
   margin: 5% auto;
-  padding: 5%;
+  padding: 1rem;
   color: #000;
-  border: 1px solid #000;
-  border-radius: 4px;
+  border: 1px solid var(--main-grey);
+  border-radius: 25px;
 }
 
 .header {
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .months {
@@ -54,10 +55,13 @@
   flex-direction: row;
   justify-content: safe center;
   flex-wrap: wrap;
+  font-weight: bold;
+  
 }
 
+
 .foodTags > li {
-  background: cornflowerblue;
+  background:#A3C9D9;
   line-height: 200%;
   padding: 0px 10px;
   border-radius: 4px;
@@ -65,28 +69,35 @@
   font-size: 0.8rem;
 }
 
-.imageWrapper {
-  width: 100%;
-  text-align: center;
+.foodTags > li:nth-child(1){
+  background:#A3C9D9
+
 }
 
-.mainImage {
-  display: block;
-  width: 100%;
-  height: auto;
+.foodTags > li:nth-child(2){
+  background:#E9DFAA;
+}
+
+.foodTags > li:nth-child(3){
+  background:#EEA57C;
+}
+
+.foodTags > li:nth-child(4){
+  background:#FFA8A8;
+}
+
+.imageContainer{
+display:flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 1.5rem;
 }
 
 .mainDescription {
-  max-width: 600px;
+  max-width: 850px;
   margin: 0 auto;
   padding: 1rem 0;
   line-height: 150%;
+  text-align: justify;
 }
-
-/* PLAN 
-
-- TABLED FOR LATER. We want the mainDescription to be able to resize and flow onto new lines.
-
-- TABLED FOR LATER. But we do not want the mainImage to responsively change dimensions: we only want it to change size, or become a single-line or block element, on resize of viewport.
-
-- We want each tag in the foodTags to be a different colour. Relevant to its value? Should this be set in the data object, or should we change the ul to an ol, and always set those values in the same position, and just make sure the same position gets the same colour tag each time? */

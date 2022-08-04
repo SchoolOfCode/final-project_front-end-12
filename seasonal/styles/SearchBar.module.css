@@ -37,4 +37,8 @@
   transition: linear 0.4s;
 }
 
+.visuallyHidden {
+  display: none;
+}
+
 /* Don't forget to do a media for mobile */

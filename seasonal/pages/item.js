@@ -12,9 +12,9 @@ export default function Item() {
         <meta name="description" content="Individual item page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar />
+      <NavBar aria-label="Navigation"/>
       <Card />
-      <footer className={styles.footer}>
+      <footer className={styles.footer} aria-label="Search bar">
         <SearchBar />
       </footer>
     </div>
