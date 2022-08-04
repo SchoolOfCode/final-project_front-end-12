@@ -7,8 +7,8 @@ import Link from 'next/link';
 export function NavBar() {
 
   return (
-    <div className={styles.div}>
-      <h1 className={styles.title}>SEASONAL</h1>
+    <div className={styles.div} role="navigation">
+      <h1 className={styles.title} >SEASONAL</h1>
       
       <Link href="/">
         <a className={styles.link}>Home</a>

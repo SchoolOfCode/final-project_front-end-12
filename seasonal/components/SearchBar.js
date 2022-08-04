@@ -31,6 +31,7 @@ export function SearchBar() {
   }
 
   return (
+   
     <form>
       <div className={styles.searchContainer}>
       <label htmlFor='searchInput'>
@@ -42,10 +43,11 @@ export function SearchBar() {
           onChange={handleChange}
         />
       </label>
-      <label htmlFor='searchDropdown'>
+      <label htmlFor='search dropdown'>
         <select
-          name='searchDropdown'
-          id='searchDropdown'
+          aria-label="search dropdown"
+          name='search dropdown'
+          id='search dropdown'
           className={styles.dropdown}
           defaultValue=''
           onChange={(e) => {
@@ -72,6 +74,7 @@ export function SearchBar() {
       </button>
       </div>
     </form>
+   
   );
 }
 

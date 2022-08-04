@@ -34,7 +34,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar aria-label="Navigation" role='navigation bar'/>
-      <main className={styles.main} role='main content'>
+      <main className={styles.main} role='main'>
         <h2 className={styles.title}>It&apos;s {timeStamp}!</h2>
         <h3 className={styles.titleh3}>Some things in season...</h3>
         <div className={styles.randomarray}> 
@@ -42,7 +42,7 @@ export default function Home() {
         </div>
         <MoreButton text={timeStamp} />
       </main>
-      <footer className={styles.footer} aria-label="Search bar" role='search bar'>
+      <footer className={styles.footer} aria-label="Search bar" role='search'>
         <SearchBar />
       </footer>
     </div>
