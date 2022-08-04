@@ -17,7 +17,7 @@ export function NavBar() {
         <a className={styles.link}>About</a>
       </Link>
 
-      <BurgerMenu className={styles.menu}/>
+      <BurgerMenu className={styles.menu} aria-label="Click to view navigation links"/>
       
     </div>
   )
