@@ -38,6 +38,7 @@ export function SearchBar() {
           type='text'
           className={styles.searchBar}
           id='searchInput'
+          aria-label="Enter food item or month here to search"
           onChange={handleChange}
         />
       </label>
@@ -60,11 +61,13 @@ export function SearchBar() {
       <button
         id='search-button'
         type='submit'
+        aria-label="Click to submit search"
         className={styles.submitButton}
         onClick={(e) => {
           handleClick(e);
         }}
       >
+      <span className={styles.visuallyHidden}>Submit Search</span>
         Submit
       </button>
       </div>
