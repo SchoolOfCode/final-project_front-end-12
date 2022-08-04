@@ -37,7 +37,9 @@ export default function Home() {
       <main className={styles.main} role='main content'>
         <h2 className={styles.title}>It&apos;s {timeStamp}!</h2>
         <h3 className={styles.titleh3}>Some things in season...</h3>
-        <RandomFiveArray timeStamp={timeStamp} getMonth={getMonth} />
+        <div className={styles.randomarray}> 
+          <RandomFiveArray timeStamp={timeStamp} getMonth={getMonth} />
+        </div>
         <MoreButton text={timeStamp} />
       </main>
       <footer className={styles.footer} aria-label="Search bar" role='search bar'>

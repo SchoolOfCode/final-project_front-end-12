@@ -1,9 +1,6 @@
-import Image from "next/image";
 import styles from "../styles/Card.module.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-//Import for when using proper state (once it persists on route change)
-import { useSearchContext } from "../context/search.js";
 
 const searchString = "https://seasonality-server-new.herokuapp.com/produce";
 
@@ -29,7 +26,10 @@ export default function Card() {
 
   if (currentItem.payload.length > 0) {
     return (
-      <div className={styles.container} aria-label="Card containing details about the food item">
+      <div
+        className={styles.container}
+        aria-label='Card containing details about the food item'
+      >
         <h2 className={styles.header}>{currentItem.payload[0].name}</h2>
         <ol className={styles.months}>
           {currentItem.payload[0].month.map((individualMonth, index) => {
@@ -42,15 +42,11 @@ export default function Card() {
           <li>Used As: {currentItem.payload[0].usedas}</li>
           <li>Allergens: {currentItem.payload[0].allergens}</li>
         </ul>
-        <div className={styles.imageContainer}>
-          <Image
-            src='https://res.cloudinary.com/dvpop7e9w/image/upload/v1659451348/banana-open_wi6q55.png'
-            alt={currentItem.payload[0].name}
-            width={300}
-            height={300}
-            className={styles.mainImage}
-          />
-        </div>
+        <img
+          src='https://res.cloudinary.com/dvpop7e9w/image/upload/v1659451348/banana-open_wi6q55.png'
+          alt={currentItem.payload[0].name}
+          className={styles.mainImage}
+        />
         <p className={styles.mainDescription}>
           {currentItem.payload[0].description}
         </p>
@@ -60,7 +56,3 @@ export default function Card() {
     return <p>Loading</p>;
   }
 }
-
-/*
-
-*/
