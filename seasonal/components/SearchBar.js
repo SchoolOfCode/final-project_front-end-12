@@ -38,7 +38,7 @@ export function SearchBar() {
           type='text'
           className={styles.searchBar}
           id='searchInput'
-          aria-label="Enter food item here to search"
+          aria-label="Enter food item or month here to search"
           onChange={handleChange}
         />
       </label>
