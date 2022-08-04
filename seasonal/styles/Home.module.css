@@ -104,11 +104,23 @@
   margin-left: 0.5rem;
 }
 
-/* @media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-} */
+.randomarray {
+  /*TODO might need to address padding when image is shown above the button to make it like wireframe*/
+  padding-top: 1rem;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  /*TODO when image is shown above button, will need target it and use display:none to hide on mobiles (group decision on whether to keep or not first)*/
+  .randomarray{
+    padding-top: 1rem;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    }
+}
 
 
