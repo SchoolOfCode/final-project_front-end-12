@@ -7,24 +7,8 @@ import { useState, useEffect } from 'react';
 export function RandomFiveArray({timeStamp, getMonth}){
 
 const [randomArray, setRandomArray]=useState({ payload: [] })
-// const [timeStamp, setTimeStamp]=useState('')
-
-/* let dummydata= {payload: [{name:'carrot' },{name:'pear'},{name:'apple'}] }
- */
-// we made usestates for the random array - this will be updated by the fetch 
-// we want to find out how to get timestamp data from a user when they press on teh site
-// we need to see what format that is in and how we pass it to the fetch request 
 
 let fetchString = "https://seasonality-server-new.herokuapp.com/produce/random"
-
-// function getMonth(){
-// const today= new Date()
-// let longMonth= today.toLocaleString('default', { month: 'long' })
-// console.log(longMonth)
-// setTimeStamp(longMonth)
-// }
-
-
 
 useEffect(() => {
 const fetchData = async () => {    
@@ -46,7 +30,7 @@ if(timeStamp==='') return
 
   if (randomArray.payload.length > 0) {
     return randomArray.payload.map((result) => {
-      return <Button text={result.name} key={result.id}/>;
+      return <Button text={result.name} key={result.id} image={result.imageurl}/>;
     });
   } else {
     return <p>Hmm, that&apos;s strange we know we put something here, please refresh to try again !</p>;
