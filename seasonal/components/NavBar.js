@@ -8,14 +8,22 @@ export function NavBar() {
 
   return (
     <div className={styles.div} role="navigation">
-      <h1 className={styles.title} >SEASONAL</h1>
+      <div className={styles.spaceHelp}></div>
+
+      <div className={styles.titleDiv}>
+        <Link href="/">
+          <a  className={styles.title}><h1 >SEASONAL</h1></a>
+        </Link>
+      </div>
       
-      <Link href="/">
-        <a className={styles.link}>Home</a>
-      </Link>
-      <Link href="/about">
-        <a className={styles.link}>About</a>
-      </Link>
+      <div className={styles.linkDiv}>
+        <Link href="/" className={styles.pageLinks}>
+          <a className={styles.link}>Home</a>
+        </Link>
+        <Link href="/about" className={styles.pageLinks}>
+          <a className={styles.link}>About</a>
+        </Link>
+      </div>
 
       <BurgerMenu className={styles.menu} aria-label="Click to view navigation links"/>
       
