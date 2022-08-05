@@ -21,8 +21,10 @@ router.push({pathname:'/item', query:{food:text}})
   return (
   
     <a className={styles.link}>
-    <img src={image} />
-    <button className={styles.button} onClick={handleClick}>{text}</button>
+    <div className={styles.buttonbox}>
+      <img src={image} alt={text} className={styles.buttonimage}/>
+      <button className={styles.button} onClick={handleClick}>{text}</button>
+    </div>
     </a>
 
   )

@@ -8,7 +8,7 @@
   border: 1px solid var(--accent-one);
   border-radius: 5px;
   padding: 0.7rem 1rem;
-  margin: 0.5rem;
+  margin: 0rem 0.5rem 1rem 0.5rem;
 }
 
 .button:hover {
@@ -22,4 +22,24 @@
   .button {
     width: 16rem;
   }
+}
+
+.buttonimage {
+  border: 1px;
+  border-style: solid;
+  border-color: var(--main-grey);
+  border-radius: 5px;
+  padding: 10px;
+  width: 12rem;
+  margin: 0px;
+};
+
+.buttonbox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+
 }
