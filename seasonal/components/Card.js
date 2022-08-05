@@ -43,7 +43,7 @@ export default function Card() {
           <li>Allergens: {currentItem.payload[0].allergens}</li>
         </ul>
         <img
-          src='https://res.cloudinary.com/dvpop7e9w/image/upload/v1659451348/banana-open_wi6q55.png'
+          src={currentItem.payload[0].imageurl}
           alt={currentItem.payload[0].name}
           className={styles.mainImage}
         />
