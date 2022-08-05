@@ -31,26 +31,28 @@ export function SearchBar() {
   }
 
   return (
+   
     <form>
       <div className={styles.searchContainer}>
-        <label htmlFor='searchInput'>
-          <input
-            type='text'
-            className={styles.searchBar}
-            id='searchInput'
-            aria-label='Enter food item or month here to search'
-            onChange={handleChange}
-          />
-        </label>
-        <label htmlFor='searchDropdown'>
-          <select
-            name='searchDropdown'
-            id='searchDropdown'
-            className={styles.dropdown}
-            defaultValue=''
-            onChange={(e) => {
-              setSelectValue(e.target.value);
-              console.log(selectValue);
+      <label htmlFor='search input'>
+        <input
+          type='text'
+          className={styles.searchBar}
+          id='search input'
+          aria-label="Enter food item or month here to search"
+          onChange={handleChange}
+        />
+      </label>
+      <label htmlFor='search dropdown'>
+        <select
+          aria-label="search dropdown"
+          name='search dropdown'
+          id='search dropdown'
+          className={styles.dropdown}
+          defaultValue=''
+          onChange={(e) => {
+            setSelectValue(e.target.value);
+            console.log(selectValue);
             }}
           >
             <option value=''>Filter by Month or Item</option>
@@ -72,6 +74,7 @@ export function SearchBar() {
         </button>
       </div>
     </form>
+   
   );
 }
 
