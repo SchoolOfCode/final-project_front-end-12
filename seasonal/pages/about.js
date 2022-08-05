@@ -32,7 +32,7 @@ export default function About() {
                     <li> <a href="https://www.linkedin.com/in/matthew-miller-b38aaa231/" target="_blank" rel="noreferrer" aria-label="Social profile link of developer">Matthew Miller</a></li> 
                     <li> <a href="https://www.linkedin.com/in/nathanlee94" target="_blank" rel="noreferrer" aria-label="Social profile link of developer">Nathan Lee</a></li> 
                 </ul>
-                <p>If you&apos;d like to learn more, visit the links available at: Linktree goes here</p>
+                <p>If you&apos;d like to learn more, visit the links available: <a href="https://linktr.ee/twelve_exponential" target="_blank" rel="noreferrer" aria-label="Link tree for developers">Here</a></p>
                 </div>
             </div>
             <footer className={styles.footer} aria-label="Search Bar">

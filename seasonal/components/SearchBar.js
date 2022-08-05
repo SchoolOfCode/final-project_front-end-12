@@ -19,9 +19,9 @@ export function SearchBar() {
         router.push({ pathname: "/item", query: { food: searchText } });
       } else if (selectValue === "") {
         alert("Please select to search by month or item");
-      } else {
-        alert("Please use letters only in your search");
       }
+    } else {
+      alert("Please use letters only in your search");
     }
   }
 
@@ -34,11 +34,11 @@ export function SearchBar() {
    
     <form>
       <div className={styles.searchContainer}>
-      <label htmlFor='searchInput'>
+      <label htmlFor='search input'>
         <input
           type='text'
           className={styles.searchBar}
-          id='searchInput'
+          id='search input'
           aria-label="Enter food item or month here to search"
           onChange={handleChange}
         />
@@ -53,25 +53,25 @@ export function SearchBar() {
           onChange={(e) => {
             setSelectValue(e.target.value);
             console.log(selectValue);
+            }}
+          >
+            <option value=''>Filter by Month or Item</option>
+            <option value='Month'>Month</option>
+            <option value='Item'>Item</option>
+          </select>
+        </label>
+        <button
+          id='search-button'
+          type='submit'
+          aria-label='Click to submit search'
+          className={styles.submitButton}
+          onClick={(e) => {
+            handleClick(e);
           }}
         >
-          <option value=''>Filter by Month or Item</option>
-          <option value='Month'>Month</option>
-          <option value='Item'>Item</option>
-        </select>
-      </label>
-      <button
-        id='search-button'
-        type='submit'
-        aria-label="Click to submit search"
-        className={styles.submitButton}
-        onClick={(e) => {
-          handleClick(e);
-        }}
-      >
-      <span className={styles.visuallyHidden}>Submit Search</span>
-        Submit
-      </button>
+          <span className={styles.visuallyHidden}>Submit Search</span>
+          Submit
+        </button>
       </div>
     </form>
    
