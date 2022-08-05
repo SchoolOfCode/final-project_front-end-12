@@ -106,3 +106,16 @@
 }
 
 
+@media screen and (max-width: 600px) {
+  .container {
+    width: 80%;
+    background: #fff;
+    margin: 4% auto;
+    margin-bottom: 5rem;
+    padding: 1rem;
+    color: #000;
+    border: 1px solid var(--main-grey);
+    border-radius: 25px;
+  }
+  
+}
