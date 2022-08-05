@@ -9,6 +9,7 @@
   align-items: center;
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
+  background-color: var(--accent-two);
 }
 
 
@@ -99,8 +100,9 @@
   max-width: 850px;
   margin: 0 auto;
   padding: 1rem 0;
-  line-height: 150%;
-  text-align: justify;
+  line-height: 200%;
+  text-align: left;
+
 }
 
 
