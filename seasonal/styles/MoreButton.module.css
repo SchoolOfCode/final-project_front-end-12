@@ -1,20 +1,19 @@
 .morebutton {
-    width: 8rem;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--main-lightest);
-    background: var(--accent-one);
-    border: 1px solid var(--accent-one);
-    border-radius: 5px;
-    padding: 0.7rem 1rem;
-    margin: 1.5rem;
-  }
-  
-  .morebutton:hover {
-    background: var(--accent-three);
-    border: 1px solid var(--accent-three);
-    cursor: pointer;
-    transition: linear 0.4s;
-  }
-  
+  width: 10rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--main-lightest);
+  background: var(--accent-one);
+  border: 1px solid var(--accent-one);
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  margin: 1.5rem;
+}
+
+.morebutton:hover {
+  background: var(--accent-three);
+  border: 1px solid var(--accent-three);
+  cursor: pointer;
+  transition: linear 0.4s;
+}
