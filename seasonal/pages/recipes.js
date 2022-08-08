@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import Button from "../components/Button.js";
+import RecipeButton from "../components/RecipeButton.js";
 
 const searchString = `https://www.themealdb.com/api/json/v1/1/search.php`;
 
@@ -31,14 +31,21 @@ export default function Recipes() {
 
   if (searchResults.length > 0) {
     return searchResults.map((recipe) => {
-      return (
+      /*       return (
         <div>
           <h2>{recipe.strMeal}</h2>
           <p>{recipe.idMeal}</p>
           <img src={recipe.strMealThumb} alt={recipe.strMeal} />
         </div>
+      ); */
+      return (
+        <RecipeButton
+          title={recipe.strMeal}
+          key={recipe.idMeal}
+          image={recipe.strMealThumb}
+          id={recipe.idMeal}
+        />
       );
-      //return <Button text={result.name} key={result.id} image={result.imageurl} />;
     });
   } else {
     return <p>Loading</p>;
