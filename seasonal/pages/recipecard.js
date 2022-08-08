@@ -3,7 +3,9 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 const searchString = `https://www.themealdb.com/api/json/v1/1/lookup.php`;
-
+//Takes in recipe from fetchData
+//Loops through object entries to search for ingredients that are not empty
+//Pushes them to a new array called ingredientsArray and returns them
 function getIngredients(recipe) {
   let ingredientsArray = [];
   for (const [key, value] of Object.entries(recipe)) {
@@ -18,7 +20,9 @@ function getIngredients(recipe) {
   console.log(ingredientsArray);
   return ingredientsArray;
 }
-
+//Takes in recipe from fetchData
+//Loops through object entries to search for quantities that are not empty
+//Pushes them to a new array called quantities Array and returns them
 function getQuantities(recipe) {
   let quantityArray = [];
   for (const [key, value] of Object.entries(recipe)) {
@@ -38,30 +42,42 @@ export default function Card() {
   const router = useRouter();
   const [currentItem, setCurrentItem] = useState([]);
 
-  let ingredientsArray = [];
-  let quantityArray = [];
-
   useEffect(() => {
     const fetchData = async () => {
+      //Fetches data from recipe API using ID from URL query (router.query)
       const data = await fetch(`${searchString}?i=${router.query.recipe}`);
       let result = await data.json();
+      //Call getIngredients and getQuantities as outlined above
       if (result.meals.length > 0) {
         console.log("Getting ingredients and quantities");
-        result.meals[0].ingredientsArray = getIngredients(result.meals[0]);
+        const ingredientsArray = getIngredients(result.meals[0]);
         console.log(JSON.stringify(result.meals));
-        result.meals[0].quantityArray = getQuantities(result.meals[0]);
-      } else {
+        const quantityArray = getQuantities(result.meals[0]);
+        //Combines ingredients and quantities in to one string
+        let combinedArray = [];
+        for (let i = 0; i < ingredientsArray.length; i++) {
+          combinedArray[i] = `${quantityArray[i]} `;
+          combinedArray[i] += ingredientsArray[i];
+        }
+        //Adds combined array to results object we got from API
+        result.meals[0].combinedArray = combinedArray;
+        console.log(result.meals[0]);
+      }
+      //Console log an error if unable to call getIngredients or getQuantities due to there being no results from API
+      else {
         console.log("Can't get ingredients or quantities");
       }
+      //Updates state with result from API (including appended combined quantities/ingredients array)
       setCurrentItem(result.meals);
     };
-
+    //Checks if router has parsed URL to obtain the query so fetch can be made
     if (!router.isReady) return;
     fetchData()
       // make sure to catch any error
       .catch(console.error);
   }, [router.isReady]);
 
+  //Conditionally renders page if we received result from API and successfully set it as state
   if (currentItem.length > 0) {
     return (
       <div
@@ -74,28 +90,19 @@ export default function Card() {
         <h4>Ingredients:</h4>
         {
           <ul className={styles.months}>
-            {currentItem[0].ingredientsArray.map((ingredient, index) => {
+            {currentItem[0].combinedArray.map((ingredient, index) => {
               return <li key={index}>{ingredient}</li>;
             })}
           </ul>
         }
-        <h4>Quantities:</h4>
-        <ul className={styles.foodTags}>
-          {currentItem[0].ingredientsArray.map((quantity, index) => {
-            return <li key={index}>{quantity}</li>;
-          })}
-        </ul>
         <p className={styles.mainDescription}>
           {currentItem[0].strInstructions}
         </p>
-        <p>
-          <a href={currentItem[0].strYouTube} target='_blank'>
-            Link to YouTube if available
-          </a>
-        </p>
       </div>
     );
-  } else {
+  }
+  //If there is nothing in the state, render a placeholder loading tag
+  else {
     return <p>Loading</p>;
   }
 }
