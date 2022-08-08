@@ -20,6 +20,7 @@ export function BurgerMenu() {
           <div className={styles.dropdown} aria-label="dropdown menu for navigation">
               <Link href="/">Home</Link>
               <Link href="/about">About</Link>
+              <Link href="/credits">Credits</Link>
               <Image src='/close.png' onClick={toggleDropdown} alt='close menu' height={20} width={20} className={styles.closeMenu} />
           </div>
       }
