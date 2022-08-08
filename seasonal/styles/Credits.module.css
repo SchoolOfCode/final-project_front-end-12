@@ -9,8 +9,8 @@
   }
   
   .textcontainer {
-    display:flex;
-    flex-direction: row ;
+    /* display:flex;
+    flex-direction: row ; */
     height: fit-content;
     width: 80vw;
     padding: 5vw;
@@ -20,7 +20,9 @@
     border-width: 1px;
     border-color: var(--main-grey);
     align-items: center;
+    justify-content: center;
     text-align:center;
+
   }
   
   .textcontainer p {
@@ -62,7 +64,18 @@
   }
 
 
-.listColumn{ 
+  .listColumn { 
+    display:flex;
+    flex-direction: row ;
+    justify-content: center;
+    text-align:center;
+  }
 
-
+  @media only screen and (max-width: 430px){
+    .listColumn { 
+      display:flex;
+      flex-direction: column ;
+      justify-content: center;
+      text-align:center;
+    }
 }
