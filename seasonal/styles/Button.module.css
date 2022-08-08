@@ -11,11 +11,20 @@
   margin: 0rem 0.5rem 1rem;
 }
 
-.button:hover {
-  background: var(--accent-three);
-  border: 1px solid var(--accent-three);
+
+.buttonbox:hover >.button{
+  background:#296243b0;
+/*   opacity: 0.8; */
+  border: 1px solid var(--accent-one);
   cursor: pointer;
-  transition: linear 0.4s;
+  transition: linear 0.2s;
+}
+
+.buttonbox:hover >.buttonimage{
+  border: 1px;
+  border-style: solid;
+  border-color: var(--accent-one);
+  border-radius: 5px 5px 0px 0px;
 }
 
 
