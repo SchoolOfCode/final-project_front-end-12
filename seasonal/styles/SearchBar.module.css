@@ -30,11 +30,13 @@
   height: 35px;
 }
 
-.submitButton:hover {
-  background: var(--accent-three);
-  border: 0px;
-  cursor: pointer;
-  transition: linear 0.4s;
+.submitButton:hover{
+  background: #296243c0; 
+  /*   opacity: 0.8; */
+    border: 0px 1px 1px 1px solid;
+    border-color:  var(--accent-one); 
+    cursor: pointer;
+    transition: linear 0.2s;
 }
 
 .visuallyHidden {

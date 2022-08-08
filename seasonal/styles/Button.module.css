@@ -13,9 +13,10 @@
 
 
 .buttonbox:hover >.button{
-  background:#296243b0;
+  background: #296243c0; 
 /*   opacity: 0.8; */
-  border: 1px solid var(--accent-one);
+  border: 0px 1px 1px 1px solid;
+  border-color:  var(--accent-one); 
   cursor: pointer;
   transition: linear 0.2s;
 }
@@ -23,8 +24,9 @@
 .buttonbox:hover >.buttonimage{
   border: 1px;
   border-style: solid;
-  border-color: var(--accent-one);
+  border-color: #296243c0 /* var(--accent-one) */;
   border-radius: 5px 5px 0px 0px;
+  cursor: pointer;
 }
 
 
