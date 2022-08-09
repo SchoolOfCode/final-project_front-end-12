@@ -18,9 +18,9 @@ export function BurgerMenu() {
       
       {dropdown &&
           <div className={styles.dropdown} aria-label="dropdown menu for navigation">
-              <Link href="/">Home</Link>
-              <Link href="/about">About</Link>
-              <Link href="/credits">Credits</Link>
+          <a onClick={(e) => handleLinkClick(e, "/")}>Home</a>
+          <a onClick={(e) => handleLinkClick(e, "/about")}>About</a>
+          <a onClick={(e) => handleLinkClick(e, "/credits")}>Credits</a>
               <Image src='/close.png' onClick={toggleDropdown} alt='close menu' height={20} width={20} className={styles.closeMenu} />
           </div>
       }
