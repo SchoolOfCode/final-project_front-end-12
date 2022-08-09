@@ -7,7 +7,7 @@ const searchString = `https://www.themealdb.com/api/json/v1/1/search.php`;
 
 export default function Recipes() {
   const router = useRouter();
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState(false);
 
   useEffect(() => {
     console.log("this is because of a fetch happening");
@@ -30,6 +30,7 @@ export default function Recipes() {
   }, [router.isReady]);
 
   if (searchResults) {
+    console.log('we have the search results and are mapping')
     return(
           
        searchResults.map((recipe) => {
@@ -52,6 +53,7 @@ export default function Recipes() {
       );
     }));
   } else {
-    return <p>We don't currently have any recipes for this item</p>;
+    console.log('nothing has come back')
+    return <p>We don't have any recipes for that item yet but please check back in future!</p>;
   }
 }

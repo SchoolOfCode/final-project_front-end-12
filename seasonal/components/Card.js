@@ -53,6 +53,6 @@ export default function Card() {
       </div>
     );
   } else {
-    return <p>Loading</p>;
+    return <p>We don't have a result for that item yet but we may still have some recipes!</p>;
   }
 }
