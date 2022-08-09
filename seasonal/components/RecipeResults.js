@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import RecipeButton from "../components/RecipeButton.js";
+import RecipeButton from "./RecipeButton.js";
 
 const searchString = `https://www.themealdb.com/api/json/v1/1/search.php`;
 

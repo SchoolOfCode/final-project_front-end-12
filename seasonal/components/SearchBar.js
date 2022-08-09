@@ -18,7 +18,7 @@ export function SearchBar() {
       } else if (selectValue === "Item") {
         router.push({ pathname: "/item", query: { food: searchText } });
       } else if (selectValue === "Recipe") {
-        router.push({ pathname: "/recipes", query: { recipe: searchText } });
+        router.push({ pathname: "/recipeResultsPage", query: { recipe: searchText } });
       } else if (selectValue === "") {
         alert("Please select to search by month or item");
       }
