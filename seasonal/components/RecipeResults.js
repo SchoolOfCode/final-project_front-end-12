@@ -1,13 +1,13 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import RecipeButton from "../components/RecipeButton.js";
+import RecipeButton from "./RecipeButton.js";
 
 const searchString = `https://www.themealdb.com/api/json/v1/1/search.php`;
 
 export default function Recipes() {
   const router = useRouter();
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState(false);
 
   useEffect(() => {
     console.log("this is because of a fetch happening");
@@ -29,8 +29,11 @@ export default function Recipes() {
       .catch(console.error);
   }, [router.isReady]);
 
-  if (searchResults.length > 0) {
-    return searchResults.map((recipe) => {
+  if (searchResults) {
+    console.log('we have the search results and are mapping')
+    return(
+          
+       searchResults.map((recipe) => {
       /*       return (
         <div>
           <h2>{recipe.strMeal}</h2>
@@ -39,15 +42,18 @@ export default function Recipes() {
         </div>
       ); */
       return (
-        <RecipeButton
+     
+              <RecipeButton
           title={recipe.strMeal}
           key={recipe.idMeal}
           image={recipe.strMealThumb}
           id={recipe.idMeal}
         />
+    
       );
-    });
+    }));
   } else {
-    return <p>Loading</p>;
+    console.log('nothing has come back')
+    return <p>We don&apos;t have any recipes for that item yet but please check back in future!</p>;
   }
 }

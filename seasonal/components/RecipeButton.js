@@ -7,11 +7,11 @@ export default function RecipeButton({ title, image, id }) {
   const router = useRouter();
 
   function handleClick() {
-    router.push({ pathname: "/recipecard", query: { recipe: id } });
+    router.push({ pathname: "/recipeCardPage", query: { recipe: id } });
   }
 
   return (
-    <a className={styles.link}>
+    <a className={styles.link} onClick={handleClick}>
       <div className={styles.buttonbox}>
         <img src={image} alt={title} className={styles.buttonimage} />
         <button className={styles.button} onClick={handleClick}>
