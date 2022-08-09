@@ -1,21 +1,28 @@
-import React, {useState} from "react";
-import styles from '../styles/BurgerMenu.module.css';
-import Image from 'next/image';
-import Link from 'next/link';
+import React, { useState } from "react";
+import styles from "../styles/BurgerMenu.module.css";
+import Image from "next/image";
+import Link from "next/link";
 
-export function BurgerMenu({handleLinkClick}) {
+
+export function BurgerMenu({ handleLinkClick }) {
   const [dropdown, setDropdown] = useState(false);
 
   function toggleDropdown() {
-    setDropdown(current => !current);
-  };
+    setDropdown((current) => !current);
+  }
 
-  return(
+  return (
     <>
       <div className={styles.wrapper}>
-      <Image src='/burgerIconMock.png' onClick={toggleDropdown} alt='burger menu' height={40} width={40} className={styles.menu} />
+        <Image
+          src='/burgerIcon.png'
+          onClick={toggleDropdown}
+          alt='burger menu'
+          height={40}
+          width={40}
+          className={styles.menu}
+        />
       </div>
-      
       {dropdown &&
           <div className={styles.dropdown} aria-label="dropdown menu for navigation">
           <a onClick={(e) => handleLinkClick(e, "/")}>Home</a>
@@ -25,5 +32,5 @@ export function BurgerMenu({handleLinkClick}) {
           </div>
       }
     </>
-  )
-};
+  );
+}
