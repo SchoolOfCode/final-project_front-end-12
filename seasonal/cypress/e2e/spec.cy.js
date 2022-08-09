@@ -83,7 +83,7 @@ describe("Test that searching for terms behaves as expected", () => {
 });
 
 describe("Burger menu works as expected on below 600px devices", () => {
-  it.only("Ensures burger menu displays on tablet and mobile view and that links work", () => {
+  it("Ensures burger menu displays on tablet and mobile view and that links work", () => {
     cy.viewport(600, 750);
     cy.visit("http://localhost:3000");
     cy.wait(1000);
@@ -102,7 +102,28 @@ describe("Navbar works as expected", () => {
 });
 
 describe("Full user journey tests", () => {
-  it("Lorem", () => {});
+  it.only("visits website landing page and checks it has loaded 5 random cards", () => {
+    cy.visit("http://localhost:3000");
+    cy.wait(1000);
+    cy.get('[data-cy="random-five-array-container"]')
+      .children()
+      .should("have.length", 5);
+  });
+  it.only("clicks on a random 5 card and checks the card loads by looking for the in season months are displayed", () => {
+    cy.get('[data-cy="random-five-array-container"] > :nth-child(1)')
+      .click();
+    cy.wait(1000);
+    cy.get('[data-cy="card-months-container"]').should("be.visible");
+  });
+  it.only("it clicks on Seasonal Logo and expects to load home page with correct url", () => {
+    cy.contains("SEASONAL").click();
+    cy.wait(1000);
+    cy.url().should("eq", "http://localhost:3000/");
+        // cy.url().should("eq", "http://localhost:3000");
+
+  });
+
+
 });
 
 /*
