@@ -1,4 +1,4 @@
-import styles from "../styles/Card.module.css";
+import styles from "../styles/RecipeCard.module.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
@@ -86,15 +86,15 @@ export default function Card() {
       >
         <h2 className={styles.header}>{currentItem[0].strMeal}</h2>
         <h3>{currentItem[0].strCategory}</h3>
-        <img src={currentItem[0].strMealThumb} alt={currentItem[0].strMeal} />
-        <h4>Ingredients:</h4>
-        {
-          <ul className={styles.months}>
-            {currentItem[0].combinedArray.map((ingredient, index) => {
-              return <li key={index}>{ingredient}</li>;
-            })}
-          </ul>
-        }
+        <div className={styles.imgIngredients}>
+          <img src={currentItem[0].strMealThumb} alt={currentItem[0].strMeal} className={styles.recipeImage}/>
+          <h4 className={styles.ingredientHeader}>Ingredients:</h4>
+            <ul className={styles.ingredients}>
+              {currentItem[0].combinedArray.map((ingredient, index) => {
+                return <li key={index}>{ingredient}</li>;
+              })}
+            </ul>
+        </div>  
         <p className={styles.mainDescription}>
           {currentItem[0].strInstructions}
         </p>

@@ -15,7 +15,9 @@ export default function Item() {
       </Head>
       <NavBar aria-label="Navigation"/>
       <Card />
-      <Recipes />
+      <div className={styles.recipeSection}>
+        <Recipes />
+      </div>
      <footer className={styles.footer} aria-label="Search bar">
         <SearchBar />
       </footer> 

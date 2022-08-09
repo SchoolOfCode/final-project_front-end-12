@@ -12,6 +12,10 @@
   background-color: var(--accent-two);
 }
 
+.header {
+  text-align: center;
+  margin-bottom: 10px;
+}
 
 .container {
   width: 80%;
@@ -22,32 +26,70 @@
   color: #000;
   border: 1px solid var(--main-grey);
   border-radius: 25px;
+  margin-bottom: 12vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.header {
+.container h3 {
   text-align: center;
-  margin-bottom: 10px;
 }
 
-.months {
+.recipeImage{
+  height: auto;
+  width: 90%;
+  max-width: 400px;
+  
+  border-radius: 7px;
+}
+
+.imgIngredients {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  flex-wrap: wrap;
+  
+}
+
+.ingredients {
   list-style-type: none;
   margin: 0;
-  padding: 0 1rem;
+  padding: 1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: safe center;
+  align-items: center;
   flex-wrap: wrap;
-}
+  height: 300px;
 
-.months > li {
+  min-width: 30vw;
+  width: 60vw;
+  
   background: darkseagreen;
-  line-height: 200%;
-  padding: 0px 10px;
   border-radius: 4px;
   margin: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: bold;
+  line-height: 200%;
 }
+
+@media screen and (max-width: 650px) {
+  .ingredients {
+    height: auto;
+    
+  }
+  
+}
+
+.ingredientHeader {
+ font-size: 1.2rem;
+}
+
 
 .foodTags {
   list-style-type: none;
