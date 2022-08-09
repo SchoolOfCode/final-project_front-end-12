@@ -14,7 +14,7 @@ export function BurgerMenu({ handleLinkClick }) {
     <>
       <div className={styles.wrapper}>
         <Image
-          src='/burgerIconMock.png'
+          src='/burgerIcon.png'
           onClick={toggleDropdown}
           alt='burger menu'
           height={40}
