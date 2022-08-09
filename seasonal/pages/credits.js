@@ -18,8 +18,8 @@ export default function Credits() {
             <div className={styles.pagecontainer}>
                 <div className={styles.textcontainer}>
  <div>Icons from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> were made by:
-  <ul>
-  <div className={styles.listColumn}>
+  <ul className={styles.listColumn}>
+  <div >
     <li><a href="https://www.flaticon.com/authors/andinur" title="andinur">andinur</a></li>
     <li><a href="https://www.flaticon.com/authors/angdiz" title="AngDiz">AngDiz</a></li>
     <li><a href="https://www.flaticon.com/authors/amethystdesign" title="AmethystDesign">AmethystDesign</a></li>
@@ -34,7 +34,7 @@ export default function Credits() {
     <li><a href="https://www.flaticon.com/authors/kosonicon" title="kosonicon">kosonicon</a></li>
     <li><a href="https://www.flaticon.com/authors/linector" title="Linector">Linector</a></li>
     </div>
-    <div className={styles.listColumn}>
+    <div>
     <li><a href="https://www.flaticon.com/authors/luvdat" title="Luvdat">Luvdat</a></li>
     <li><a href="https://www.flaticon.com/authors/maxicons" title="max.icons">max.icons</a></li>
     <li><a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a></li>
