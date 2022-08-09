@@ -17,6 +17,8 @@ export function SearchBar() {
         router.push({ pathname: "/results", query: { month: searchText } });
       } else if (selectValue === "Item") {
         router.push({ pathname: "/item", query: { food: searchText } });
+      } else if (selectValue === "Recipe") {
+        router.push({ pathname: "/recipes", query: { recipe: searchText } });
       } else if (selectValue === "") {
         alert("Please select to search by month or item");
       }
@@ -31,33 +33,33 @@ export function SearchBar() {
   }
 
   return (
-   
     <form>
       <div className={styles.searchContainer}>
-      <label htmlFor='search input'>
-        <input
-          type='text'
-          className={styles.searchBar}
-          id='search input'
-          aria-label="Enter food item or month here to search"
-          onChange={handleChange}
-        />
-      </label>
-      <label htmlFor='search dropdown'>
-        <select
-          aria-label="search dropdown"
-          name='search dropdown'
-          id='search dropdown'
-          className={styles.dropdown}
-          defaultValue=''
-          onChange={(e) => {
-            setSelectValue(e.target.value);
-            console.log(selectValue);
+        <label htmlFor='search input'>
+          <input
+            type='text'
+            className={styles.searchBar}
+            id='search input'
+            aria-label='Enter food item or month here to search'
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor='search dropdown'>
+          <select
+            aria-label='search dropdown'
+            name='search dropdown'
+            id='search dropdown'
+            className={styles.dropdown}
+            defaultValue=''
+            onChange={(e) => {
+              setSelectValue(e.target.value);
+              console.log(selectValue);
             }}
           >
             <option value=''>Filter by Month or Item</option>
             <option value='Month'>Month</option>
             <option value='Item'>Item</option>
+            <option value='Recipe'>Recipe</option>
           </select>
         </label>
         <button
@@ -74,7 +76,6 @@ export function SearchBar() {
         </button>
       </div>
     </form>
-   
   );
 }
 
