@@ -93,6 +93,7 @@ describe("Burger menu works as expected on below 600px devices", () => {
     // cy.wait(1000);
     // cy.url().should("eq", "http://localhost:3000");
     // assert for home url using above code when links are sorted
+    // check that the burger menu open and closes properly
   });
 });
 
@@ -104,6 +105,24 @@ describe("Full user journey tests", () => {
   it("Lorem", () => {});
 });
 
-// WHAT NEEDS DOING
-// test the burger icon links work (make sure clicking on each one works and routes properly)
-// test recipe user journey if completed?
+/*
+USER JOURNEY SINGLE TEST FLOW
+- visit website landing page 
+- click a card
+- click on home
+- click more in season
+- search for an item
+- and then search for a month from page 
+- select an item
+- go to the about page 
+- go to the credits page 
+- check out the link tree and hire all of us 
+
+STRETCH INCLUSION IN ABOVE TEST WHEN RECIPE FUNCTIONALITY ACCESSIBLE ON FRONT-END
+- check out the recipe functionality
+- navigate to an item card
+- click on one of the recipes 
+- go through the recipe?
+
+TODO: DO ABOVE LISTS AS ONE E2E TEST.
+*/
