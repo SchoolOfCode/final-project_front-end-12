@@ -29,8 +29,10 @@ export default function Recipes() {
       .catch(console.error);
   }, [router.isReady]);
 
-  if (searchResults.length > 0) {
-    return searchResults.map((recipe) => {
+  if (searchResults) {
+    return(
+          
+       searchResults.map((recipe) => {
       /*       return (
         <div>
           <h2>{recipe.strMeal}</h2>
@@ -39,15 +41,17 @@ export default function Recipes() {
         </div>
       ); */
       return (
-        <RecipeButton
+        <div>
+              <RecipeButton
           title={recipe.strMeal}
           key={recipe.idMeal}
           image={recipe.strMealThumb}
           id={recipe.idMeal}
         />
+        </div>
       );
-    });
+    }));
   } else {
-    return <p>Loading</p>;
+    return <p>We don't currently have any recipes for this item</p>;
   }
 }

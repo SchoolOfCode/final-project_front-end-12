@@ -15,7 +15,7 @@ export default function Button({text, image}) {
 const router = useRouter()
 
 function handleClick(){
-router.push({pathname:'/item', query:{food:text}})
+router.push({pathname:'/item', query:{food:text,recipe:text }})
 }
 
   return (
