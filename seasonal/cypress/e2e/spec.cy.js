@@ -119,11 +119,7 @@ describe("Full user journey tests", () => {
     cy.contains("SEASONAL").click();
     cy.wait(1000);
     cy.url().should("eq", "http://localhost:3000/");
-        // cy.url().should("eq", "http://localhost:3000");
-
   });
-
-
 });
 
 /*
