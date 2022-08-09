@@ -42,18 +42,18 @@ export default function Recipes() {
         </div>
       ); */
       return (
-        <div>
+     
               <RecipeButton
           title={recipe.strMeal}
           key={recipe.idMeal}
           image={recipe.strMealThumb}
           id={recipe.idMeal}
         />
-        </div>
+    
       );
     }));
   } else {
     console.log('nothing has come back')
-    return <p>We don't have any recipes for that item yet but please check back in future!</p>;
+    return <p>We don&apos;t have any recipes for that item yet but please check back in future!</p>;
   }
 }
