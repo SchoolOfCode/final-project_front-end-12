@@ -57,6 +57,13 @@ export function NavBar() {
         >
           About
         </a>
+        <a
+          href=''
+          className={styles.link}
+          onClick={(e) => handleLinkClick(e, "/credits")}
+        >
+          Credits
+        </a>
       </div>
 
       <BurgerMenu

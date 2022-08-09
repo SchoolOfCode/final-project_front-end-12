@@ -3,6 +3,7 @@ import styles from "../styles/BurgerMenu.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
+
 export function BurgerMenu({ handleLinkClick }) {
   const [dropdown, setDropdown] = useState(false);
 
@@ -22,24 +23,14 @@ export function BurgerMenu({ handleLinkClick }) {
           className={styles.menu}
         />
       </div>
-
-      {dropdown && (
-        <div
-          className={styles.dropdown}
-          aria-label='dropdown menu for navigation'
-        >
+      {dropdown &&
+          <div className={styles.dropdown} aria-label="dropdown menu for navigation">
           <a onClick={(e) => handleLinkClick(e, "/")}>Home</a>
           <a onClick={(e) => handleLinkClick(e, "/about")}>About</a>
-          <Image
-            src='/close.png'
-            onClick={toggleDropdown}
-            alt='close menu'
-            height={20}
-            width={20}
-            className={styles.closeMenu}
-          />
-        </div>
-      )}
+          <a onClick={(e) => handleLinkClick(e, "/credits")}>Credits</a>
+              <Image src='/close.png' onClick={toggleDropdown} alt='close menu' height={20} width={20} className={styles.closeMenu} />
+          </div>
+      }
     </>
   );
 }
