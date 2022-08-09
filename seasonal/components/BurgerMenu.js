@@ -28,6 +28,7 @@ export function BurgerMenu() {
         <div
           className={styles.dropdown}
           aria-label="dropdown menu for navigation"
+          data-cy="dropdown-menu"
         >
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>

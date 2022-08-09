@@ -88,7 +88,11 @@ describe("Burger menu works as expected on below 600px devices", () => {
     cy.visit("http://localhost:3000");
     cy.wait(1000);
     cy.get('[data-cy="burger-menu"]').should("be.visible").click();
-    cy.contains("Home").click();
+    cy.get('[data-cy="dropdown-menu"]').children().should("have.length", 3);
+    cy.get('[data-cy="dropdown-menu"] > [href="/"]').click();
+    // cy.wait(1000);
+    // cy.url().should("eq", "http://localhost:3000");
+    // assert for home url using above code when links are sorted
   });
 });
 
