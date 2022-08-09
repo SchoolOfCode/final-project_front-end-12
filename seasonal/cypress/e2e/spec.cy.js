@@ -23,16 +23,13 @@ describe("Test that the RandomFiveArray works as expected", () => {
     cy.wait(1000);
     cy.get("button").should("have.length", 7);
   });
-  // please complete below test teehee
-  it("Returns specifically five different things in the array", () => {
+
+  it("Returns five different things in the array", () => {
     cy.visit("http://localhost:3000");
     cy.wait(1000);
-    cy.get(".randomarray");
-    // visit the page
-    // perceive the page
-    // perceive that there are five cards upon the page
-    // perceive that these five cards, all alike in dignity, in fair seasonalfood app where we lay our scene, are different
-    // profit x2
+    cy.get('[data-cy="random-five-array-container"]')
+      .children()
+      .should("have.length", 5);
   });
 });
 
@@ -72,7 +69,7 @@ describe("Test that searching for terms behaves as expected", () => {
     cy.get("p").contains("Loading");
   });
 
-  it.only("Returns a correct error message for an incorrect search where numbers are entered", () => {
+  it("Returns a correct error message for an incorrect search where numbers are entered", () => {
     cy.visit("http://localhost:3000");
     cy.wait(1000);
     cy.get("input").type("12345");
@@ -85,7 +82,24 @@ describe("Test that searching for terms behaves as expected", () => {
   });
 });
 
+describe("Burger menu works as expected on below 600px devices", () => {
+  it.only("Ensures burger menu displays on tablet and mobile view and that links work", () => {
+    cy.viewport(600, 750);
+    cy.visit("http://localhost:3000");
+    cy.wait(1000);
+    cy.get('[data-cy="burger-menu"]').should("be.visible").click();
+    cy.contains("Home").click();
+  });
+});
+
+describe("Navbar works as expected", () => {
+  it("Lorem", () => {});
+});
+
+describe("Full user journey tests", () => {
+  it("Lorem", () => {});
+});
+
 // WHAT NEEDS DOING
 // test the burger icon links work (make sure clicking on each one works and routes properly)
-// test the random five array works (done-ish, need to finish line 26)
 // test recipe user journey if completed?
