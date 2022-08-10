@@ -15,12 +15,13 @@ export default function Credits() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
             <NavBar aria-label="Navigation" />
-            <div className={styles.pagecontainer}>
+            <main>
+                        <div className={styles.pagecontainer}>
                 <div className={styles.textcontainer}>
  <div>Icons from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> were made by:
-  <ul className={styles.listColumn}>
-  <div >
-    <li><a href="https://www.flaticon.com/authors/andinur" title="andinur">andinur</a></li>
+ <div className={styles.listColumn}>
+ <ul >
+     <li><a href="https://www.flaticon.com/authors/andinur" title="andinur">andinur</a></li>
     <li><a href="https://www.flaticon.com/authors/angdiz" title="AngDiz">AngDiz</a></li>
     <li><a href="https://www.flaticon.com/authors/amethystdesign" title="AmethystDesign">AmethystDesign</a></li>
     <li><a href="https://www.flaticon.com/authors/artlega-studio" title="Artlèga Studio">Artlèga Studio</a></li>
@@ -33,8 +34,8 @@ export default function Credits() {
     <li><a href="https://www.flaticon.com/authors/kerismaker" title="kerismaker">kerismaker</a></li>
     <li><a href="https://www.flaticon.com/authors/kosonicon" title="kosonicon">kosonicon</a></li>
     <li><a href="https://www.flaticon.com/authors/linector" title="Linector">Linector</a></li>
-    </div>
-    <div>
+    </ul>
+    <ul>
     <li><a href="https://www.flaticon.com/authors/luvdat" title="Luvdat">Luvdat</a></li>
     <li><a href="https://www.flaticon.com/authors/maxicons" title="max.icons">max.icons</a></li>
     <li><a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a></li>
@@ -46,13 +47,13 @@ export default function Credits() {
     <li><a href="https://www.flaticon.com/authors/shmai" title="shmai">shmai</a></li>
     <li><a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a></li>
     <li><a href="https://www.flaticon.com/authors/surang" title="surang">surang</a></li>
-    
     <li><a href="https://www.flaticon.com/authors/umeicon" title="Umeicon">Umeicon</a></li>
-    </div>
   </ul>
+  </div>
 </div>
                 </div>
             </div>
+            </main>
             <footer className={styles.footer} aria-label="Search Bar">
                 <SearchBar />
             </footer>
