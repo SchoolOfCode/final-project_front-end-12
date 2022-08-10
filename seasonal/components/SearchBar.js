@@ -42,6 +42,7 @@ export function SearchBar() {
             id='search input'
             aria-label='Enter food item or month here to search'
             onChange={handleChange}
+            placeholder='Search for more things in season'
           />
         </label>
         <label htmlFor='search dropdown'>
@@ -56,7 +57,7 @@ export function SearchBar() {
               console.log(selectValue);
             }}
           >
-            <option value=''>Filter by Month or Item</option>
+            <option value=''>Filter by month, item or recipe</option>
             <option value='Month'>Month</option>
             <option value='Item'>Item</option>
             <option value='Recipe'>Recipe</option>
