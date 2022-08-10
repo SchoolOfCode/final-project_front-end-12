@@ -1,6 +1,7 @@
 .div {
   background-color: var(--accent-one);
   height: 48px;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
