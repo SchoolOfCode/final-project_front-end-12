@@ -11,7 +11,7 @@ function getIngredients(recipe) {
   for (const [key, value] of Object.entries(recipe)) {
     console.log(`${key}: ${value}`);
     if (key.includes("strIngredient")) {
-      if (value !== "") {
+      if (value !== ""||"undefined") {
         ingredientsArray.push(value);
       }
     }
@@ -75,7 +75,7 @@ export default function Card() {
     fetchData()
       // make sure to catch any error
       .catch(console.error);
-  }, [router.isReady]);
+  }, [router.isReady, router.query]);
 
   //Conditionally renders page if we received result from API and successfully set it as state
   if (currentItem.length > 0) {

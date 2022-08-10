@@ -27,7 +27,7 @@ export default function Recipes() {
     fetchData()
       // make sure to catch any error
       .catch(console.error);
-  }, [router.isReady]);
+  }, [router.isReady, router.query]);
 
   if (searchResults) {
     console.log('we have the search results and are mapping')

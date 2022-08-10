@@ -29,9 +29,9 @@ export function ResultsItem() {
 
   if (searchResults.payload.length > 0) {
     return searchResults.payload.map((result) => {
-      return <Button text={result.name} key={result.id} />;
+      return <Button text={result.name} key={result.id} image={result.imageurl}/>;
     });
   } else {
-    return <p>Loading</p>;
+    return <p>We couldn&apos;t find anything for your search, check your filter options and try a new search!</p>;
   }
 }

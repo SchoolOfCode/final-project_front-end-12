@@ -22,7 +22,7 @@ export default function Card() {
     fetchData()
       // make sure to catch any error
       .catch(console.error);
-  }, [router.isReady]);
+  }, [router.isReady, router.query]);
 
   if (currentItem.payload.length > 0) {
     return (
@@ -53,6 +53,6 @@ export default function Card() {
       </div>
     );
   } else {
-    return <p>We don&apos;t have a result for that item yet but we may still have some recipes!</p>;
+    return <p>We don&apos;t seem to have that item, if you&apos;re expecting something here please check your search term!</p>;
   }
 }
