@@ -75,7 +75,7 @@ export default function Card() {
     fetchData()
       // make sure to catch any error
       .catch(console.error);
-  }, [router.isReady]);
+  }, [router.isReady, router.query]);
 
   //Conditionally renders page if we received result from API and successfully set it as state
   if (currentItem.length > 0) {
@@ -88,13 +88,14 @@ export default function Card() {
         <h3>{currentItem[0].strCategory}</h3>
         <div className={styles.imgIngredients}>
           <img src={currentItem[0].strMealThumb} alt={currentItem[0].strMeal} className={styles.recipeImage}/>
-          <h4 className={styles.ingredientHeader}>Ingredients:</h4>
+          <h4 className={styles.smallHeader}>Ingredients</h4>
             <ul className={styles.ingredients}>
               {currentItem[0].combinedArray.map((ingredient, index) => {
                 return <li key={index}>{ingredient}</li>;
               })}
             </ul>
         </div>  
+        <h4 className={styles.smallHeader}>Method</h4>
         <p className={styles.mainDescription}>
           {currentItem[0].strInstructions}
         </p>
