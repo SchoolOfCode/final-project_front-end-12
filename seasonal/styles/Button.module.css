@@ -47,6 +47,7 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  width: fit-content;
 }
 
 @media screen and (max-width: 600px) {

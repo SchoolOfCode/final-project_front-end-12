@@ -1,7 +1,7 @@
 import Card from "../components/RecipeCard.js";
 import { NavBar } from "../components/NavBar.js";
 import { SearchBar } from "../components/SearchBar.js";
-import styles from "../styles/Card.module.css";
+import styles from "../styles/RecipeCard.module.css";
 import Head from "next/head";
 
 export default function RecipeCardPage() {
