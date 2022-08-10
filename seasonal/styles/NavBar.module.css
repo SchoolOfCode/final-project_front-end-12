@@ -22,6 +22,7 @@
 .titleDiv {
   height: fit-content;
   padding-left: 3rem;
+  letter-spacing: 3px;
 }
 
 .title {
@@ -33,6 +34,8 @@
 
 .title h1 {
   margin:0;
+  font-weight: 900;
+  -webkit-text-stroke: 1px;
 }
 
 .title:hover {
