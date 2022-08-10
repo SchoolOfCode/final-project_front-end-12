@@ -32,6 +32,6 @@ export function ResultsItem() {
       return <Button text={result.name} key={result.id} image={result.imageurl}/>;
     });
   } else {
-    return <p>We couldn't find anything for your search, check your filter options and try a new search!</p>;
+    return <p>We couldn&apos;t find anything for your search, check your filter options and try a new search!</p>;
   }
 }
