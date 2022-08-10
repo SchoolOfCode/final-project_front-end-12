@@ -8,12 +8,14 @@
   border: 1px solid var(--accent-one);
   border-radius: 5px;
   padding: 0.7rem 1rem;
-  margin: 1.5rem;
+  margin: 1.5rem auto 6rem;
 }
 
-.morebutton:hover {
-  background: var(--accent-three);
-  border: 1px solid var(--accent-three);
-  cursor: pointer;
-  transition: linear 0.4s;
+.morebutton:hover{
+  background: #296243c0; 
+  /*   opacity: 0.8; */
+    border: 0px 1px 1px 1px solid;
+    border-color:  var(--accent-one); 
+    cursor: pointer;
+    transition: linear 0.2s;
 }

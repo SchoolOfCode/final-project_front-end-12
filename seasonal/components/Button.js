@@ -3,30 +3,28 @@ import styles from "../styles/Button.module.css";
 import Link from "next/link";
 import { useRouter } from 'next/router'
 //Plan
-// Button needs to be clickable and take us to {prop} url.
-// Button text needs to be a {prop}
-// Button Styling needs to be a variable that follows the seasons.
+//Create some state
+//useEffect function
+//Make a request to the database
+//navigate the response object to retrieve the url
+//store the url into the state
+//put the state into the img within the return
 
-// we want some state which passes down the text of the search result 
-// the href 
+export default function Button({text, image}) {
 
-
-export default function Button({text}) {
-  
-  
 const router = useRouter()
 
-
-
-
 function handleClick(){
-router.push({pathname:'/item', query:{food:text}})
+router.push({pathname:'/item', query:{food:text,recipe:text }})
 }
 
   return (
   
-    <a className={styles.link}>
-    <button className={styles.button} onClick={handleClick}>{text}</button>
+    <a className={styles.link} onClick={handleClick}>
+    <div className={styles.buttonbox}>
+      <img src={image} alt={text} className={styles.buttonimage}/>
+      <button className={styles.button} >{text}</button>
+    </div>
     </a>
 
   )

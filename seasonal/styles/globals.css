@@ -23,3 +23,7 @@ body {
   box-sizing: border-box;
 }
 
+p {
+  line-height: 200%;
+}
+

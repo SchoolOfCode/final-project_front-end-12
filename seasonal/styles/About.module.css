@@ -50,10 +50,10 @@
   
 }
 
-.linkSection a:link {
+.textcontainer a:link {
   color: var(--accent-three);
 }
 
-.linkSection a:visited {
+.textcontainer a:visited {
   color: var(--accent-one);
 }

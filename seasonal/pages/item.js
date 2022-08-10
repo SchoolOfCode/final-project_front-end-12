@@ -1,4 +1,5 @@
 import Card from "../components/Card.js";
+import Recipes from "../components/RecipeResults.js"
 import { NavBar } from "../components/NavBar.js";
 import { SearchBar } from "../components/SearchBar.js";
 import styles from "../styles/Card.module.css";
@@ -14,9 +15,12 @@ export default function Item() {
       </Head>
       <NavBar aria-label="Navigation"/>
       <Card />
-      <footer className={styles.footer} aria-label="Search bar">
+      <div className={styles.recipeSection}>
+        <Recipes />
+      </div>
+     <footer className={styles.footer} aria-label="Search bar">
         <SearchBar />
-      </footer>
+      </footer> 
     </div>
   )
   

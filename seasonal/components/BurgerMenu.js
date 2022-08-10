@@ -3,7 +3,8 @@ import styles from "../styles/BurgerMenu.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-export function BurgerMenu() {
+
+export function BurgerMenu({ handleLinkClick }) {
   const [dropdown, setDropdown] = useState(false);
 
   function toggleDropdown() {
@@ -14,34 +15,23 @@ export function BurgerMenu() {
     <>
       <div className={styles.wrapper}>
         <Image
-          src="/burgerMenu.png"
+          src='/burgerIcon.png'
           onClick={toggleDropdown}
-          alt="burger menu"
+          alt='burger menu'
           height={40}
           width={40}
           className={styles.menu}
           data-cy="burger-menu"
         />
       </div>
-
-      {dropdown && (
-        <div
-          className={styles.dropdown}
-          aria-label="dropdown menu for navigation"
-          data-cy="dropdown-menu"
-        >
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Image
-            src="/close.png"
-            onClick={toggleDropdown}
-            alt="close menu"
-            height={20}
-            width={20}
-            className={styles.closeMenu}
-          />
-        </div>
-      )}
+      {dropdown &&
+          <div className={styles.dropdown} aria-label="dropdown menu for navigation">
+          <a onClick={(e) => handleLinkClick(e, "/")}>Home</a>
+          <a onClick={(e) => handleLinkClick(e, "/about")}>About</a>
+          <a onClick={(e) => handleLinkClick(e, "/credits")}>Credits</a>
+              <Image src='/close.png' onClick={toggleDropdown} alt='close menu' height={20} width={20} className={styles.closeMenu} />
+          </div>
+      }
     </>
   );
 }
