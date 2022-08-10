@@ -24,7 +24,7 @@ return(
   
   </div>
   <footer className={styles.footer} aria-label="Search bar">
-    <SearchBar />
+    <SearchBar/>
   </footer>
  </div>
 )};

@@ -29,7 +29,9 @@
   cursor: pointer;
 }
 
-
+#recipeButton {
+  min-height: 80px;
+}
 
 .buttonimage {
   border: 1px;
