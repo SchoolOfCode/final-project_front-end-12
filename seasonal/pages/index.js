@@ -28,7 +28,7 @@ export default function Home() {
           name="description"
           content="An app that helps people find what food is in season in the UK"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/seasonalfavicon.png" />
       </Head>
       <NavBar aria-label="Navigation" role="navigation bar" />
       <main className={styles.main} role="main">
