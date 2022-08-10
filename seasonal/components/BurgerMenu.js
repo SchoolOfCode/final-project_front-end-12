@@ -21,6 +21,7 @@ export function BurgerMenu({ handleLinkClick }) {
           height={40}
           width={40}
           className={styles.menu}
+          data-cy="burger-menu"
         />
       </div>
       {dropdown &&

@@ -31,7 +31,7 @@ export default function Card() {
         aria-label='Card containing details about the food item'
       >
         <h2 className={styles.header}>{currentItem.payload[0].name}</h2>
-        <ol className={styles.months}>
+        <ol className={styles.months} data-cy="card-months-container">
           {currentItem.payload[0].month.map((individualMonth, index) => {
             return <li key={index}>{individualMonth}</li>;
           })}
