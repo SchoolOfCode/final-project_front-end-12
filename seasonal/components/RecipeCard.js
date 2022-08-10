@@ -75,7 +75,7 @@ export default function Card() {
     fetchData()
       // make sure to catch any error
       .catch(console.error);
-  }, [router.isReady]);
+  }, [router.isReady, router.query]);
 
   //Conditionally renders page if we received result from API and successfully set it as state
   if (currentItem.length > 0) {
