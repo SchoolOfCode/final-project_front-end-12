@@ -56,7 +56,7 @@
   }
 
   .textcontainer a:link {
-    color: var(--accent-three);
+    color: var(--main-darkest);
   }
   
   .textcontainer a:visited {

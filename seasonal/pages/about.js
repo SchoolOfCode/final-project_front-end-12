@@ -16,6 +16,7 @@ export default function About() {
       </Head>
             <NavBar aria-label="Navigation" />
             <div className={styles.pagecontainer}>
+            <main>
                 <div className={styles.textcontainer}>
                 <h2>About Seasonal</h2>
                 <p>Seasonal is an app that helps people find out what food is in season in the UK.</p>
@@ -34,6 +35,7 @@ export default function About() {
                 </ul>
                 <p>If you&apos;d like to learn more, visit the links available: <a href="https://linktr.ee/twelve_exponential" target="_blank" rel="noreferrer" aria-label="Link tree for developers">Here</a></p>
                 </div>
+                </main>
             </div>
             <footer className={styles.footer} aria-label="Search Bar">
                 <SearchBar />

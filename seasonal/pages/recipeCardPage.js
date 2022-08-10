@@ -13,7 +13,9 @@ export default function RecipeCardPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar aria-label="Navigation"/>
+      <main>
       <Card />
+      </main>
       <footer className={styles.footer} aria-label="Search bar">
         <SearchBar />
       </footer>
