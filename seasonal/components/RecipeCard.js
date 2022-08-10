@@ -11,7 +11,7 @@ function getIngredients(recipe) {
   for (const [key, value] of Object.entries(recipe)) {
     console.log(`${key}: ${value}`);
     if (key.includes("strIngredient")) {
-      if (value !== "") {
+      if (value !== ""||"undefined") {
         ingredientsArray.push(value);
       }
     }
