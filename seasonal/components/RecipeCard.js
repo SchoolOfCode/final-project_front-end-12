@@ -28,7 +28,7 @@ function getQuantities(recipe) {
   for (const [key, value] of Object.entries(recipe)) {
     console.log(`${key}: ${value}`);
     if (key.includes("strMeasure")) {
-      if (value !== "") {
+      if (Boolean(value) !== false) {
         quantityArray.push(value);
       }
     }
