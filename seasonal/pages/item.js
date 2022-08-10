@@ -23,6 +23,5 @@ export default function Item() {
       </footer> 
     </div>
   )
-  
-  
+
 }
