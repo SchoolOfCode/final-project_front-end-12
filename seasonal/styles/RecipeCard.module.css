@@ -160,6 +160,10 @@
   
 }
 
+
+
+
+
 .recipeSection {
   display: flex;
   justify-content: center;
@@ -174,4 +178,6 @@
   border: 1px solid var(--main-grey);
   border-radius: 25px;
   margin-bottom: 12vh;
+  
 }
+

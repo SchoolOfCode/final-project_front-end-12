@@ -132,6 +132,16 @@
   border: 1px solid var(--main-grey);
   border-radius: 25px;
   margin-bottom: 12vh;
+
+}
+
+@media screen and (max-width:350px) {
+  .recipeSection{
+    border-radius: 5px;
+  }
+  .container{
+    border-radius: 5px;
+  }
 }
 
 .errorContainer {
