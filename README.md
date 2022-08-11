@@ -4,6 +4,26 @@
 
 ## Directory Structure
 
+Our front-end - which is built using Next.js - is currently structured as follows:
+
+```
+-final-project_front-end-12
+    - seasonal
+        - components
+        - cypress
+            - e2e
+                - spec.cy.js
+        - pages
+        - public
+        - styles
+        - .gitignore
+        - cypress.config.js
+        - next.config.js
+        - package.json
+    - manifesto.md
+    - README.md
+```
+
 ## Roadmap
 
 The stretch goal that we're currently working on is to integrate the recipe arm of our product design. With this stretch goal, users should be able to locate and search for seasonal recipes which match up to different foods in season.
