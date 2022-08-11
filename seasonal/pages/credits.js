@@ -12,7 +12,7 @@ export default function Credits() {
         <Head>
         <title>Seasonal</title>
         <meta name="description" content="Credits page" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/seasonalfaviconlarger.png" />
       </Head>
             <NavBar aria-label="Navigation" />
             <div className={styles.pagecontainer}>

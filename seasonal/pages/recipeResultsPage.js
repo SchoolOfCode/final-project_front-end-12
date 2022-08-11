@@ -12,10 +12,10 @@ export default function Results() {
 return(
 <div>
   <Head>
-        <title>Seasonal</title>
-        <meta name="description" content="Search by recipe results page" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <title>Seasonal</title>
+    <meta name="description" content="Search by recipe results page" />
+    <link rel="icon" href="/seasonalfaviconlarger.png" />
+  </Head>
   
   <NavBar aria-label="Navigation"/>
   <div className={styles.resultsItem} >

@@ -12,8 +12,8 @@ export default function About() {
         <Head>
         <title>Seasonal</title>
         <meta name="description" content="About page" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+        <link rel="icon" href="/seasonalfaviconlarger.png" />
+        </Head>
             <NavBar aria-label="Navigation" />
             <div className={styles.pagecontainer}>
                 <div className={styles.textcontainer}>
