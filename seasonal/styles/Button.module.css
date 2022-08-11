@@ -14,7 +14,6 @@
 
 .buttonbox:hover >.button{
   background: #296243c0; 
-/*   opacity: 0.8; */
   border: 0px 1px 1px 1px solid;
   border-color:  var(--accent-one); 
   cursor: pointer;
@@ -75,4 +74,12 @@
   border-radius: 0px 0px 5px 5px;
   padding: 0.7rem 1rem;
   margin: 0rem 0.5rem 1rem;
+}
+
+.buttonbox:hover >.recipeButton{
+  background: #296243c0; 
+  border: 0px 1px 1px 1px solid;
+  border-color:  var(--accent-one); 
+  cursor: pointer;
+  transition: linear 0.2s;
 }
