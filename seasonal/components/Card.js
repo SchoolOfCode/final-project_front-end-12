@@ -22,8 +22,8 @@ export default function Card() {
     fetchData()
       // make sure to catch any error
       .catch(console.error);
-  }, [router.isReady, router.query]);
-
+  }, [router.isReady, router.query]); 
+// if the current item exists then we map it into a card format 
   if (currentItem.payload.length > 0) {
     return (
       <div
@@ -53,6 +53,7 @@ export default function Card() {
       </div>
     );
   } else {
+    // this is an error message if we don't have a match for the search query 
     return <p>We don&apos;t seem to have that item, if you&apos;re expecting something here please check your search term!</p>;
   }
 }

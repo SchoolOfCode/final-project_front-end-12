@@ -1,14 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "../styles/SearchBar.module.css";
-import { useSearchContext } from "../context/search.js";
 import { useRouter } from "next/router";
 
 export function SearchBar() {
-  const [searchResults, setSearchResults] = useSearchContext();
   const [searchText, setSearchText] = useState("");
   const [selectValue, setSelectValue] = useState("");
   const router = useRouter();
-
+// on the press of the submit button here is where we check and pass on the query
+//we have a regex check here to make sure only letters are handed in and it throws an error alert if not
+// we also have an error for if the select value is empty prompting the user to select a value
+// the query is then passed to the relevant path and each component performs a fetch with the qeury
   async function handleClick(e) {
     e.preventDefault();
     var letters = /^[A-Za-z]+$/;
@@ -20,7 +21,7 @@ export function SearchBar() {
       } else if (selectValue === "Recipe") {
         router.push({ pathname: "/recipeResultsPage", query: { recipe: searchText } });
       } else if (selectValue === "") {
-        alert("Please select to search by month or item");
+        alert("Please select to search by month, item or recipe");
       }
     } else {
       alert("Please use letters only in your search");
@@ -80,31 +81,3 @@ export function SearchBar() {
   );
 }
 
-/*
-PLAN
-- create component file for searchbar DONE
-- create styles file for searchbar DONE
-- create a cheeky little searchbar DONE
-- profit
-- WE HAVE REMOVED BROKEN NAVBAR FROM PAGES / INDEX.JS TO TEST OUR COMPONENT
-- TODO: FORM VALIDATION NOT QUITE WORKING, ONCLICK STILL RUNS EVEN IF ERROR REGISTERS. NOT A PRIORITY, OTHER WAYS TO ACHIEVE.
-- TODO: MAYBE REMOVE TYPE="SUBMIT" ON BUTTON FOR REFRESH REASONS
-
-WHAT IS HAPPENING
-- we are taking searchText
-- sling it at the back-end in a fetch request
-- get back relevant results in the console
-
-TO DO NEXT 
-- TODO: make this interact with new page / components to display results
-- TODO: Can't search by food item at the moment.
-*/
-
-// Plan
-// making a drop down using the select - drop down menu
-// look at search by item and search by month
-// understand where the value is being passed to
-// onChange select e.target.value
-// when there's no selection made we just run get item
-
-//error handling is horrific but kind of works?
