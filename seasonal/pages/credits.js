@@ -46,7 +46,6 @@ export default function Credits() {
     <li><a href="https://www.flaticon.com/authors/shmai" title="shmai">shmai</a></li>
     <li><a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a></li>
     <li><a href="https://www.flaticon.com/authors/surang" title="surang">surang</a></li>
-    
     <li><a href="https://www.flaticon.com/authors/umeicon" title="Umeicon">Umeicon</a></li>
     </div>
   </ul>

@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../styles/Button.module.css"; 
 import { useRouter } from 'next/router'
 
-
 export default function Button({text, image}) {
 
 const router = useRouter()

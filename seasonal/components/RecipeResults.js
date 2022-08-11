@@ -27,23 +27,26 @@ export default function Recipes() {
       // make sure to catch any error
       .catch(console.error);
   }, [router.isReady, router.query]);
-// this is a conditional render- if search results exist then we map it into a recipe button component
+  // this is a conditional render- if search results exist then we map it into a recipe button component
   if (searchResults) {
-    console.log('we have the search results and are mapping')
-    return(
-          
-       searchResults.map((recipe) => {
-           return (
-                   <RecipeButton
+    console.log("we have the search results and are mapping");
+    return searchResults.map((recipe) => {
+      return (
+        <RecipeButton
           title={recipe.strMeal}
           key={recipe.idMeal}
           image={recipe.strMealThumb}
           id={recipe.idMeal}
         />
       );
-    }));
+    });
   } else {
-    console.log(`we don't have any recipe results`)
-    return <p>We don&apos;t have any recipes for that item yet but please check back in future!</p>;
+    console.log(`we don't have any recipe results`);
+    return (
+      <p>
+        We don&apos;t have any recipes for that item yet but please check back
+        in future!
+      </p>
+    );
   }
 }

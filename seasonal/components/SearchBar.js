@@ -36,38 +36,38 @@ export function SearchBar() {
   return (
     <form>
       <div className={styles.searchContainer}>
-        <label htmlFor='search input'>
+        <label htmlFor="search input">
           <input
-            type='text'
+            type="text"
             className={styles.searchBar}
-            id='search input'
-            aria-label='Enter food item or month here to search'
+            id="search input"
+            aria-label="Enter food item or month here to search"
             onChange={handleChange}
-            placeholder='Search for more things in season'
+            placeholder="Search for more things in season"
           />
         </label>
-        <label htmlFor='search dropdown'>
+        <label htmlFor="search dropdown">
           <select
-            aria-label='search dropdown'
-            name='search dropdown'
-            id='search dropdown'
+            aria-label="search dropdown"
+            name="search dropdown"
+            id="search dropdown"
             className={styles.dropdown}
-            defaultValue=''
+            defaultValue=""
             onChange={(e) => {
               setSelectValue(e.target.value);
               console.log(selectValue);
             }}
           >
-            <option value=''>Filter by month, item or recipe</option>
-            <option value='Month'>Month</option>
-            <option value='Item'>Item</option>
-            <option value='Recipe'>Recipe</option>
+            <option value="">Filter by month, item or recipe</option>
+            <option value="Month">Month</option>
+            <option value="Item">Item</option>
+            <option value="Recipe">Recipe</option>
           </select>
         </label>
         <button
-          id='search-button'
-          type='submit'
-          aria-label='Click to submit search'
+          id="search-button"
+          type="submit"
+          aria-label="Click to submit search"
           className={styles.submitButton}
           onClick={(e) => {
             handleClick(e);
