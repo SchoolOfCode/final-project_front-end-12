@@ -120,20 +120,68 @@ describe("Full user journey tests", () => {
     cy.wait(1000);
     cy.url().should("eq", "http://localhost:3000/");
   });
+  it.only("clicks more in season and checks url and if banana is displayed (because banana is always in season)", () => {
+    cy.contains("More in Season").click();
+    cy.url().should("include", "results?month=");
+    cy.contains("Banana").should("be.visible");
+  });
+  it.only("it inputs strawberry, selects item and submits search and checks result page has correct url and displays strawberry as an h2", () => {
+    cy.get("input").type("strawberry");
+    cy.get("select").select("Item");
+    cy.contains("Submit").click();
+    cy.wait(1000);
+    cy.url().should("include", "item?food=strawberry");
+    cy.wait(1000);
+    cy.get("h2").contains("Strawberry");
+  });
+  it.only("it inputs October in to search bar and checks beef is displayed on results page. Clicks beef and checks card h2 is beef and seasonal months includes October", () => {
+    cy.get("input").type("October");
+    cy.get("select").select("Month");
+    cy.contains("Submit").click();
+    cy.url().should("include", "results?month=October");
+    cy.wait(1000);
+    cy.contains("Beef").click().wait(1000);
+    cy.get("h2").contains("Beef");
+    cy.get("ol").children().contains("October");
+  });
+  it.only("it clicks on the about page and checks title conatins About Seasonal and correct url displayed. Checks link tree has all the correct attributes", () => {
+    cy.get('[href="/about"]').click();
+    cy.wait(1000);
+    cy.get("h2").contains("About Seasonal");
+    cy.url().should("eq", "http://localhost:3000/about");
+    cy
+    .get(':nth-child(9) > a')
+    .should('have.attr', 'href', 'https://linktr.ee/twelve_exponential')
+    .should('have.attr', 'target', '_blank')
+    .should('have.attr', 'rel', 'noreferrer'); 
+  });
+  it.only("Checks the link tree is returning a status 200 and link is good", () => {
+    cy
+    .get('[href="/about"]')
+    .then(link => {
+
+      cy
+        .request('https://linktr.ee/twelve_exponential')
+        .its('status')
+        .should('eq', 200);
+    })
+  });
 });
+
+
 
 /*
 USER JOURNEY SINGLE TEST FLOW
-- visit website landing page 
-- click a card
-- click on home
-- click more in season
-- search for an item
-- and then search for a month from page 
-- select an item
-- go to the about page 
-- go to the credits page 
-- check out the link tree and hire all of us 
+- visit website landing page DONE
+- click a card DONE
+- click on home DONE
+- click more in season DONE
+- search for an item DONE
+- and then search for a month from page DONE
+- select an item DONE
+- go to the about page DONE
+- go to the credits page DONE
+- check out the link tree and hire all of us DONE
 
 STRETCH INCLUSION IN ABOVE TEST WHEN RECIPE FUNCTIONALITY ACCESSIBLE ON FRONT-END
 - check out the recipe functionality
