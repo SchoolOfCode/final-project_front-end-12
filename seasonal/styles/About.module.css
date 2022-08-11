@@ -18,11 +18,14 @@
   border-width: 1px;
   border-color: var(--main-grey);
   align-items: center;
+
 }
 
 .textcontainer p {
   max-width: 850px;
   text-align: left;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .textcontainer h2{
@@ -44,9 +47,7 @@
 
 .pagecontainer ul {
   list-style: none;
-  padding-left: 0;
-  align-self: flex-start;
-  
+  margin-left: 12vw;
 }
 
 .textcontainer a:link {
