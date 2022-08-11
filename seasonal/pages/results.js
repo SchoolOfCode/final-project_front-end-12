@@ -22,10 +22,12 @@ return(
       </Head>
   
   <NavBar aria-label="Navigation"/>
+  <main>
   <div className={styles.resultsItem} >
   <ResultsItem aria-label="A list of food items in season as a result of the search filter"/> 
   
   </div>
+  </main>
   <footer className={styles.footer} aria-label="Search bar">
     <SearchBar />
   </footer>

@@ -21,11 +21,11 @@ return(
       </Head>
   
   <NavBar aria-label="Navigation"/>
+<main>
   <div className={styles.resultsItem} >
-
   <Recipes/>
-  
   </div>
+</main>
   <footer className={styles.footer} aria-label="Search bar">
     <SearchBar/>
   </footer>
