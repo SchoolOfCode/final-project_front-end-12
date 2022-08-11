@@ -13,7 +13,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Ubuntu', Arial, Tahoma, Verdana, sans-serif;
   background: var(--main-light);
   color: var(--main-dark);
 }
@@ -24,5 +24,6 @@ body {
 
 p {
   line-height: 200%;
+  font-size: 1.15em;
 }
 
