@@ -24,6 +24,16 @@ Our front-end - which is built using Next.js - is currently structured as follow
     - README.md
 ```
 
+The `pages` directory contains the individual pages which are returned by our front-end, as Next.js provides some handing routing options which we decided would be quite useful in this project.
+
+The `components` directory contains all of our component files.
+
+The `styles` directory contains our styling, which is created using CSS modules. Inside this directoy, `globals.css` contains our root colour variables for the site's branding.
+
+The `manifesto.md` file is a copy of our team manifesto, that we adhered to whilst building _Seasonal_.
+
+The `cypress` directory contains our front-end integration and E2E tests.
+
 ## Roadmap
 
 The stretch goal that we're currently working on is to integrate the recipe arm of our product design. With this stretch goal, users should be able to locate and search for seasonal recipes which match up to different foods in season.
