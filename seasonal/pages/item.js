@@ -14,10 +14,12 @@ export default function Item() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar aria-label="Navigation"/>
+      <main>
       <Card />
       <div className={styles.recipeSection}>
         <Recipes />
       </div>
+      </main>
      <footer className={styles.footer} aria-label="Search bar">
         <SearchBar />
       </footer> 

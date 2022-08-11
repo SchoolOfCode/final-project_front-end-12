@@ -14,7 +14,7 @@ export default function RecipeButton({ title, image, id }) {
     <a className={styles.link} onClick={handleClick}>
       <div className={styles.buttonbox}>
         <img src={image} alt={title} className={styles.buttonimage} />
-        <button className={styles.button} id={styles.recipeButton} onClick={handleClick}>
+        <button className={styles.button} id={id} onClick={handleClick}>
           {title}
         </button>
       </div>
