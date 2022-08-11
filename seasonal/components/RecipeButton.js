@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../styles/Button.module.css";
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function RecipeButton({ title, image, id }) {

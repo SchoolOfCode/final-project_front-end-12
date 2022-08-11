@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/NavBar.module.css";
 import { BurgerMenu } from "./BurgerMenu.js";
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 export function NavBar() {
   const [currentPath, setCurrentPath] = useState("");
   const router = useRouter();
+//e.preventDefault prevents a full page reload, however if option pressed is the same as the current page then the page will do a reload- else will push teh qeury 
 
   function handleLinkClick(e, path) {
     e.preventDefault();
@@ -31,7 +31,6 @@ export function NavBar() {
   return (
     <div className={styles.div} role='navigation'>
       <div className={styles.spaceHelp}></div>
-
       <div className={styles.titleDiv}>
         <a
           href=''
@@ -65,7 +64,6 @@ export function NavBar() {
           Credits
         </a>
       </div>
-
       <BurgerMenu
         className={styles.menu}
         aria-label='Click to view navigation links'

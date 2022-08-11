@@ -51,20 +51,3 @@ export default function Home() {
     </div>
   );
 }
-
-//PLAN
-/*
-Make a new button component called MoreButton.js 
-  - Hard code the text on the button - "More in Season"
-  - Buttons page path to '/results'
-  - Hand it the state of Month (use logic from RandomFive Component and place that in index.js - pass down the 
-    the timestamp to button and random5.
-
-Make a new styles modeule for the button. Size smaller
-
-Add button to index. Import at Top.
-
-fingers crossed.
-
-
-*/

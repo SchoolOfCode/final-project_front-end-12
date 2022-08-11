@@ -82,19 +82,23 @@ export default function Card() {
     return (
       <div
         className={styles.container}
-        aria-label='Card containing details about the food item'
+        aria-label="Card containing details about the food item"
       >
         <h2 className={styles.header}>{currentItem[0].strMeal}</h2>
         <h3>{currentItem[0].strCategory}</h3>
         <div className={styles.imgIngredients}>
-          <img src={currentItem[0].strMealThumb} alt={currentItem[0].strMeal} className={styles.recipeImage}/>
+          <img
+            src={currentItem[0].strMealThumb}
+            alt={currentItem[0].strMeal}
+            className={styles.recipeImage}
+          />
           <h4 className={styles.smallHeader}>Ingredients</h4>
-            <ul className={styles.ingredients}>
-              {currentItem[0].combinedArray.map((ingredient, index) => {
-                return <li key={index}>{ingredient}</li>;
-              })}
-            </ul>
-        </div>  
+          <ul className={styles.ingredients}>
+            {currentItem[0].combinedArray.map((ingredient, index) => {
+              return <li key={index}>{ingredient}</li>;
+            })}
+          </ul>
+        </div>
         <h4 className={styles.smallHeader}>Method</h4>
         <p className={styles.mainDescription}>
           {currentItem[0].strInstructions}

@@ -2,11 +2,8 @@ import React from "react";
 import Head from "next/head";
 import { NavBar } from "../components/NavBar.js";
 import { SearchBar } from "../components/SearchBar.js";
-import { ResultsItem } from "../components/ResultsItem.js"; 
-/* import styles from "../styles/Card.module.css"; */
-import styles from "../styles/Results.module.css"
-
-const searchString = "https://seasonality-server-new.herokuapp.com/produce";
+import { ResultsItem } from "../components/ResultsItem.js";
+import styles from "../styles/Results.module.css";
 
 export default function Results() {
 
@@ -33,6 +30,4 @@ return(
   </footer>
  </div>
 )
-
-
 }

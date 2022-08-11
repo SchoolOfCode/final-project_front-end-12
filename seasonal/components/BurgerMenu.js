@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/BurgerMenu.module.css";
 import Image from "next/image";
-import Link from "next/link";
-
 
 export function BurgerMenu({ handleLinkClick }) {
   const [dropdown, setDropdown] = useState(false);

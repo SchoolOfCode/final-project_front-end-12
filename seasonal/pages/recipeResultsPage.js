@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { NavBar } from "../components/NavBar.js";
 import { SearchBar } from "../components/SearchBar.js";
-import Recipes, { recipeResults } from "../components/RecipeResults"; 
+import Recipes from "../components/RecipeResults"; 
 import styles from "../styles/Results.module.css"
 
 const searchString = "https://seasonality-server-new.herokuapp.com/produce";
