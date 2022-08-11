@@ -54,6 +54,6 @@ export default function Card() {
     );
   } else {
     // this is an error message if we don't have a match for the search query 
-    return <p>We don&apos;t seem to have that item, if you&apos;re expecting something here please check your search term!</p>;
+    return <p className={styles.errorContainer}>We don&apos;t seem to have that item, if you&apos;re expecting something here please check your search term!</p>;
   }
 }

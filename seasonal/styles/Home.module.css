@@ -18,7 +18,7 @@
   bottom: 0;
   flex-direction: row;
   width: 100vw;
-  height: 8vh;
+  height: 48px;
   justify-content: center;
   align-items: center;
   background-color: var(--accent-two);
@@ -39,7 +39,7 @@
   text-align: center;
 }
 
-.titleh3 {
+.title h3 {
   margin: 0;
   font-size: calc(10px + 2vmin);
   width: 100vw;
@@ -79,13 +79,6 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
 }
 
 .card h2 {

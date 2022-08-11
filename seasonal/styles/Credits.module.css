@@ -41,10 +41,9 @@
     bottom: 0;
     flex-direction: row;
     width: 100vw;
-    height: 8vh;
+    height: 48px;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
     background-color: var(--accent-two);
   }
   
@@ -56,7 +55,7 @@
   }
 
   .textcontainer a:link {
-    color: var(--accent-three);
+    color: var(--main-darkest);
   }
   
   .textcontainer a:visited {

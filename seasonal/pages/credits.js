@@ -12,15 +12,19 @@ export default function Credits() {
         <Head>
         <title>Seasonal</title>
         <meta name="description" content="Credits page" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/seasonalfaviconlarger.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
       </Head>
             <NavBar aria-label="Navigation" />
-            <div className={styles.pagecontainer}>
+            <main>
+                        <div className={styles.pagecontainer}>
                 <div className={styles.textcontainer}>
  <div>Icons from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> were made by:
-  <ul className={styles.listColumn}>
-  <div >
-    <li><a href="https://www.flaticon.com/authors/andinur" title="andinur">andinur</a></li>
+ <div className={styles.listColumn}>
+ <ul >
+     <li><a href="https://www.flaticon.com/authors/andinur" title="andinur">andinur</a></li>
     <li><a href="https://www.flaticon.com/authors/angdiz" title="AngDiz">AngDiz</a></li>
     <li><a href="https://www.flaticon.com/authors/amethystdesign" title="AmethystDesign">AmethystDesign</a></li>
     <li><a href="https://www.flaticon.com/authors/artlega-studio" title="Artlèga Studio">Artlèga Studio</a></li>
@@ -33,8 +37,8 @@ export default function Credits() {
     <li><a href="https://www.flaticon.com/authors/kerismaker" title="kerismaker">kerismaker</a></li>
     <li><a href="https://www.flaticon.com/authors/kosonicon" title="kosonicon">kosonicon</a></li>
     <li><a href="https://www.flaticon.com/authors/linector" title="Linector">Linector</a></li>
-    </div>
-    <div>
+    </ul>
+    <ul>
     <li><a href="https://www.flaticon.com/authors/luvdat" title="Luvdat">Luvdat</a></li>
     <li><a href="https://www.flaticon.com/authors/maxicons" title="max.icons">max.icons</a></li>
     <li><a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a></li>
@@ -47,11 +51,12 @@ export default function Credits() {
     <li><a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a></li>
     <li><a href="https://www.flaticon.com/authors/surang" title="surang">surang</a></li>
     <li><a href="https://www.flaticon.com/authors/umeicon" title="Umeicon">Umeicon</a></li>
-    </div>
   </ul>
+  </div>
 </div>
                 </div>
             </div>
+            </main>
             <footer className={styles.footer} aria-label="Search Bar">
                 <SearchBar />
             </footer>

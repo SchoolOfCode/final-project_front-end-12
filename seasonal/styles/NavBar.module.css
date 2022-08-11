@@ -1,6 +1,7 @@
 .div {
   background-color: var(--accent-one);
   height: 48px;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,6 +23,7 @@
 .titleDiv {
   height: fit-content;
   padding-left: 3rem;
+  letter-spacing: 3px;
 }
 
 .title {
@@ -33,6 +35,8 @@
 
 .title h1 {
   margin:0;
+  font-weight: 900;
+  -webkit-text-stroke: 1px;
 }
 
 .title:hover {
