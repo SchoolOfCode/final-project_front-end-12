@@ -11,7 +11,6 @@ describe("BurgerMenu unit tests", () => {
     const burgerMenuImage = screen.getByRole("img", { name: /burger menu/i });
     expect(burgerMenuImage).toBeVisible();
   });
-  //Dropdown doesn't appear to be conditionally rendering when clicked (also tried with links)
   test("When clicked, should show close button", async () => {
     const user = userEvent.setup();
     render(<BurgerMenu handleLinkClick={testFunction} />);
