@@ -19,17 +19,28 @@ export function BurgerMenu({ handleLinkClick }) {
           height={40}
           width={40}
           className={styles.menu}
-          data-cy="burger-menu"
+          data-cy='burger-menu'
         />
       </div>
-      {dropdown &&
-          <div className={styles.dropdown} aria-label="dropdown menu for navigation">
+      {dropdown && (
+        <div
+          className={styles.dropdown}
+          aria-label='dropdown menu for navigation'
+          data-cy='dropdown-menu'
+        >
           <a onClick={(e) => handleLinkClick(e, "/")}>Home</a>
           <a onClick={(e) => handleLinkClick(e, "/about")}>About</a>
           <a onClick={(e) => handleLinkClick(e, "/credits")}>Credits</a>
-              <Image src='/close.png' onClick={toggleDropdown} alt='close menu' height={20} width={20} className={styles.closeMenu} />
-          </div>
-      }
+          <Image
+            src='/close.png'
+            onClick={toggleDropdown}
+            alt='close menu'
+            height={20}
+            width={20}
+            className={styles.closeMenu}
+          />
+        </div>
+      )}
     </>
   );
 }
