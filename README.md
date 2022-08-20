@@ -40,7 +40,9 @@ Building an accessible app has been central to our design process. By designing 
 
 While the app doesn't yet have full coverage of produce avaliable, this is in the works for future iterations!
 
-The back-end for this project can be found in [this linked repository](https://github.com/SchoolOfCode/final-project_back-end-12).
+The back-end for this project can be [found in this linked repository](https://github.com/SchoolOfCode/final-project_back-end-12).
+
+A recording of our presentation of this project at Bootcamp 12.0 Demo Day can be [viewed here on Youtube](https://www.youtube.com/watch?v=Oit70HijLSY&feature=youtu.be).
 
 ---
 
