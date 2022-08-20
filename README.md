@@ -1,6 +1,6 @@
 # Seasonal
 
-_Seasonal_ is a web application made to help the consumer make more informed choices about the produce they buy, by providing them information about the food that's currently in season.
+_Seasonal_ is a web application made to help consumers make more informed choices about the produce they buy, by providing them information about the food that's currently in season.
 
 _Seasonal_ was created by six developers from the [School of Code](https://github.com/SchoolOfCode) over the course of four weeks.
 
