@@ -6,7 +6,7 @@ export function RandomFiveArray({ timeStamp, getMonth }) {
   const [randomArray, setRandomArray] = useState({ payload: [] });
 
   let fetchString =
-    "https://seasonality-server-new.herokuapp.com/produce/random";
+    "https://drab-ruby-seahorse-veil.cyclic.app//produce/random";
 
   useEffect(() => {
     const fetchData = async () => {

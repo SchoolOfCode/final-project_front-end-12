@@ -2,7 +2,7 @@ import styles from "../styles/Card.module.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
-const searchString = "https://seasonality-server-new.herokuapp.com/produce";
+const searchString = "https://drab-ruby-seahorse-veil.cyclic.app/produce";
 
 export default function Card() {
   const router = useRouter();
@@ -22,8 +22,8 @@ export default function Card() {
     fetchData()
       // make sure to catch any error
       .catch(console.error);
-  }, [router.isReady, router.query]); 
-// if the current item exists then we map it into a card format 
+  }, [router.isReady, router.query]);
+  // if the current item exists then we map it into a card format
   if (currentItem.payload.length > 0) {
     return (
       <div
@@ -31,7 +31,7 @@ export default function Card() {
         aria-label='Card containing details about the food item'
       >
         <h2 className={styles.header}>{currentItem.payload[0].name}</h2>
-        <ol className={styles.months} data-cy="card-months-container">
+        <ol className={styles.months} data-cy='card-months-container'>
           {currentItem.payload[0].month.map((individualMonth, index) => {
             return <li key={index}>{individualMonth}</li>;
           })}
@@ -53,7 +53,12 @@ export default function Card() {
       </div>
     );
   } else {
-    // this is an error message if we don't have a match for the search query 
-    return <p className={styles.errorContainer}>We don&apos;t seem to have that item, if you&apos;re expecting something here please check your search term!</p>;
+    // this is an error message if we don't have a match for the search query
+    return (
+      <p className={styles.errorContainer}>
+        We don&apos;t seem to have that item, if you&apos;re expecting something
+        here please check your search term!
+      </p>
+    );
   }
 }
