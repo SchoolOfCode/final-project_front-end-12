@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Button from "../components/Button.js";
 
-const searchString = "https://seasonality-server-new.herokuapp.com/produce";
+const searchString = "https://drab-ruby-seahorse-veil.cyclic.app//produce";
 
 export function ResultsItem() {
   const router = useRouter();
