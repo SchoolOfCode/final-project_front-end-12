@@ -11,14 +11,38 @@ export function ResultsItem() {
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log(JSON.stringify(router.query));
-      let modifiedMonth = router.query.month;
-      const data = await fetch(`${searchString}?month=${modifiedMonth}`);
-      let result = await data.json();
-      setSearchResults(result);
-      console.log(
-        `this is the search results console log: ${JSON.stringify(result)}`
-      );
+      if (router.query.month !== undefined) {
+        let modifiedMonth = router.query.month;
+        console.log(`this is the month= ${modifiedMonth}`);
+        const data = await fetch(`${searchString}?month=${modifiedMonth}`);
+        let result = await data.json();
+        setSearchResults(result);
+      } else if (router.query.allergen !== undefined){
+        let allergen = router.query.allergen;
+        console.log(`this is the allergen = ${allergen}`);
+        const data = await fetch(`${searchString}?allergen=${allergen}`);
+        let result = await data.json();
+        setSearchResults(result);
+        console.log(`this is the result: ${JSON.stringify(result)}`);
+      }
+      else if (router.query.family !== undefined){
+        let family = router.query.family;
+        const data = await fetch(`${searchString}?family=${family}`);
+        let result = await data.json();
+        setSearchResults(result);
+      }
+      else if (router.query.usedAs !== undefined){
+        let usedAs = router.query.usedAs;
+        const data = await fetch(`${searchString}?usedAs=${usedAs}`);
+        let result = await data.json();
+        setSearchResults(result);
+      }
+      else{
+        let foodType = router.query.foodType;
+        const data = await fetch(`${searchString}?foodType=${foodType}`);
+        let result = await data.json();
+        setSearchResults(result);
+      }
     };
     if (!router.isReady) return;
     fetchData()

@@ -66,6 +66,7 @@
   border-radius: 4px;
   margin: 0.5rem;
   font-size: 0.8rem;
+  cursor: pointer;
 }
 
 .foodTags > li:nth-child(1) {

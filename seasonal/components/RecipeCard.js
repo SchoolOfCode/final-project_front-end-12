@@ -16,8 +16,7 @@ function getIngredients(recipe) {
       }
     }
   }
-  console.log("Ingredients array is next");
-  console.log(ingredientsArray);
+
   return ingredientsArray;
 }
 //Takes in recipe from fetchData
@@ -26,7 +25,7 @@ function getIngredients(recipe) {
 function getQuantities(recipe) {
   let quantityArray = [];
   for (const [key, value] of Object.entries(recipe)) {
-    console.log(`${key}: ${value}`);
+ 
     if (key.includes("strMeasure")) {
       if (Boolean(value) !== false) {
         quantityArray.push(value);
@@ -51,7 +50,7 @@ export default function Card() {
       if (result.meals.length > 0) {
         console.log("Getting ingredients and quantities");
         const ingredientsArray = getIngredients(result.meals[0]);
-        console.log(JSON.stringify(result.meals));
+      
         const quantityArray = getQuantities(result.meals[0]);
         //Combines ingredients and quantities in to one string
         let combinedArray = [];
