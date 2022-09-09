@@ -13,6 +13,19 @@ html[data-theme="autumn"] {
   --accent-one: #612948;
   --accent-two: #e0b4cc;
 }
+html[data-theme="winter"] {
+  --accent-one: #2C5784;
+  --accent-two: #B8CFE7;
+}
+html[data-theme="spring"] {
+  --accent-one: #BB9F06;
+  --accent-two: #FCF0A7;
+}
+html[data-theme="summer"] {
+  --accent-one: #296243;
+  --accent-two: #b1d0b6;
+}
+
 
 html,
 body {
