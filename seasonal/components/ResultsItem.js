@@ -11,22 +11,20 @@ export function ResultsItem() {
 
   useEffect(() => {
     const fetchData = async () => {
-      if(router.query.month !== undefined )
-      {
-      let modifiedMonth = router.query.month;
-      console.log(`this is the month= ${modifiedMonth}`)
-      const data = await fetch(`${searchString}?month=${modifiedMonth}`);
-      let result = await data.json();
-      setSearchResults(result);
-      }
-   else
-      {
+      if (router.query.month !== undefined) {
+        let modifiedMonth = router.query.month;
+        console.log(`this is the month= ${modifiedMonth}`);
+        const data = await fetch(`${searchString}?month=${modifiedMonth}`);
+        let result = await data.json();
+        setSearchResults(result);
+      } else {
         let allergen = router.query.allergen;
-        console.log(`this is the allergen = ${allergen}`)
+        console.log(`this is the allergen = ${allergen}`);
         const data = await fetch(`${searchString}?allergen=${allergen}`);
         let result = await data.json();
         setSearchResults(result);
-        }
+        console.log(`this is the result: ${JSON.stringify(result)}`);
+      }
     };
     if (!router.isReady) return;
     fetchData()
