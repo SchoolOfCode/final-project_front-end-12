@@ -8,6 +8,10 @@ export default function Card() {
   const router = useRouter();
   const [currentItem, setCurrentItem] = useState({ payload: [] });
 
+  function handleMonthClick(individualMonth) {
+    router.push({ pathname: "/results", query: { month: individualMonth } });
+  }
+
   useEffect(() => {
     const fetchData = async () => {
       console.log(JSON.stringify(router.query));
@@ -28,12 +32,21 @@ export default function Card() {
     return (
       <div
         className={styles.container}
-        aria-label='Card containing details about the food item'
+        aria-label="Card containing details about the food item"
       >
         <h2 className={styles.header}>{currentItem.payload[0].name}</h2>
-        <ol className={styles.months} data-cy='card-months-container'>
+        <ol className={styles.months} data-cy="card-months-container">
           {currentItem.payload[0].month.map((individualMonth, index) => {
-            return <li key={index}>{individualMonth}</li>;
+            return (
+              <li
+                key={index}
+                onClick={() => {
+                  handleMonthClick(individualMonth);
+                }}
+              >
+                {individualMonth}
+              </li>
+            );
           })}
         </ol>
         <ul className={styles.foodTags}>
@@ -62,3 +75,10 @@ export default function Card() {
     );
   }
 }
+
+/*
+- SURPRISE HIDDEN TASK ACCOMPLISHED: updated the buttons.
+- add onclick to maps for the months and allergens
+- onclick returns a search for selected value
+- change li to a? or put an a inside the li, so we keep the semantic use of having the ul, while also having a tags?
+*/

@@ -11,7 +11,6 @@
   background-color: var(--accent-two);
 }
 
-
 .container {
   width: 80%;
   background: #fff;
@@ -46,6 +45,7 @@
   margin: 0.5rem;
   font-size: 0.8rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .foodTags {
@@ -57,12 +57,10 @@
   justify-content: safe center;
   flex-wrap: wrap;
   font-weight: bold;
-  
 }
 
-
 .foodTags > li {
-  background:#A3C9D9;
+  background: #a3c9d9;
   line-height: 200%;
   padding: 0px 10px;
   border-radius: 4px;
@@ -70,31 +68,30 @@
   font-size: 0.8rem;
 }
 
-.foodTags > li:nth-child(1){
-  background:#A3C9D9
-
+.foodTags > li:nth-child(1) {
+  background: #a3c9d9;
 }
 
-.foodTags > li:nth-child(2){
-  background:#E9DFAA;
+.foodTags > li:nth-child(2) {
+  background: #e9dfaa;
 }
 
-.foodTags > li:nth-child(3){
-  background:#EEA57C;
+.foodTags > li:nth-child(3) {
+  background: #eea57c;
 }
 
-.foodTags > li:nth-child(4){
-  background:#FFA8A8;
+.foodTags > li:nth-child(4) {
+  background: #ffa8a8;
 }
 
-.mainImage{
+.mainImage {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   max-width: 300px;
   padding: 1.5rem;
- }
+}
 
 .mainDescription {
   max-width: 850px;
@@ -102,7 +99,6 @@
   padding: 1rem 0;
   text-align: left;
 }
-
 
 @media screen and (max-width: 600px) {
   .container {
@@ -115,7 +111,6 @@
     border: 1px solid var(--main-grey);
     border-radius: 25px;
   }
-  
 }
 
 .recipeSection {
@@ -132,28 +127,27 @@
   border: 1px solid var(--main-grey);
   border-radius: 25px;
   margin-bottom: 12vh;
-
 }
 
-@media screen and (max-width:350px) {
-  .recipeSection{
+@media screen and (max-width: 350px) {
+  .recipeSection {
     border-radius: 5px;
   }
-  .container{
+  .container {
     border-radius: 5px;
   }
 }
 
 .errorContainer {
-    width: 80%;
-    background: #fff;
-    margin: 5% auto;
-    padding: 1rem;
-    color: #000;
-    border: 1px solid var(--main-grey);
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 80%;
+  background: #fff;
+  margin: 5% auto;
+  padding: 1rem;
+  color: #000;
+  border: 1px solid var(--main-grey);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

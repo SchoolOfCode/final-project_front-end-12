@@ -3,6 +3,7 @@
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
+  text-align: center;
   color: var(--main-lightest);
   background: var(--accent-one);
   border: 1px solid var(--accent-one);
@@ -11,11 +12,11 @@
   margin: 1.5rem auto 6rem;
 }
 
-.morebutton:hover{
-  background: #296243c0; 
+.morebutton:hover {
+  background: #296243c0;
   /*   opacity: 0.8; */
-    border: 0px 1px 1px 1px solid;
-    border-color:  var(--accent-one); 
-    cursor: pointer;
-    transition: linear 0.2s;
+  border: 0px 1px 1px 1px solid;
+  border-color: var(--accent-one);
+  cursor: pointer;
+  transition: linear 0.2s;
 }

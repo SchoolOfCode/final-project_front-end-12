@@ -9,18 +9,18 @@
   border-radius: 0px 0px 5px 5px;
   padding: 0.7rem 1rem;
   margin: 0rem 0.5rem 1rem;
+  text-align: center;
 }
 
-
-.buttonbox:hover >.button{
-  background: #296243c0; 
+.buttonbox:hover > .button {
+  background: #296243c0;
   border: 0px 1px 1px 1px solid;
-  border-color:  var(--accent-one); 
+  border-color: var(--accent-one);
   cursor: pointer;
   transition: linear 0.2s;
 }
 
-.buttonbox:hover >.buttonimage{
+.buttonbox:hover > .buttonimage {
   border: 1px;
   border-style: solid;
   border-color: #296243c0 /* var(--accent-one) */;
@@ -76,10 +76,10 @@
   margin: 0rem 0.5rem 1rem;
 }
 
-.buttonbox:hover >.recipeButton{
-  background: #296243c0; 
+.buttonbox:hover > .recipeButton {
+  background: #296243c0;
   border: 0px 1px 1px 1px solid;
-  border-color:  var(--accent-one); 
+  border-color: var(--accent-one);
   cursor: pointer;
   transition: linear 0.2s;
 }
