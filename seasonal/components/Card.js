@@ -12,6 +12,11 @@ export default function Card() {
     router.push({ pathname: "/results", query: { month: individualMonth } });
   }
 
+
+function handleAllergenClick(searchedAllergen){
+  router.push({ pathname: "/results", query: { allergen: searchedAllergen } })
+}
+
   useEffect(() => {
     const fetchData = async () => {
       console.log(JSON.stringify(router.query));
@@ -53,7 +58,9 @@ export default function Card() {
           <li>Family: {currentItem.payload[0].family}</li>
           <li>Food Type: {currentItem.payload[0].foodtype}</li>
           <li>Used As: {currentItem.payload[0].usedas}</li>
-          <li>Allergens: {currentItem.payload[0].allergens}</li>
+          <li onClick={() => {
+                  handleAllergenClick(currentItem.payload[0].allergens);
+                }}>Allergens: {currentItem.payload[0].allergens}</li>
         </ul>
         <img
           src={currentItem.payload[0].imageurl}
