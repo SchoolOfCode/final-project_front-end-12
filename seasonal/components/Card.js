@@ -12,10 +12,26 @@ export default function Card() {
     router.push({ pathname: "/results", query: { month: individualMonth } });
   }
 
-
 function handleAllergenClick(searchedAllergen){
   router.push({ pathname: "/results", query: { allergen: searchedAllergen } })
 }
+
+function handleFamilyClick(searchedFamily){
+  router.push({ pathname: "/results", query: { family: searchedFamily } })
+}
+
+function handleUsedAsClick(searchedUsedAs){
+  router.push({ pathname: "/results", query: { usedAs: searchedUsedAs } })
+}
+
+function handleFoodTypeClick(searchedFoodType){
+  router.push({ pathname: "/results", query: { foodType: searchedFoodType } })
+}
+
+
+
+
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -55,9 +71,15 @@ function handleAllergenClick(searchedAllergen){
           })}
         </ol>
         <ul className={styles.foodTags}>
-          <li>Family: {currentItem.payload[0].family}</li>
-          <li>Food Type: {currentItem.payload[0].foodtype}</li>
-          <li>Used As: {currentItem.payload[0].usedas}</li>
+          <li onClick={() => {
+                  handleFamilyClick(currentItem.payload[0].family);
+                }}>Family: {currentItem.payload[0].family}</li>
+          <li onClick={() => {
+                  handleFoodTypeClick(currentItem.payload[0].foodtype);
+                }}>Food Type: {currentItem.payload[0].foodtype}</li>
+          <li onClick={() => {
+                  handleUsedAsClick(currentItem.payload[0].usedas);
+                }}>Used As: {currentItem.payload[0].usedas}</li>
           <li onClick={() => {
                   handleAllergenClick(currentItem.payload[0].allergens);
                 }}>Allergens: {currentItem.payload[0].allergens}</li>
