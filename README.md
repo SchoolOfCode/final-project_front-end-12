@@ -28,17 +28,37 @@ Thanks for stopping by!
 
 ---
 
-### Project Description
+## Project Description
 
-This repository holds the front-end documentation for Seasonal by Team 12\*\* (Twelve Exponential). Seasonal is our final project with the [School of Code](https://github.com/SchoolOfCode). In an agile team, over the course of a month, we researched, designed, and built the first iteration of our application, and are currently working on implementing stretch goals.
+### Demonstration
 
-The core aim of Seasonal is to make it easier and more accessible for users to find out what food is in season in the UK during any given month. Our research identitified that there was a desire from consumers to make more enviromentally concious choices, and shopping seasonaly is a great way to do this. Shopping in season can reduce cost and the enviromental impact of meals as well as exposing cosumers to a wider range of produce. In order to make these choices easier we also provide ways to search for a recipe by the ingredient by using TheMealDB API.
+![Recorded demonstration of the Seasonal App](./Seasonal-Demo.gif)
 
-Users will be immediately provided with foods currently in season on the landing page, and then can navigate to more food currently in season, or can perform searches for different months, items and recipes to see when they're in season, as well as information on cooking, growing, and ecological impact. In the future we hope to make our app more communtiy-centric and have user generated recipes. For more details on what we intend on doing next with Seasonal, please refer to our project roadmap!
+### About
 
-Building an accessible app has been central to our design process. By designing and coding with acessibillity in mind, we are looking to be part of the postive change in making the internet more accesible and open to all. We're testing our app by using axe testing software - however, we're still learning, so please get in touch in with us if you spot a problem that compromises your experience of the app!
+This repository holds the front-end documentation for Seasonal by Team 12\*\* (Twelve Exponential).
+
+Seasonal is our final project with the [School of Code](https://github.com/SchoolOfCode). In an agile team, over the course of a month, we researched, designed, and built the first iteration of our application. We're still working on the app today, and are currently implementing some stretch goals we couldn't quite get to first time around!
+
+**The core aim of Seasonal is to make it easier and more accessible for users to find out what food is in season in the UK during any given month.**
+
+Our research identitified a desire from users to make more enviromentally-concious choices, and shopping seasonally is a great way to do this. Shopping in season can reduce costs for shoppers and farmers, lessens the enviromental impact of meals (as it takes a lot more resources to grow or import out-of-season food), and can also introduce people to produce they might never have encountered otherwise. In order to make these choices easier, we also provide ways to search for recipes by seasonal ingredient, using TheMealDB API.
+
+Users will be immediately provided with foods currently in season on the landing page. They can then navigate to more food currently in season, or can perform searches for different months, items and recipes. Through searching, they can see when different items are in season, and get information on cooking and growing those items, as well as on their ecological impact.
+
+In the future, we hope to make our app more community-centric and include spaces for users to submit their own recipes. For more details on what we intend on doing next with Seasonal, please refer to our project roadmap!
 
 While the app doesn't yet have full coverage of produce avaliable, this is in the works for future iterations!
+
+### Accessibility
+
+Building an accessible app has been central to our design process. By designing and coding with acessibillity in mind, we are looking to be part of the postive change in making the internet more accesible and open to all.
+
+We're currently using Axe testing software and perform manual screen reader testing, and have really appreciated the feedback we receive from users, mentors, and other developers that's enabled us to learn more and keep implementing more changes.
+
+However, we're still learning and we're really open to feedback, so please get in touch with us if you spot a problem that compromises your experience of the app!
+
+### Links
 
 The back-end for this project can be [found in this linked repository](https://github.com/SchoolOfCode/final-project_back-end-12).
 
@@ -116,4 +136,5 @@ Goals we're working towards:
 - More cleanly integrate the recipe arm of our design. Users should be able to search for recipes, and receive seasonal suggestions. The API we are using to retrieve recipes returns irregular data, which might have to be handled or addressed in a more robust way moving forward.
 - Expand searchbar functionality with error handling and looking into fuzzy search.
 - Integrate a maps API, to allow users to search for local farms, shops and growers near them.
+- Integrate community-generated recipe submission functionality.
 - Make further accessibility edits. Always actively ongoing!
