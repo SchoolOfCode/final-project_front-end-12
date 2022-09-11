@@ -1,8 +1,8 @@
 # Seasonal
 
-_Seasonal_ is a web application made to help consumers make more informed choices about the produce they buy, by providing them information about the food that's currently in season.
+_Seasonal_ is a web application made to help UK-based users make more informed choices about the produce they buy, by providing them information about the food that's currently in season in the UK.
 
-_Seasonal_ was created by six developers from the [School of Code](https://github.com/SchoolOfCode) over the course of four weeks.
+_Seasonal_ was created by six developers from the [School of Code](https://github.com/SchoolOfCode) over the course of four weeks, before being presented to other developers and industry professionals at a virtual exhibition-style Demo Day. A recording of our presentation of this project at Bootcamp 12.0 Demo Day can be [viewed here on Youtube](https://www.youtube.com/watch?v=Oit70HijLSY&feature=youtu.be).
 
 Our team consists of:
 
@@ -32,7 +32,7 @@ Thanks for stopping by!
 
 This repository holds the front-end documentation for Seasonal by Team 12\*\* (Twelve Exponential). Seasonal is our final project with the [School of Code](https://github.com/SchoolOfCode). In an agile team, over the course of a month, we researched, designed, and built the first iteration of our application, and are currently working on implementing stretch goals.
 
-The core aim of Seasonal is to make it easier and more accessible for users to find out what food is in season in the UK during any given month. Our research identitified that there was a desire from consumers to make more enviromentally concious choices, and shopping seasonaly is a great way to do this. Shopping in season can reduce cost and the enviromental impact of meals as well as exposing cosumers to a wider range of produce. In order to make these choices easier we also provide ways to search for a recipe by the ingredient by using TheMealDB api.
+The core aim of Seasonal is to make it easier and more accessible for users to find out what food is in season in the UK during any given month. Our research identitified that there was a desire from consumers to make more enviromentally concious choices, and shopping seasonaly is a great way to do this. Shopping in season can reduce cost and the enviromental impact of meals as well as exposing cosumers to a wider range of produce. In order to make these choices easier we also provide ways to search for a recipe by the ingredient by using TheMealDB API.
 
 Users will be immediately provided with foods currently in season on the landing page, and then can navigate to more food currently in season, or can perform searches for different months, items and recipes to see when they're in season, as well as information on cooking, growing, and ecological impact. In the future we hope to make our app more communtiy-centric and have user generated recipes. For more details on what we intend on doing next with Seasonal, please refer to our project roadmap!
 
@@ -104,8 +104,16 @@ The `cypress` directory contains our front-end integration and E2E tests.
 
 ## Roadmap
 
-The stretch goal that we're currently working on is to integrate the recipe arm of our product design. With this stretch goal, users should be able to locate and search for seasonal recipes which match up to different foods in season.
+Goals completed since Demo Day:
 
-Potentially, we will create an intermediary API between our front and back-end which can help sort and tidy the recipes data we are pulling from various places. Regarding the front-end, some stretch goals we'd like to implement next include adding in seasonal colour scheme functionality and expanding our searchbar functionality.
+- Add in colour scheme changing functionality, so that the website theme changes according to the season.
+- Make all the tags on our card components clickable and add new back-end routes, so users can sort by all tags.
+- Accessibility edits made to our button components.
 
-Following meeting this stretch goal, our next goal will be to integrate a maps API, to allow users to search for local farms and growers near them.
+Goals we're working towards:
+
+- Colour theme reiterations and colour testing.
+- More cleanly integrate the recipe arm of our design. Users should be able to search for recipes, and receive seasonal suggestions. The API we are using to retrieve recipes returns irregular data, which might have to be handled or addressed in a more robust way moving forward.
+- Expand searchbar functionality with error handling and looking into fuzzy search.
+- Integrate a maps API, to allow users to search for local farms, shops and growers near them.
+- Make further accessibility edits. Always actively ongoing!
