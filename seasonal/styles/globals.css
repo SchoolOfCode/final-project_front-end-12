@@ -6,26 +6,29 @@
   --main-darkest: #000000;
   --accent-one: #296243;
   --accent-two: #b1d0b6;
-  --accent-three: #e54a4a;
+  --accent-button: #5d866f;
 }
 
-html[data-theme="autumn"] {
-  --accent-one: #612948;
-  --accent-two: #e0b4cc;
-}
-html[data-theme="winter"] {
-  --accent-one: #2C5784;
-  --accent-two: #B8CFE7;
-}
 html[data-theme="spring"] {
-  --accent-one: #BB9F06;
-  --accent-two: #FCF0A7;
+  --accent-one: #6b1933;
+  --accent-two: #cc708d;
+  --accent-button: #a42850;
 }
 html[data-theme="summer"] {
   --accent-one: #296243;
   --accent-two: #b1d0b6;
+  --accent-button: #5d866f;
 }
-
+html[data-theme="autumn"] {
+  --accent-one: #851e12;
+  --accent-two: #d07066;
+  --accent-button: #c44536;
+}
+html[data-theme="winter"] {
+  --accent-one: #04344e;
+  --accent-two: #96a9b5;
+  --accent-button: #185a7d;
+}
 
 html,
 body {

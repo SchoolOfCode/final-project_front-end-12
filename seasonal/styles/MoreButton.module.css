@@ -13,10 +13,10 @@
 }
 
 .morebutton:hover {
-  background: #296243c0;
+  background: var(--accent-button);
   /*   opacity: 0.8; */
   border: 0px 1px 1px 1px solid;
-  border-color: var(--accent-one);
+  border-color: var(--accent-button);
   cursor: pointer;
   transition: linear 0.2s;
 }
