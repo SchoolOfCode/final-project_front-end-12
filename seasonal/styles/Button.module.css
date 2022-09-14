@@ -13,9 +13,9 @@
 }
 
 .buttonbox:hover > .button {
-  background: #296243c0;
+  background: var(--accent-button);
   border: 0px 1px 1px 1px solid;
-  border-color: var(--accent-one);
+  border-color: var(--accent-button);
   cursor: pointer;
   transition: linear 0.2s;
 }
@@ -23,7 +23,7 @@
 .buttonbox:hover > .buttonimage {
   border: 1px;
   border-style: solid;
-  border-color: #296243c0 /* var(--accent-one) */;
+  border-color: var(--accent-button) /* var(--accent-one) */;
   border-radius: 5px 5px 0px 0px;
   cursor: pointer;
 }
@@ -77,9 +77,9 @@
 }
 
 .buttonbox:hover > .recipeButton {
-  background: #296243c0;
+  background: var(--accent-button);
   border: 0px 1px 1px 1px solid;
-  border-color: var(--accent-one);
+  border-color: var(--accent-button);
   cursor: pointer;
   transition: linear 0.2s;
 }
