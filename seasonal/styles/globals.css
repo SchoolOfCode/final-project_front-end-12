@@ -1,7 +1,7 @@
 :root {
   --main-light: #f2f2f2;
   --main-lightest: #ffffff;
-  --main-grey: #D9D9D9;
+  --main-grey: #d9d9d9;
   --main-dark: #1f1f1f;
   --main-darkest: #000000;
   --accent-one: #296243;
@@ -9,11 +9,29 @@
   --accent-three: #e54a4a;
 }
 
+html[data-theme="autumn"] {
+  --accent-one: #612948;
+  --accent-two: #e0b4cc;
+}
+html[data-theme="winter"] {
+  --accent-one: #2C5784;
+  --accent-two: #B8CFE7;
+}
+html[data-theme="spring"] {
+  --accent-one: #BB9F06;
+  --accent-two: #FCF0A7;
+}
+html[data-theme="summer"] {
+  --accent-one: #296243;
+  --accent-two: #b1d0b6;
+}
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Ubuntu', Arial, Tahoma, Verdana, sans-serif;
+  font-family: "Ubuntu", Arial, Tahoma, Verdana, sans-serif;
   background: var(--main-light);
   color: var(--main-dark);
 }
@@ -29,6 +47,5 @@ p {
 
 a {
   line-height: 200%;
-  font-size: 1.15em; 
+  font-size: 1.15em;
 }
-

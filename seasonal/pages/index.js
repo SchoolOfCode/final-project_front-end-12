@@ -25,27 +25,30 @@ export default function Home() {
       <Head>
         <title>Seasonal</title>
         <meta
-          name="description"
-          content="An app that helps people find what food is in season in the UK"
+          name='description'
+          content='An app that helps people find what food is in season in the UK'
         />
-        <link rel="icon" href="/seasonalfaviconlarger.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
+        <link rel='icon' href='/seasonalfaviconlarger.png' />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'
+          rel='stylesheet'
+        />
       </Head>
-      <NavBar aria-label="Navigation" role="navigation bar" />
-      <main className={styles.main} role="main">
+      <NavBar aria-label='Navigation' role='navigation bar' />
+      <main className={styles.main} role='main'>
         <h2 className={styles.title}>It&apos;s {timeStamp}!</h2>
         <h3 className={styles.titleh3}>Some things in season...</h3>
         <div
           className={styles.randomarray}
-          data-cy="random-five-array-container"
+          data-cy='random-five-array-container'
         >
           <RandomFiveArray timeStamp={timeStamp} getMonth={getMonth} />
         </div>
         <MoreButton text={timeStamp} />
       </main>
-      <footer className={styles.footer} aria-label="Search bar" role="search">
+      <footer className={styles.footer} aria-label='Search bar' role='search'>
         <SearchBar />
       </footer>
     </div>

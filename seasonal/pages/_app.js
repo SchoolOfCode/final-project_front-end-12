@@ -1,11 +1,11 @@
 import "../styles/globals.css";
-import { SearchResultsProvider } from "../context/search.js";
+import { ThemeProvider } from "../context/theme.js";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <SearchResultsProvider>
+    <ThemeProvider>
       <Component {...pageProps} />
-    </SearchResultsProvider>
+    </ThemeProvider>
   );
 }
 
