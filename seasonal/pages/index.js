@@ -12,7 +12,6 @@ export default function Home() {
   function getMonth() {
     const today = new Date();
     let longMonth = today.toLocaleString("default", { month: "long" });
-    console.log(longMonth);
     setTimeStamp(longMonth);
   }
 

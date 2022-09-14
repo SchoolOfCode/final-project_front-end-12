@@ -11,16 +11,12 @@ export default function Recipes() {
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log(JSON.stringify(router.query));
+      
       let recipeSearch = router.query.recipe;
       const data = await fetch(`${searchString}?s=${recipeSearch}`);
       let result = await data.json();
       setSearchResults(result.meals);
-      console.log(
-        `this is the recipes results console log: ${JSON.stringify(
-          result.meals
-        )}`
-      );
+     ;
     };
     if (!router.isReady) return;
     fetchData()
@@ -29,7 +25,6 @@ export default function Recipes() {
   }, [router.isReady, router.query]);
   // this is a conditional render- if search results exist then we map it into a recipe button component
   if (searchResults) {
-    console.log("we have the search results and are mapping");
     return searchResults.map((recipe) => {
       return (
         <RecipeButton
@@ -41,7 +36,7 @@ export default function Recipes() {
       );
     });
   } else {
-    console.log(`we don't have any recipe results`);
+
     return (
       <p>
         We don&apos;t have any recipes for that item yet but please check back

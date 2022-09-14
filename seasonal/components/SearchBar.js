@@ -30,7 +30,7 @@ export function SearchBar() {
 
   function handleChange(e) {
     setSearchText(e.target.value);
-    console.log(searchText);
+    
   }
 
   return (
