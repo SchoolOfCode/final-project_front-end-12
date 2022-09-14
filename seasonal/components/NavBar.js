@@ -20,8 +20,6 @@ export function NavBar() {
 
   useEffect(() => {
     const updatePath = () => {
-      console.log("Setting path name");
-      console.log(`The pathname is: ${router.pathname}`);
       setCurrentPath(router.pathname);
     };
     if (!router.isReady) return;

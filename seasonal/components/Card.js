@@ -35,13 +35,11 @@ function handleFoodTypeClick(searchedFoodType){
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log(JSON.stringify(router.query));
+   
       const data = await fetch(`${searchString}?item=${router.query.food}`);
       let result = await data.json();
       setCurrentItem(result);
-      console.log(
-        `this is the search results console log: ${JSON.stringify(result)}`
-      );
+     
     };
     if (!router.isReady) return;
     fetchData()

@@ -10,13 +10,11 @@ export function RandomFiveArray({ timeStamp, getMonth }) {
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log(`this is today's month-  ${timeStamp}`);
+     
       const data = await fetch(`${fetchString}?month=${timeStamp}`);
       let result = await data.json();
       setRandomArray(result);
-      console.log(
-        `this is the search results console log: ${JSON.stringify(result)}`
-      );
+     
     };
 
     if (timeStamp === "") {

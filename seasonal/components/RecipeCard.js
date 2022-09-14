@@ -9,7 +9,6 @@ const searchString = `https://www.themealdb.com/api/json/v1/1/lookup.php`;
 function getIngredients(recipe) {
   let ingredientsArray = [];
   for (const [key, value] of Object.entries(recipe)) {
-    console.log(`${key}: ${value}`);
     if (key.includes("strIngredient")) {
       if (Boolean(value) !== false) {
         ingredientsArray.push(value);
@@ -32,9 +31,7 @@ function getQuantities(recipe) {
       }
     }
   }
-  console.log("Quantity array is next");
-  console.log(quantityArray);
-  return quantityArray;
+   return quantityArray;
 }
 
 export default function Card() {
@@ -48,7 +45,7 @@ export default function Card() {
       let result = await data.json();
       //Call getIngredients and getQuantities as outlined above
       if (result.meals.length > 0) {
-        console.log("Getting ingredients and quantities");
+        
         const ingredientsArray = getIngredients(result.meals[0]);
       
         const quantityArray = getQuantities(result.meals[0]);
@@ -60,7 +57,7 @@ export default function Card() {
         }
         //Adds combined array to results object we got from API
         result.meals[0].combinedArray = combinedArray;
-        console.log(result.meals[0]);
+        
       }
       //Console log an error if unable to call getIngredients or getQuantities due to there being no results from API
       else {
