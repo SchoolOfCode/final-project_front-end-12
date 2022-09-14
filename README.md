@@ -2,6 +2,8 @@
 
 **_Seasonal_ is a web application made to help UK-based users make more informed choices about the produce they buy, by providing them information about the food that's currently in season, and what recipes they can make with it.**
 
+**[Deployed live app here!](https://seasonalfood.netlify.app)**
+
 _Seasonal_ was created by six developers from the [School of Code](https://github.com/SchoolOfCode) over the course of four weeks, before being presented to other developers and industry professionals at a virtual exhibition-style Demo Day. This repository holds the front-end documentation for this project.
 
 Our team - 12\*\* (Twelve Exponential) - consists of:
@@ -33,7 +35,7 @@ Thanks for stopping by!
       - [Accessibility](#accessibility)
       - [Links](#links)
     - [Getting Started](#getting-started)
-    - [Directory Structure](#directory-Structure)
+    - [Directory Structure](#directory-structure)
     - [Roadmap](#roadmap)
     - [Credits](#credits)
 
