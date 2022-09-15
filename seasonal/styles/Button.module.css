@@ -28,8 +28,10 @@
   cursor: pointer;
 }
 
-#recipeButton {
+.recipeButton {
   min-height: 80px;
+  text-align: center;
+  line-height: 100%;
 }
 
 .buttonimage {
