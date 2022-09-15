@@ -7,6 +7,11 @@
   --accent-one: #296243;
   --accent-two: #b1d0b6;
   --accent-button: #5d866f;
+  --tag-one: #85c685;
+  --tag-two: #9acde2;
+  --tag-three: #f3e6a0;
+  --tag-four: #f6a374;
+  --tag-five: #ff9c9c;
 }
 
 html[data-theme="spring"] {

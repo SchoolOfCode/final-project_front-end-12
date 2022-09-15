@@ -13,11 +13,11 @@
 
 .container {
   width: 80%;
-  background: #fff;
+  background: var(--main-lightest);
   margin: 5% auto;
   margin-bottom: 3vh;
   padding: 1rem;
-  color: #000;
+  color: var(--main-darkest);
   border: 1px solid var(--main-grey);
   border-radius: 25px;
 }
@@ -38,7 +38,7 @@
 }
 
 .months > li {
-  background: darkseagreen;
+  background: var(--tag-one);
   line-height: 200%;
   padding: 0px 10px;
   border-radius: 4px;
@@ -60,7 +60,7 @@
 }
 
 .foodTags > li {
-  background: #a3c9d9;
+  background: var(--tag-two);
   line-height: 200%;
   padding: 0px 10px;
   border-radius: 4px;
@@ -70,19 +70,19 @@
 }
 
 .foodTags > li:nth-child(1) {
-  background: #a3c9d9;
+  background: var(--tag-two);
 }
 
 .foodTags > li:nth-child(2) {
-  background: #e9dfaa;
+  background: var(--tag-three);
 }
 
 .foodTags > li:nth-child(3) {
-  background: #eea57c;
+  background: var(--tag-four);
 }
 
 .foodTags > li:nth-child(4) {
-  background: #ffa8a8;
+  background: var(--tag-five);
 }
 
 .mainImage {
