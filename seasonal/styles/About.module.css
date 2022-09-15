@@ -18,7 +18,6 @@
   border-width: 1px;
   border-color: var(--main-grey);
   align-items: center;
-
 }
 
 .textcontainer p {
@@ -28,7 +27,7 @@
   margin-right: auto;
 }
 
-.textcontainer h2{
+.textcontainer h2 {
   text-align: center;
   padding-bottom: 10px;
   margin: 0px;
@@ -56,4 +55,8 @@
 
 .textcontainer a:visited {
   color: var(--accent-one);
+}
+
+.linkSection a {
+  font-size: 1.15rem;
 }

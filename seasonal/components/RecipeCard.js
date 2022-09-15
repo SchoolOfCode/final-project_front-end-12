@@ -24,14 +24,13 @@ function getIngredients(recipe) {
 function getQuantities(recipe) {
   let quantityArray = [];
   for (const [key, value] of Object.entries(recipe)) {
- 
     if (key.includes("strMeasure")) {
       if (Boolean(value) !== false) {
         quantityArray.push(value);
       }
     }
   }
-   return quantityArray;
+  return quantityArray;
 }
 
 export default function Card() {
@@ -45,9 +44,8 @@ export default function Card() {
       let result = await data.json();
       //Call getIngredients and getQuantities as outlined above
       if (result.meals.length > 0) {
-        
         const ingredientsArray = getIngredients(result.meals[0]);
-      
+
         const quantityArray = getQuantities(result.meals[0]);
         //Combines ingredients and quantities in to one string
         let combinedArray = [];
@@ -57,7 +55,6 @@ export default function Card() {
         }
         //Adds combined array to results object we got from API
         result.meals[0].combinedArray = combinedArray;
-        
       }
       //Console log an error if unable to call getIngredients or getQuantities due to there being no results from API
       else {
@@ -81,7 +78,9 @@ export default function Card() {
         aria-label="Card containing details about the food item"
       >
         <h2 className={styles.header}>{currentItem[0].strMeal}</h2>
-        <h3>{currentItem[0].strCategory}</h3>
+        <h3>
+          <i>{currentItem[0].strCategory}</i>
+        </h3>
         <div className={styles.imgIngredients}>
           <img
             src={currentItem[0].strMealThumb}

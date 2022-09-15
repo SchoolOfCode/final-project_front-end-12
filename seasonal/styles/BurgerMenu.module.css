@@ -7,15 +7,20 @@
 .dropdown {
   display: none;
 }
-
+.burgerOption {
+  background-color: var(--main-lightest);
+  width: 75%;
+  text-align: center;
+  border-radius: 5px;
+}
 
 @media screen and (max-width: 600px) {
-  .menu{
+  .menu {
     min-width: 40px;
     max-width: 40px;
     height: 40px;
   }
-  
+
   .wrapper {
     display: flex;
     margin-right: 10px;
@@ -34,9 +39,9 @@
     padding-top: 2vh;
     padding-bottom: 2vh;
     width: 100vw;
-    animation: scale-up-ver-top 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-ver-top 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
-  
+
   /* Animation for dropdown */
   @keyframes scale-up-ver-top {
     0% {
@@ -48,25 +53,23 @@
       transform-origin: 100% 0%;
     }
   }
-  .closeMenu{
+  .closeMenu {
     margin-top: 20px;
-
+    cursor: pointer;
   }
-  .dropdown a{
-    transition: ease-in-out, .25s;
+  .dropdown a {
+    transition: ease-in-out, 0.25s;
     font-size: calc(15px + 2vmin);
     text-decoration: none;
     color: inherit;
-
   }
 
-  .dropdown{
-   height: 100vh;
-   gap: 50px;
-
-
+  .dropdown {
+    height: 100vh;
+    gap: 50px;
   }
   .dropdown a:hover {
-    color: white;
+    color: var(--main-darkest);
+    cursor: pointer;
   }
 }
