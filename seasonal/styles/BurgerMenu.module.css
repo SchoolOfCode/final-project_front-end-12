@@ -30,7 +30,7 @@
   .dropdown {
     background-color: var(--accent-two);
     position: fixed;
-    top: 7vh;
+    top: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
