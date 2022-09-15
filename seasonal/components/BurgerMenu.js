@@ -13,28 +13,34 @@ export function BurgerMenu({ handleLinkClick }) {
     <>
       <div className={styles.wrapper}>
         <Image
-          src='/burgerIcon.png'
+          src="/burgerIcon.png"
           onClick={toggleDropdown}
-          alt='burger menu'
+          alt="burger menu"
           height={40}
           width={40}
           className={styles.menu}
-          data-cy='burger-menu'
+          data-cy="burger-menu"
         />
       </div>
       {dropdown && (
         <div
           className={styles.dropdown}
-          aria-label='dropdown menu for navigation'
-          data-cy='dropdown-menu'
+          aria-label="dropdown menu for navigation"
+          data-cy="dropdown-menu"
         >
-          <a onClick={(e) => handleLinkClick(e, "/")}>Home</a>
-          <a onClick={(e) => handleLinkClick(e, "/about")}>About</a>
-          <a onClick={(e) => handleLinkClick(e, "/credits")}>Credits</a>
+          <span className={styles.burgerOption}>
+            <a onClick={(e) => handleLinkClick(e, "/")}>Home</a>
+          </span>
+          <span className={styles.burgerOption}>
+            <a onClick={(e) => handleLinkClick(e, "/about")}>About</a>
+          </span>
+          <span className={styles.burgerOption}>
+            <a onClick={(e) => handleLinkClick(e, "/credits")}>Credits</a>
+          </span>
           <Image
-            src='/close.png'
+            src="/close.png"
             onClick={toggleDropdown}
-            alt='close menu'
+            alt="close menu"
             height={20}
             width={20}
             className={styles.closeMenu}
