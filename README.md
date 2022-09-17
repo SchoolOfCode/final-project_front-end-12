@@ -153,12 +153,12 @@ The `cypress` directory contains our front-end integration and E2E tests.
 Goals completed since Demo Day:
 
 - Add in colour scheme changing functionality, so that the website theme changes according to the season.
-- Make all the tags on our card components clickable and add new back-end routes, so users can sort by all tags.
+- Make all tags on our card components clickable and add new routes for those searches.
 - Accessibility edits made to our button components.
+- Colour theme reiterations and testing design options for accessibility and WCAG compliance.
 
 Goals we're working towards:
 
-- Colour theme reiterations and testing design options for accessibility and WCAG compliance.
 - More cleanly integrate the recipe arm of our design. Users should be able to search for recipes, and receive seasonal suggestions. The API we are using to retrieve recipes returns irregular data, which might have to be addressed in a more robust way moving forward.
 - Expand searchbar functionality with error handling and looking into fuzzy search.
 - Integrate a maps API, to allow users to search for local farms, shops and growers near them.
