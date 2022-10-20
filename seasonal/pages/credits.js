@@ -65,6 +65,22 @@ export default function Credits() {
                 </li>
                 <li>
                   <a
+                    href="https://www.flaticon.com/authors/Chanut-is-industries"
+                    title="Chanut-is-Industries"
+                  >
+                    Chanut-is-Industries
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.flaticon.com/authors/dDara"
+                    title="dDara"
+                  >
+                    dDara
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="https://www.flaticon.com/authors/designbydai"
                     title="designbydai"
                   >
@@ -144,6 +160,14 @@ export default function Credits() {
                 </li>
                 <li>
                   <a
+                    href="https://www.flaticon.com/authors/mangsaabguru"
+                    title="mangsaabguru"
+                  >
+                    mangsaabguru
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="https://www.flaticon.com/authors/maxicons"
                     title="max.icons"
                   >
@@ -156,14 +180,6 @@ export default function Credits() {
                     title="monkik"
                   >
                     monkik
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.flaticon.com/authors/yukyik"
-                    title="yukyik"
-                  >
-                    yukyik
                   </a>
                 </li>
                 <li>
@@ -228,6 +244,22 @@ export default function Credits() {
                     title="Umeicon"
                   >
                     Umeicon
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.flaticon.com/authors/Vitaly-Gorbachev"
+                    title="Vitaly Gorbachev"
+                  >
+                    Vitaly Gorbachev
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.flaticon.com/authors/yukyik"
+                    title="yukyik"
+                  >
+                    yukyik
                   </a>
                 </li>
               </ul>
