@@ -1,0 +1,48 @@
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchBar {
+  height: 35px;
+  width: 30vw;
+  border-radius: 3px;
+  border: 2px;
+  text-indent: 5px;
+}
+
+.dropdown {
+  height: 35px;
+  border-radius: 3px;
+  border: 2px;
+}
+
+.submitButton {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--main-lightest);
+  background: var(--accent-one);
+  border: 1px solid;
+  border-color: var(--accent-one);
+  border-radius: 3px;
+  height: 35px;
+}
+
+.submitButton:hover {
+  background: var(--accent-button);
+  /*   opacity: 0.8; */
+  border: 1px solid;
+  border-color: var(--accent-button);
+  cursor: pointer;
+  transition: linear 0.2s;
+}
+
+.visuallyHidden {
+  display: none;
+}
+
+/* Don't forget to do a media for mobile */

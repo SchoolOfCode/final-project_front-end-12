@@ -1,0 +1,64 @@
+:root {
+  --main-light: #f2f2f2;
+  --main-lightest: #ffffff;
+  --main-grey: #d9d9d9;
+  --main-dark: #1f1f1f;
+  --main-darkest: #000000;
+  --accent-one: #296243;
+  --accent-two: #b1d0b6;
+  --accent-three: #b1d0b6;
+  --accent-button: #5d866f;
+  --tag-one: #85c685;
+  --tag-two: #9acde2;
+  --tag-three: #f3e6a0;
+  --tag-four: #f6a374;
+  --tag-five: #ff9c9c;
+}
+
+html[data-theme="spring"] {
+  --accent-one: #6b1933;
+  --accent-two: #cc708d;
+  --accent-three: #f1cfd9;
+  --accent-button: #a42850;
+}
+html[data-theme="summer"] {
+  --accent-one: #296243;
+  --accent-two: #b1d0b6;
+  --accent-three: #e0ece2;
+  --accent-button: #5d866f;
+}
+html[data-theme="autumn"] {
+  --accent-one: #851e12;
+  --accent-two: #d07066;
+  --accent-three: #efcecb;
+  --accent-button: #c44536;
+}
+html[data-theme="winter"] {
+  --accent-one: #04344e;
+  --accent-two: #96a9b5;
+  --accent-three: #dee4e8;
+  --accent-button: #185a7d;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Ubuntu", Arial, Tahoma, Verdana, sans-serif;
+  background: var(--main-light);
+  color: var(--main-dark);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 200%;
+  font-size: 1.15em;
+}
+
+a {
+  line-height: 200%;
+  /* font-size: 1.15em; */
+}
