@@ -4,7 +4,6 @@ import { NavBar } from "../components/NavBar.js";
 import { SearchBar } from "../components/SearchBar.js";
 import { RandomFiveArray } from "../components/RandomFiveArray.js";
 import { useEffect, useState } from "react";
-import MoreButton from "../components/MoreButton";
 
 export default function Home() {
   const [timeStamp, setTimeStamp] = useState("");
@@ -28,24 +27,30 @@ export default function Home() {
           content="An app that helps people find what food is in season in the UK"
         />
         <link rel="icon" href="/favicon.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link rel="preload" href="https://fonts.googleapis.com" as="font" />
+        <link
+          rel="preload"
+          href="https://fonts.gstatic.com"
+          as="font"
+          crossOrigin
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-          rel="stylesheet"
+          rel="preload"
+          as="font"
         />
       </Head>
       <NavBar aria-label="Navigation" role="navigation bar" />
       <main className={styles.main} role="main">
-        <h2 className={styles.title}>It&apos;s {timeStamp}!</h2>
-        <h3 className={styles.titleh3}>Some things in season...</h3>
-        <div
-          className={styles.randomarray}
-          data-cy="random-five-array-container"
-        >
-          <RandomFiveArray timeStamp={timeStamp} getMonth={getMonth} />
+        {timeStamp && (
+          <>
+            <h2 className={styles.title}>It&apos;s {timeStamp}!</h2>
+            <h3 className={styles.titleh3}>Some things in season...</h3>
+          </>
+        )}
+        <div data-cy="random-five-array-container">
+          <RandomFiveArray timeStamp={timeStamp} />
         </div>
-        <MoreButton text={timeStamp} />
       </main>
       <footer className={styles.footer} aria-label="Search bar" role="search">
         <SearchBar />

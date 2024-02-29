@@ -100,6 +100,7 @@
   /*TODO might need to address padding when image is shown above the button to make it like wireframe*/
   padding-top: 1rem;
   display: flex;
+  /*THIS SETTING TO CHANGE FLEX ON HOME PAGE FOR BUTTON*/
   flex-flow: row wrap;
   justify-content: center;
 }
