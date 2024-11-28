@@ -9,7 +9,6 @@ export function ThemeProvider({ children }) {
   function getMonth() {
     const today = new Date();
     longMonth = today.toLocaleString("default", { month: "long" });
-    console.log(longMonth);
   }
 
   useEffect(() => {
