@@ -2,8 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Button from "../components/Button.js";
-
-const searchString = "https://drab-ruby-seahorse-veil.cyclic.app//produce";
+import { API_BASE_URL } from '../util/constants';
 
 export function ResultsItem() {
   const router = useRouter();
@@ -14,32 +13,32 @@ export function ResultsItem() {
       if (router.query.month !== undefined) {
         let modifiedMonth = router.query.month;
        
-        const data = await fetch(`${searchString}?month=${modifiedMonth}`);
+        const data = await fetch(`${API_BASE_URL}?month=${modifiedMonth}`);
         let result = await data.json();
         setSearchResults(result);
       } else if (router.query.allergen !== undefined){
         let allergen = router.query.allergen;
        
-        const data = await fetch(`${searchString}?allergen=${allergen}`);
+        const data = await fetch(`${API_BASE_URL}?allergen=${allergen}`);
         let result = await data.json();
         setSearchResults(result);
         
       }
       else if (router.query.family !== undefined){
         let family = router.query.family;
-        const data = await fetch(`${searchString}?family=${family}`);
+        const data = await fetch(`${API_BASE_URL}?family=${family}`);
         let result = await data.json();
         setSearchResults(result);
       }
       else if (router.query.usedAs !== undefined){
         let usedAs = router.query.usedAs;
-        const data = await fetch(`${searchString}?usedAs=${usedAs}`);
+        const data = await fetch(`${API_BASE_URL}?usedAs=${usedAs}`);
         let result = await data.json();
         setSearchResults(result);
       }
       else{
         let foodType = router.query.foodType;
-        const data = await fetch(`${searchString}?foodType=${foodType}`);
+        const data = await fetch(`${API_BASE_URL}?foodType=${foodType}`);
         let result = await data.json();
         setSearchResults(result);
       }
