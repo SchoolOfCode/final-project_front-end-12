@@ -1,16 +1,20 @@
 describe("Integration test for landing page, 'More In Season' button and card component", () => {
-  it("Visits our landing page and checks that the More in Season button is visible", () => {
+  beforeEach(() => {
     cy.visit("http://localhost:3000");
     cy.wait(1000);
+  })
+  it("Visits our landing page and checks that the More in Season button is visible", () => {
     cy.contains("More in Season").should("be.visible");
   });
 
   it("Clicks on More in Season and checks that we have been redirected to the results page", () => {
-    cy.contains("More in Season").click();
+    cy.contains("More in Season").scrollIntoView().click();
+    cy.wait(1000);
     cy.url().should("include", "results?month=");
   });
 
   it("Clicks on Banana (which is always in season) and checks we have been redirected to the item page", () => {
+    cy.contains("More in Season").click();
     cy.wait(1000);
     cy.contains("Banana").click();
     cy.url().should("include", "item?food=Banana");
@@ -18,12 +22,6 @@ describe("Integration test for landing page, 'More In Season' button and card co
 });
 
 describe("Integration test for Random Five Array", () => {
-  it("Returns five cards on the page", () => {
-    cy.visit("http://localhost:3000");
-    cy.wait(1000);
-    cy.get("button").should("have.length", 7);
-  });
-
   it("Returns five different things in the array", () => {
     cy.visit("http://localhost:3000");
     cy.wait(1000);
@@ -94,9 +92,11 @@ describe("Burger menu works as expected on below 600px devices", () => {
 });
 
 describe("Full user journey tests", () => {
-  it("visits website landing page and checks it has loaded 5 random cards", () => {
+    beforeEach(() => {
     cy.visit("http://localhost:3000");
     cy.wait(1000);
+  })
+  it("visits website landing page and checks it has loaded 5 random cards", () => {
     cy.get('[data-cy="random-five-array-container"]')
       .children()
       .should("have.length", 5);
