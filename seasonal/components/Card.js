@@ -116,10 +116,3 @@ export default function Card() {
     );
   }
 }
-
-/*
-- SURPRISE HIDDEN TASK ACCOMPLISHED: updated the buttons.
-- add onclick to maps for the months and allergens
-- onclick returns a search for selected value
-- change li to a? or put an a inside the li, so we keep the semantic use of having the ul, while also having a tags?
-*/
