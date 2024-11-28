@@ -10,14 +10,15 @@ export function RandomFiveArray({ timeStamp, getMonth }) {
     const fetchData = async () => {
       const data = await fetch(`${API_BASE_URL}/random?month=${timeStamp}`);
       let result = await data.json();
-      setRandomArray(result);
+      setRandomArray(result);   
     };
 
     if (timeStamp === "") {
       getMonth();
     }
     if (timeStamp === "") return;
-    fetchData();
+    fetchData()
+      .catch(console.error);
   }, [timeStamp]);
 
   if (randomArray.payload.length > 0) {
