@@ -55,7 +55,6 @@ export function SearchBar() {
             defaultValue=""
             onChange={(e) => {
               setSelectValue(e.target.value);
-              console.log(selectValue);
             }}
           >
             <option value=''>Choose Filter</option>

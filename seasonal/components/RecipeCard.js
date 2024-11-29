@@ -56,10 +56,6 @@ export default function Card() {
         //Adds combined array to results object we got from API
         result.meals[0].combinedArray = combinedArray;
       }
-      //Console log an error if unable to call getIngredients or getQuantities due to there being no results from API
-      else {
-        console.log("Can't get ingredients or quantities");
-      }
       //Updates state with result from API (including appended combined quantities/ingredients array)
       setCurrentItem(result.meals);
     };

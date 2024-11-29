@@ -1,8 +1,7 @@
 import styles from "../styles/Card.module.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-
-const searchString = "https://drab-ruby-seahorse-veil.cyclic.app/produce";
+import { API_BASE_URL } from '../util/constants';
 
 export default function Card() {
   const router = useRouter();
@@ -36,7 +35,7 @@ export default function Card() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch(`${searchString}?item=${router.query.food}`);
+      const data = await fetch(`${API_BASE_URL}?item=${router.query.food}`);
       let result = await data.json();
       setCurrentItem(result);
     };
@@ -117,10 +116,3 @@ export default function Card() {
     );
   }
 }
-
-/*
-- SURPRISE HIDDEN TASK ACCOMPLISHED: updated the buttons.
-- add onclick to maps for the months and allergens
-- onclick returns a search for selected value
-- change li to a? or put an a inside the li, so we keep the semantic use of having the ul, while also having a tags?
-*/

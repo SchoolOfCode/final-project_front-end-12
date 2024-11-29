@@ -1,27 +1,24 @@
 import React from "react";
 import Button from "./Button";
 import { useState, useEffect } from "react";
+import { API_BASE_URL } from '../util/constants';
 
 export function RandomFiveArray({ timeStamp, getMonth }) {
   const [randomArray, setRandomArray] = useState({ payload: [] });
 
-  let fetchString =
-    "https://drab-ruby-seahorse-veil.cyclic.app//produce/random";
-
   useEffect(() => {
     const fetchData = async () => {
-     
-      const data = await fetch(`${fetchString}?month=${timeStamp}`);
+      const data = await fetch(`${API_BASE_URL}/random?month=${timeStamp}`);
       let result = await data.json();
-      setRandomArray(result);
-     
+      setRandomArray(result);   
     };
 
     if (timeStamp === "") {
       getMonth();
     }
     if (timeStamp === "") return;
-    fetchData();
+    fetchData()
+      .catch(console.error);
   }, [timeStamp]);
 
   if (randomArray.payload.length > 0) {
