@@ -1,0 +1,40 @@
+.div {
+  background-color: var(--accent-one);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  flex-direction: row;
+  width: 100vw;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent-two);
+}
+
+.resultsItem {
+  padding: 3rem 0 6rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .resultsItem {
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

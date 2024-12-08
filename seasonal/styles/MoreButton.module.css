@@ -1,0 +1,22 @@
+.morebutton {
+  width: 10rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--main-lightest);
+  background: var(--accent-one);
+  border: 1px solid var(--accent-one);
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  margin: 1.5rem auto 0;
+}
+
+.morebutton:hover {
+  background: var(--accent-button);
+  /*   opacity: 0.8; */
+  border: 0px 1px 1px 1px solid;
+  border-color: var(--accent-button);
+  cursor: pointer;
+  transition: linear 0.2s;
+}
