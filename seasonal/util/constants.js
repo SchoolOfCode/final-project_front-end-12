@@ -1,1 +1,2 @@
-export const API_BASE_URL = 'https://seasonal-backend-multivit.ladeapp.com/produce';
+export const API_BASE_URL =
+  "https://sharp-franny-multi-vit-69df91c3.koyeb.app/produce";
